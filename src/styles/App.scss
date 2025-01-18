@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("./assets/RobotoCondensed-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  background: #2d2d2d;
+  color: white;
+  font-family: "Roboto Condensed";
+  padding: 0px 20px;
+}
+
+h1 {
+  font-style: normal;
+  font-size: 25pt;
+  text-shadow: 0 0 20px black;
+}
+
+.TitleSystem {
+  text-align: center;
+}
+.TitleComponents {
+  padding: 0px 0px;
+  text-align: center;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: center; /* Canh giữa theo chiều ngang */
+  align-items: center; /* Canh giữa theo chiều dọc */
+  .nav-item {
+    background: #17c728;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 15pt;
+    padding: 8px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 20px;
+    box-shadow: 0 0 10px black;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #367c38;
+    }
+  }
+}
+.table {
+  width: 100%;
+  .table-form-hover {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+    margin: 0 auto;
+    tr {
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+        width: 25%;
+        a {
+          background: none;
+          .button-submit {
+            background-color: #4caf50;
+            color: white;
+            padding: 8px 15px;
+            font-weight: bold;
+            font-size: 12pt;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 2px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #367c38;
+            }
+          }
+        }
+      }
+      th {
+        color: black;
+        background-color: #f2f2f2;
+        padding: 8px;
+        font-weight: bold;
+        border-left: 1px solid white;
+        border-right: 1px solid black;
+      }
+      th:last-child {
+        border-right: 1px solid rgb(255, 255, 255);
+      }
+      td:last-child {
+        text-align: center;
+        width: 25%;
+      }
+    }
+    tr:nth-child(2n + 1) {
+      td {
+        background: rgba(255, 255, 255, 0.159);
+      }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.14);
+      }
+    }
+    tr:nth-child(2n) {
+      td {
+        background: rgba(86, 86, 86, 0.159);
+      }
+      &:hover {
+        background-color: rgba(86, 86, 86, 0.559);
+      }
+    }
+  }
+  tr {
+    td {
+      form .rowForm {
+        margin: 0 auto;
+        width: 45%;
+        display: grid;
+        margin-bottom: 10px;
+        grid-template-columns: repeat(12, 1fr);
+        label {
+          grid-column: span 3;
+          font-weight: bold;
+          text-align: right;
+          padding-right: 10px;
+          align-self: center;
+        }
+        input {
+          padding: 5px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        input:not([type]) {
+          grid-column: span 6;
+          background: white;
+          color: black;
+        }
+        .buttonArea {
+          grid-column: span 6;
+          display: flex; /* Sử dụng Flexbox */
+          justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+          gap: 10px; /* Khoảng cách giữa các phần tử */
+        }
+        .buttonArea {
+          input[type="submit"] {
+            flex: 1;
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+            /* Hiệu ứng khi hover */
+            &:hover {
+              background-color: #387a3b; /* Đổi màu nền khi hover */
+            }
+          }
+          input[type="button"] {
+            flex: 1;
+            margin-left: 5px;
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            /* Hiệu ứng khi hover */
+            &:hover {
+              background-color: #387a3b; /* Đổi màu nền khi hover */
+            }
+          }
+        }
+        .errorMes {
+          grid-column: span 3;
+          color: red;
+          margin-left: 5px;
+          align-self: center;
+          font-size: 11pt;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}

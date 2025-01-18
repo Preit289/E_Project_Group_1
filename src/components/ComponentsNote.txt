@@ -1,0 +1,2 @@
+Storage type: UI components which can be usable with lots of times
+Ex: Scroll Bar, Table, Button, Form, Navigation Bar, Card
