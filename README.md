@@ -1,4 +1,4 @@
-# **Keanburg Park**
+# eProject Semester 1: _Keanburg Park_
 
 =======================================
 
