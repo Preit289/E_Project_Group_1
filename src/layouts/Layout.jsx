@@ -7,6 +7,7 @@ const Layout = () => {
           <div className="info-contact"></div>
           <div className="flag-lang"></div>
           <div className="social-icon"></div>
+          <div>Visitor Count Area</div>
         </div>
         <nav className="Navbar">
           <Link to="/">Svg of Homepage</Link>
