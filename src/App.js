@@ -1,7 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CreateCRUD from './components/CreateCRUD';
-import ReadCRUD from './components/ReadCRUD';
-import UpdateCRUD from './components/UpdateCRUD';
+import HomePage from './pages/HomePage'
+import AboutUs from './pages/AboutUs';
+import Gallery from './pages/Gallery';
+import Activity from './pages/Activity';
+import Tickets from './pages/Tickets';
+import ContactUs from './pages/ContactUs';
 import Notfound from './pages/Notfound';
 import Layout from './layout/Layout';
 import "./App.scss"
@@ -11,9 +14,12 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={<ReadCRUD />} />
-            <Route path="/create" element={<CreateCRUD />} />
-            <Route path="/update" element={<UpdateCRUD />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/activity" element={<Activity />} />
+            <Route path="/tickets" element={<Tickets />} />
+            <Route path="/contactus" element={<ContactUs />} />
             <Route path="*" element={<Notfound />} />
           </Route>
         </Routes>
