@@ -6,8 +6,8 @@ import Activity from './pages/Activity';
 import Tickets from './pages/Tickets';
 import ContactUs from './pages/ContactUs';
 import Notfound from './pages/Notfound';
-import Layout from './layout/Layout';
-import "./App.scss"
+import Layout from './layouts/Layout';
+import "./styles/App.scss"
 const App = () => {
   return (
     <>
