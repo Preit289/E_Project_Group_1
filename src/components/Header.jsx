@@ -32,9 +32,28 @@ const Header = () => {
       <div className="Header">
         <div className="top-Navbar">
           <div className="info-contact">Info Contact</div>
-          <div className="flag-lang">Lang</div>
           <div className="social-icon">Social</div>
-          <div>Visitor Count Area</div>
+          <div className="SearchArea">Search icon</div>
+          <div className="visitor-count">
+            <div>Visitor count:</div>
+            <div className="website-counter">{visitCount}</div>
+            <button
+              //   Remember block code after remove Reset button
+              style={{
+                backgroundColor: "red", // background -> backgroundColor
+                color: "white", // Màu chữ
+                padding: "0px 20px", // Khoảng cách bên trong nút
+                margin: "0px 20px",
+                border: "none", // Loại bỏ viền
+                borderRadius: "5px", // Bo góc
+                cursor: "pointer", // Hiển thị con trỏ khi di chuột qua
+              }}
+              id="reset"
+              onClick={handleReset}
+            >
+              Reset
+            </button>
+          </div>
         </div>
         <nav className="Navbar">
           <Link to="/">Svg of Homepage</Link>
@@ -48,13 +67,6 @@ const Header = () => {
           <Link to="/tickets">Tickets</Link>
           <Link to="/contactus">Contact Us</Link>
         </nav>
-        <div className="visitor-count">
-          <div>Visitor count:</div>
-          <div className="website-counter">{visitCount}</div>
-          <button id="reset" onClick={handleReset}>
-            Reset
-          </button>
-        </div>
       </div>
     </>
   );
