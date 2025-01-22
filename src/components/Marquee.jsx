@@ -18,8 +18,10 @@ const Marquee = () => {
   }, []); // Chỉ chạy một lần sau khi component được render
   return (
     <>
-      <div className="MarqueeText" ref={marqueeTickerRef}>
-        <span ref={spanRef}>Here is scrolling continous ticker sample</span>
+      <div className="MarqueeArea">
+        <div className="MarqueeText" ref={marqueeTickerRef}>
+          <span ref={spanRef}>Here is scrolling continous ticker sample</span>
+        </div>
       </div>
     </>
   );

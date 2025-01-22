@@ -1,21 +1,24 @@
-.MarqueeText {
+.MarqueeArea {
   display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  padding: 20px 100px;
+  padding: 10px 100px;
   background: #4c4141;
-  span {
+  .MarqueeText {
     display: inline-block;
-    width: max-content;
-    font-size: 40pt;
-    animation: marquee 12s linear infinite;
-    @keyframes marquee {
-      0% {
-        transform: translateX(var(--x));
-      }
-      100% {
-        transform: translateX(-100%);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    span {
+      display: inline-block;
+      width: max-content;
+      font-size: 40pt;
+      animation: marquee 12s linear infinite;
+      @keyframes marquee {
+        0% {
+          transform: translateX(var(--x));
+        }
+        100% {
+          transform: translateX(-100%);
+        }
       }
     }
   }
