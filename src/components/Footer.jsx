@@ -1,5 +1,4 @@
 import "../styles/components/Footer.scss";
-import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
@@ -91,7 +90,7 @@ const Footer = () => {
         </div>
         <div className="bot-Footer">
           <div className="webcopyright">
-            &copy; Copyright 2023 SUOI TIEN THEME PARK. All Rights Reserved
+            &copy; Copyright 2025 KEANSBURG PARK. All Rights Reserved
           </div>
           <div className="devcopyright">Developed by Group 1</div>
         </div>
