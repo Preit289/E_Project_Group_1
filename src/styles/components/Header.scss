@@ -1,11 +1,41 @@
 .Header {
   background: #2d2d2d;
   display: block;
-  padding: 10px 10px;
+  padding: 10px 100px;
   .top-Navbar {
     display: flex;
+    padding: 5px 0px;
+    .info-contact {
+      width: 30%;
+    }
+    .social-icon {
+      width: 25%;
+    }
+    .SearchArea {
+      width: 30%;
+    }
     .visitor-count {
       display: flex;
+      .website-counter {
+        text-align: center;
+        width: 30px;
+        margin: 0px 0px 0px 0px;
+      }
+    }
+  }
+  .Navbar {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    a {
+      padding: 0px 0px;
+      .bxs-home {
+        font-size: 20pt;
+      }
+      .logo {
+        background: #2d2d2d;
+      }
     }
   }
 }

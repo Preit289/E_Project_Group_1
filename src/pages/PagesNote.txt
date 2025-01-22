@@ -1,2 +1,0 @@
-Storage Type: Contains pages in website
-Ex: Home, Services, About, Contact,..

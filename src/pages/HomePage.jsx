@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+import "../styles/pages/HomePage.scss";
 const HomePage = () => {
+  // Setup title for page
+  useEffect(() => {
+    document.title = "Homepage | KEANSBURG PARK";
+  }, []);
   return (
     <>
       <h1>Home</h1>

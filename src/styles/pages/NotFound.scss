@@ -1,0 +1,13 @@
+button#ReturnHP {
+  background: red; // background -> backgroundColor
+  color: white; // Màu chữ
+  padding: 5px 20px; // Khoảng cách bên trong nút
+  margin: 5px 20px;
+  border: none; // Loại bỏ viền
+  border-radius: 5px; // Bo góc
+  cursor: pointer; // Hiển thị con trỏ khi di chuột qua
+  &:hover {
+    background-color: #9d1616;
+    color: #fff;
+  }
+}

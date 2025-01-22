@@ -1,2 +1,0 @@
-Storage Type: Contains basic layout in a Website
-Ex: Header, Footer, Sessions, Main Layout, Admin Layout

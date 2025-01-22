@@ -1,5 +1,55 @@
 .Footer {
-  background: #2d2d2d;
   display: block;
-  padding: 10px 10px;
+
+  .top-Footer {
+    background: #2d2d2d;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mid-Footer {
+    box-sizing: border-box;
+    background: #2d2d2d;
+    padding: 10px 100px;
+    display: flex;
+    width: 100%;
+    .list-Footer {
+      width: 20%;
+      .title-list {
+        font-style: italic;
+        font-size: 20pt;
+      }
+      .line-list {
+        height: 1px;
+        width: 100px;
+        background: white;
+        margin: 10px 0;
+      }
+      .content-list {
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            margin: 5px 0;
+            a {
+              color: white;
+              text-decoration: none;
+              &:hover {
+                color: #f1f1f1;
+              }
+            }
+          }
+        }
+      }
+    }
+    .list-Footer:last-child {
+      width: 40%;
+    }
+  }
+  .bot-Footer {
+    background: #2d2d2d9f;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

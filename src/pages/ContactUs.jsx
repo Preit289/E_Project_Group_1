@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+import "../styles/pages/ContactUs.scss";
 const ContactUs = () => {
+  // Setup title for page
+  useEffect(() => {
+    document.title = "Contact Us | KEANSBURG PARK";
+  }, []);
   return (
     <>
       <h1>Contact Us</h1>

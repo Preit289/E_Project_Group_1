@@ -1,5 +1,6 @@
 import React, { useState, useLayoutEffect, useRef, useCallback } from "react";
 import "../styles/components/Header.scss";
+import "../../node_modules/boxicons/css/boxicons.min.css";
 import { Link } from "react-router-dom";
 const Header = () => {
   const [visitCount, setVisitCount] = useState(0);
@@ -42,8 +43,8 @@ const Header = () => {
               style={{
                 backgroundColor: "red", // background -> backgroundColor
                 color: "white", // Màu chữ
-                padding: "0px 20px", // Khoảng cách bên trong nút
-                margin: "0px 20px",
+                padding: "3px 20px", // Khoảng cách bên trong nút
+                margin: "0px 0px 10px 5px",
                 border: "none", // Loại bỏ viền
                 borderRadius: "5px", // Bo góc
                 cursor: "pointer", // Hiển thị con trỏ khi di chuột qua
@@ -56,7 +57,9 @@ const Header = () => {
           </div>
         </div>
         <nav className="Navbar">
-          <Link to="/">Svg of Homepage</Link>
+          <Link to="/">
+            <i className="bx bxs-home"></i>
+          </Link>
           <Link to="/" className="logo">
             Logo
           </Link>
