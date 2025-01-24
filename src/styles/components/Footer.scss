@@ -5,6 +5,14 @@
     padding: 10px 100px;
     display: flex;
     justify-content: space-between;
+    .logo-Footer {
+      background-color: #f0f0f0;
+      img {
+        width: 150px;
+        height: auto;
+        margin: auto auto;
+      }
+    }
   }
   .mid-Footer {
     box-sizing: border-box;

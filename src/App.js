@@ -5,6 +5,7 @@ import Gallery from './pages/Gallery';
 import Activity from './pages/Activity';
 import Tickets from './pages/Tickets';
 import ContactUs from './pages/ContactUs';
+import Review from './pages/Review';
 import Notfound from './pages/Notfound';
 import Layout from './layouts/Layout';
 import "./styles/App.scss"
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/activity" element={<Activity />} />
             <Route path="/tickets" element={<Tickets />} />
             <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/review" element={<Review />} />
             <Route path="*" element={<Notfound />} />
           </Route>
         </Routes>

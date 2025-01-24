@@ -1,10 +1,9 @@
 .Header {
-  background: #2d2d2d;
   display: block;
-  padding: 10px 100px;
   .top-Navbar {
+    background: #a74848;
+    padding: 5px 100px;
     display: flex;
-    padding: 5px 0px;
     .info-contact {
       width: 30%;
     }
@@ -24,18 +23,33 @@
     }
   }
   .Navbar {
+    background: #2d2d2d;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 5px 0px;
+    align-items: center;
+    padding: 5px 100px;
     a {
       padding: 0px 0px;
+      text-decoration: none;
       .bxs-home {
         font-size: 20pt;
       }
-      .logo {
-        background: #2d2d2d;
+    }
+    .logo {
+      background-color: #f0f0f0;
+      img {
+        width: 150px;
+        height: auto;
+        margin: auto auto;
       }
+    }
+    .buy-tickets {
+      background: #a50f0f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 5px;
     }
   }
 }

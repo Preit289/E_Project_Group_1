@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useRef, useCallback } from "react";
 import "../styles/components/Header.scss";
 import "../../node_modules/boxicons/css/boxicons.min.css";
+import logo from "../assets/img/keansburg-logo.png";
 import { Link } from "react-router-dom";
 const Header = () => {
   const [visitCount, setVisitCount] = useState(0);
@@ -60,15 +61,18 @@ const Header = () => {
           <Link to="/">
             <i className="bx bxs-home"></i>
           </Link>
-          <Link to="/" className="logo">
-            Logo
-          </Link>
           <Link to="/">Home</Link>
           <Link to="/aboutus">About Us</Link>
           <Link to="/gallery">Gallery</Link>
+          <Link to="/" className="logo">
+            <img src={logo} alt="Keanburg Park" />
+          </Link>
           <Link to="/activity">Activity</Link>
-          <Link to="/tickets">Tickets</Link>
+          <Link to="/review">Review</Link>
           <Link to="/contactus">Contact Us</Link>
+          <Link to="/tickets" className="buy-tickets">
+            <i className="bx bxs-purchase-tag"></i>Tickets
+          </Link>
         </nav>
       </div>
     </>

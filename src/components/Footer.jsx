@@ -1,20 +1,26 @@
 import "../styles/components/Footer.scss";
+import logo from "../assets/img/keansburg-logo.png";
 const Footer = () => {
   return (
     <>
       <div className="Footer">
         <div className="top-Footer">
-          <div className="logo-Footer">Logo</div>
+          <div className="logo-Footer">
+            <img src={logo} alt="Keanburg Park" />
+          </div>
           <div className="email-form">Contact me by email here</div>
         </div>
         <div className="mid-Footer">
           <div className="list-Footer">
-            <div className="title-list">About Us</div>
+            <div className="title-list">Navigation</div>
             <div className="line-list"></div>
             <div className="content-list">
               <ul>
                 <li>
-                  <a href="/aboutus">Introduce</a>
+                  <a href="/aboutus">About Us</a>
+                </li>
+                <li>
+                  <a href="/gallery">Gallery</a>
                 </li>
                 <li>
                   <a href="/activity">Activity</a>
@@ -23,7 +29,7 @@ const Footer = () => {
                   <a href="/contactus">Contact Us</a>
                 </li>
                 <li>
-                  <a href="/gallery">Gallery</a>
+                  <a href="/review">Review</a>
                 </li>
                 <li>
                   <a href="/tickets">Tickets</a>
@@ -32,47 +38,38 @@ const Footer = () => {
             </div>
           </div>
           <div className="list-Footer">
-            <div className="title-list">About Us</div>
+            <div className="title-list">Legal Informations</div>
             <div className="line-list"></div>
             <div className="content-list">
               <ul>
                 <li>
-                  <a href="/aboutus">Introduce</a>
+                  <a href="/disclamer">Disclamer</a>
                 </li>
                 <li>
-                  <a href="/activity">Activity</a>
+                  <a href="/privatepolicy">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="/contactus">Contact Us</a>
-                </li>
-                <li>
-                  <a href="/gallery">Gallery</a>
-                </li>
-                <li>
-                  <a href="/tickets">Tickets</a>
+                  <a href="/bookingterm">Ticket Booking Terms</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="list-Footer">
-            <div className="title-list">About Us</div>
+            <div className="title-list">Contact</div>
             <div className="line-list"></div>
             <div className="content-list">
               <ul>
                 <li>
-                  <a href="/aboutus">Introduce</a>
+                  <div className="icon-contact"></div>
+                  <div>Address</div>
                 </li>
                 <li>
-                  <a href="/activity">Activity</a>
+                  <div className="icon-contact"></div>
+                  <div>Phone number</div>
                 </li>
                 <li>
-                  <a href="/contactus">Contact Us</a>
-                </li>
-                <li>
-                  <a href="/gallery">Gallery</a>
-                </li>
-                <li>
-                  <a href="/tickets">Tickets</a>
+                  <div className="icon-contact"></div>
+                  <div>Email</div>
                 </li>
               </ul>
             </div>
