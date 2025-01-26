@@ -1,0 +1,25 @@
+.MarqueeArea {
+  display: block;
+  padding: 10px 100px;
+  background: #4c4141;
+  .MarqueeText {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    span {
+      display: inline-block;
+      width: max-content;
+      font-size: 15pt;
+      animation: marquee 12s linear infinite;
+      @keyframes marquee {
+        0% {
+          transform: translateX(var(--x));
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+}
