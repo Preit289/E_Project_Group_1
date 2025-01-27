@@ -1,9 +1,16 @@
 .Header {
   display: block;
+
   .top-Navbar {
     background: #a74848;
     padding: 5px 100px;
     display: flex;
+    transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+    &.hidden {
+      opacity: 0;
+      height: 0;
+      display: none;
+    }
     .info-contact {
       width: 30%;
     }
@@ -29,6 +36,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 100px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
     a {
       padding: 0px 0px;
       text-decoration: none;
