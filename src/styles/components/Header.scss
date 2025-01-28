@@ -1,10 +1,12 @@
 .Header {
   display: block;
-
+  color: white;
   .top-Navbar {
-    background: #a74848;
+    background: #128125;
     padding: 5px 100px;
     display: flex;
+    align-items: center;
+    box-sizing: border-box;
     transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
     &.hidden {
       opacity: 0;
@@ -22,10 +24,32 @@
     }
     .visitor-count {
       display: flex;
+      width: 15%;
+      align-items: center;
+      justify-content: flex-end;
+      .TitleVisitor {
+        background-color: #ffd700;
+        padding: 5px 5px;
+        color: black;
+        border-top-left-radius: 10px; /* Bo góc trái trên */
+        border-bottom-left-radius: 10px; /* Bo góc trái dưới */
+        box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.3); /* Thêm đổ bóng */
+        z-index: 1; /* Đặt lớp z-index */
+        display: flex;
+        align-items: center;
+        i {
+          padding: 0px 5px;
+        }
+      }
       .website-counter {
         text-align: center;
+        color: rgb(255, 255, 255);
+        background-color: #0b3832;
         width: 30px;
+        padding: 5px 5px;
         margin: 0px 0px 0px 0px;
+        border-top-right-radius: 10px; /* Bo góc trái trên */
+        border-bottom-right-radius: 10px; /* Bo góc trái dưới */
       }
     }
   }
@@ -47,12 +71,13 @@
     a {
       padding: 0px 0px;
       text-decoration: none;
+      color: white;
       .bxs-home {
         font-size: 20pt;
       }
     }
     .logo {
-      background-color: #f0f0f0;
+      // background-color: #f0f0f0;
       img {
         width: 150px;
         height: auto;

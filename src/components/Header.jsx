@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import "../styles/components/Header.scss";
 import "../../node_modules/boxicons/css/boxicons.min.css";
-import logo from "../assets/img/keansburg-logo.png";
+import logo from "../assets/img/logo.svg";
 import { Link } from "react-router-dom";
 const Header = () => {
   const [visitCount, setVisitCount] = useState(0);
@@ -64,15 +64,17 @@ const Header = () => {
           <div className="social-icon">Social</div>
           <div className="SearchArea">Search icon</div>
           <div className="visitor-count">
-            <div>Visitor count:</div>
+            <div className="TitleVisitor">
+              <i class="bx bxs-user-account"></i>Visits
+            </div>
             <div className="website-counter">{visitCount}</div>
             <button
               //   Remember block code after remove Reset button
               style={{
-                backgroundColor: "red", // background -> backgroundColor
+                backgroundColor: "#131f2a", // background -> backgroundColor
                 color: "white", // Màu chữ
-                padding: "3px 20px", // Khoảng cách bên trong nút
-                margin: "0px 0px 10px 5px",
+                padding: "3px 10px", // Khoảng cách bên trong nút
+                margin: "10px 0px 10px 5px",
                 border: "none", // Loại bỏ viền
                 borderRadius: "5px", // Bo góc
                 cursor: "pointer", // Hiển thị con trỏ khi di chuột qua

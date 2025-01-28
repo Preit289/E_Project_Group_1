@@ -1,12 +1,14 @@
 import "../styles/components/Footer.scss";
-import logo from "../assets/img/keansburg-logo.png";
+import logo from "../assets/img/logo.svg";
 const Footer = () => {
   return (
     <>
       <div className="Footer">
         <div className="top-Footer">
           <div className="logo-Footer">
-            <img src={logo} alt="Keanburg Park" />
+            <a href="/">
+              <img src={logo} alt="Keanburg Park" />
+            </a>
           </div>
           <div className="email-form">Contact me by email here</div>
         </div>
