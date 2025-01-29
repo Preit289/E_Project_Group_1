@@ -1,5 +1,6 @@
 import "../styles/components/Footer.scss";
 import logo from "../assets/img/logo.svg";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
@@ -45,13 +46,13 @@ const Footer = () => {
             <div className="content-list">
               <ul>
                 <li>
-                  <a href="/disclamer">Disclamer</a>
+                  <Link to="/aboutus#disclamer-info">Disclamer</Link>
                 </li>
                 <li>
-                  <a href="/privatepolicy">Privacy Policy</a>
+                  <a href="#privacy-policy">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="/bookingterm">Ticket Booking Terms</a>
+                  <a href="#booking-terms">Ticket Booking Terms</a>
                 </li>
               </ul>
             </div>

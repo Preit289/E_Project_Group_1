@@ -7,7 +7,7 @@ const Activity = () => {
   }, []);
   return (
     <>
-      <h1>Activity</h1>
+      <h1 id="activity">Activity</h1>
       <p
         style={{
           fontSize: "50px",

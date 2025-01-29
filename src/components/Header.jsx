@@ -36,6 +36,26 @@ const Header = () => {
     localStorage.setItem("page_view", 0); // Đặt lại giá trị trong localStorage thành 0
     setVisitCount(0); // Đặt lại visitCount thành 0
   }, []);
+  // Move scrollToTop outside useEffect
+  const scrollToTop = useCallback(() => {
+    const scrollDuration = 1000; // Thời gian scroll (ms)
+    const scrollHeight = window.scrollY;
+    const startTime = performance.now();
+
+    const animateScroll = (currentTime) => {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / scrollDuration, 1);
+      const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
+      window.scrollTo(0, scrollHeight * (1 - easeInOutQuad(progress)));
+
+      if (timeElapsed < scrollDuration) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       // Remember measure height of top-Navbar again when edit Styles {100: 100px}
@@ -103,6 +123,12 @@ const Header = () => {
             <i className="bx bxs-purchase-tag"></i>Tickets
           </Link>
         </nav>
+      </div>
+      <div
+        className={`ScrolltoTop ${isTopNavbarHidden ? "" : "hidden"}`}
+        onClick={scrollToTop}
+      >
+        <i class="bx bxs-chevrons-up"></i>
       </div>
     </>
   );
