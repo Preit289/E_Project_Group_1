@@ -22,14 +22,15 @@ const HeaderTitle = () => {
       case "tickets":
         return "Tickets";
       default:
-        return "Home";
+        return null; // Return null for unknown paths
     }
   };
 
   // Hàm để lấy title dựa trên route
   const getTitle = () => {
     const path = location.pathname;
-    return getPageTitle(path.slice(1));
+    const title = getPageTitle(path.slice(1));
+    return title !== null ? title : "Page Not Found";
   };
 
   // Hàm để tạo breadcrumb
@@ -40,10 +41,10 @@ const HeaderTitle = () => {
       const isLast = index === pathnames.length - 1;
       const title = getPageTitle(name);
       return isLast ? (
-        <span key={name}>{title}</span>
+        <span key={name}>{title || "404 Error"}</span>
       ) : (
         <Link key={name} to={routeTo}>
-          {title}
+          {title || "404 Error"}
         </Link>
       );
     });
@@ -51,14 +52,18 @@ const HeaderTitle = () => {
   };
 
   if (isHomePage) {
-    return null; // or return <></>; to render nothing
+    return null;
   }
+  const breadcrumbs = getBreadcrumbs();
+
   return (
     <>
       <div className="header-title">
         <h1 className="title-session">{getTitle()}</h1>
         <nav className="breadcrumb-nav">
-          <Link to="/">Home</Link> <span> &gt; </span> {getBreadcrumbs()}
+          <Link to="/">Home</Link>
+          {breadcrumbs.length > 0 && <span> &gt; </span>}
+          {breadcrumbs}
         </nav>
       </div>
     </>
