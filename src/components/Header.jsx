@@ -107,7 +107,6 @@ const Header = () => {
           </div>
         </div>
         <div className={`Navbar ${isNavbarFixed ? "fixed" : ""}`}>
-          div.
           <Link to="/">
             <i className="bx bxs-home"></i>
           </Link>
