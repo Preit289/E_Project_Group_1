@@ -106,7 +106,8 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <nav className={`Navbar ${isNavbarFixed ? "fixed" : ""}`}>
+        <div className={`Navbar ${isNavbarFixed ? "fixed" : ""}`}>
+          div.
           <Link to="/">
             <i className="bx bxs-home"></i>
           </Link>
@@ -122,7 +123,7 @@ const Header = () => {
           <Link to="/tickets" className="buy-tickets">
             <i className="bx bxs-purchase-tag"></i>Tickets
           </Link>
-        </nav>
+        </div>
       </div>
       <div
         className={`ScrolltoTop ${isTopNavbarHidden ? "" : "hidden"}`}
