@@ -13,9 +13,10 @@ const HomePage = () => {
             fontSize: "15pt",
             padding: "50px 0px",
             textAlign: "justify",
+            lineHeight: "1.6",
           }}
         >
-          (HomePage) Welcome to Keanburg Amusement Park, where thrills,
+          <b>(HomePage)</b> Welcome to Keanburg Amusement Park, where thrills,
           laughter, and unforgettable memories come to life! Step into a world
           of vibrant colors, exhilarating rides, and captivating attractions,
           designed to spark joy and create lasting moments for guests of all

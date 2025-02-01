@@ -13,11 +13,13 @@ const Notfound = () => {
   };
   return (
     <>
-      <h1>404 Error</h1>
-      <h4>This page could not be found </h4>
-      <button id="ReturnHP" onClick={returnHomePage}>
-        Homepage
-      </button>
+      <div className="Notfound">
+        <div className="titleNotfound">404 Error</div>
+        <div className="messageNotfound">This page could not be found </div>
+        <button id="ReturnHP" onClick={returnHomePage}>
+          Homepage
+        </button>
+      </div>
     </>
   );
 };

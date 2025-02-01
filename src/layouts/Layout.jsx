@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HeaderTitle from "../components/HeaderTitle";
+// import HeaderTitle from "../components/HeaderTitle";
 import Marquee from "../components/Marquee";
 import useScrollTo from "../hooks/useScrollTo";
 
@@ -16,7 +16,7 @@ const Layout = () => {
     <>
       <Header />
       <div id="full-content" ref={contentRef}>
-        <HeaderTitle />
+        {/* <HeaderTitle /> */}
         <section>
           <Outlet />
         </section>

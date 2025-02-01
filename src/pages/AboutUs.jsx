@@ -27,9 +27,10 @@ const AboutUs = () => {
         </h1>
         <p
           style={{
-            fontSize: "50px",
-            padding: "0px",
+            fontSize: "15pt",
+            padding: "50px 0px",
             textAlign: "justify",
+            lineHeight: "1.6",
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -43,9 +44,10 @@ const AboutUs = () => {
         </h1>
         <p
           style={{
-            fontSize: "50px",
-            padding: "0px",
+            fontSize: "15pt",
+            padding: "50px 0px",
             textAlign: "justify",
+            lineHeight: "1.6",
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -59,9 +61,10 @@ const AboutUs = () => {
         </h1>
         <p
           style={{
-            fontSize: "50px",
-            padding: "0px",
+            fontSize: "15pt",
+            padding: "50px 0px",
             textAlign: "justify",
+            lineHeight: "1.6",
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -75,9 +78,10 @@ const AboutUs = () => {
         </h1>
         <p
           style={{
-            fontSize: "50px",
-            padding: "0px",
+            fontSize: "15pt",
+            padding: "50px 0px",
             textAlign: "justify",
+            lineHeight: "1.6",
           }}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do

@@ -82,7 +82,6 @@ const Header = () => {
         <div className={`top-Navbar ${isTopNavbarHidden ? "hidden" : ""}`}>
           <div className="info-contact">Info Contact</div>
           <div className="social-icon">Social</div>
-          <div className="SearchArea">Search icon</div>
           <div className="visitor-count">
             <div className="TitleVisitor">
               <i class="bx bxs-user-account"></i>Visits
