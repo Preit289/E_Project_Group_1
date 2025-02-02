@@ -81,10 +81,12 @@ const Footer = () => {
             <div className="title-list">Introduce</div>
             <div className="line-list"></div>
             <div className="content-list">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              Keansburg Amusement Park offers a vibrant escape with a classic
+              boardwalk feel. Experience thrilling rides, family-friendly
+              attractions, and a lively arcade, all while savoring delicious
+              seaside treats. From the soaring heights of the Ferris wheel to
+              the friendly competition of skill games, Keansburg provides a day
+              of unforgettable fun and memories for everyone..
             </div>
           </div>
         </div>

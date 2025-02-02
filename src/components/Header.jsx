@@ -80,8 +80,44 @@ const Header = () => {
     <>
       <div className="Header">
         <div className={`top-Navbar ${isTopNavbarHidden ? "hidden" : ""}`}>
-          <div className="info-contact">Info Contact</div>
-          <div className="social-icon">Social</div>
+          <ul className="list-nav-item">
+            <li>
+              <i class="bx bxs-map"></i>
+              <span>
+                <a href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5">
+                  275 Beachway Ave, Keansburg, NJ 07734
+                </a>
+              </span>
+            </li>
+            <li>
+              <i class="bx bxs-phone"></i>
+              <span>
+                <a href="tel:(732) 495-1400">(732) 495-1400</a>
+              </span>
+            </li>
+            <li>
+              <i class="bx bxs-envelope"></i>
+              <span>
+                <a href="mailto:info@keansburgamusementpark.com">
+                  info@keansburgamusementpark.com
+                </a>
+              </span>
+            </li>
+          </ul>
+          <ul className="list-nav-item">
+            <li>
+              <i class="bx bxl-facebook"></i>
+            </li>
+            <li>
+              <i class="bx bxl-tiktok"></i>
+            </li>
+            <li>
+              <i class="bx bxl-instagram"></i>
+            </li>
+            <li>
+              <i class="bx bxl-youtube"></i>
+            </li>
+          </ul>
           <div className="visitor-count">
             <div className="TitleVisitor">
               <i class="bx bxs-user-account"></i>Visits
