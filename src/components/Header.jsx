@@ -59,7 +59,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Remember measure height of top-Navbar again when edit Styles {100: 100px}
-      if (window.scrollY > 53) {
+      if (window.scrollY > 90) {
         // Cuộn quá 100px thì ẩn
         setIsTopNavbarHidden(true);
         setIsNavbarFixed(true);
@@ -79,7 +79,7 @@ const Header = () => {
   return (
     <>
       <div className="Header">
-        <div className={`top-Navbar ${isTopNavbarHidden ? "hidden" : ""}`}>
+        <div className="top-Navbar">
           <ul className="list-nav-item">
             <li>
               <i class="bx bxs-map"></i>
