@@ -7,7 +7,7 @@ body {
   }
   
   .header {
-    background-color: #4CAF50;
+    background-color: #a74848;
     color: white;
     padding: 20px;
     text-align: center;
@@ -69,7 +69,7 @@ body {
   
   button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #a74848;
     color: white;
     border: none;
     border-radius: 5px;
@@ -78,4 +78,10 @@ body {
   
   button:hover {
     background-color: #45a049;
+  }
+
+  p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
   }

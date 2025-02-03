@@ -41,11 +41,22 @@ const Homepage = () => {
       </header>
 
       <main>
-        <section className="overview">
+        <section id="about" className="overview">
           <h2>About Keansburg Park</h2>
           <p>
-            Experience the family-friendly attractions, beautiful beach, and
-            exciting activities that Keansburg Park has to offer.
+            Keansburg Park, located in New Jersey, is a beloved destination
+            known for its family-friendly atmosphere, thrilling rides, and
+            stunning views of the Raritan Bay. Established in 1905, the park
+            combines rich history with modern attractions, making it a perfect
+            spot for visitors of all ages.
+          </p>
+          <p>
+            Whether you’re looking to relax on the free beach, enjoy
+            exhilarating joy rides, or indulge in delicious food, Keansburg Park
+            has something for everyone. The park also features an arcade with
+            classic games, a waterpark, batting cages, a fishing pier, and
+            exciting go-kart tracks. Every visit promises a day filled with fun
+            and adventure!
           </p>
         </section>
 
