@@ -79,3 +79,20 @@ body {
   button:hover {
     background-color: #45a049;
   }
+
+  p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .activities {
+    display: block; /* Ensure it's being displayed */
+  }
+  
+  ul li {
+    margin-bottom: 10px; /* Add space between list items */
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+  }
