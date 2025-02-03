@@ -31,6 +31,10 @@
         align-items: center;
         gap: 10px;
         list-style: none;
+        a {
+          color: white;
+          text-decoration: none;
+        }
         i {
           display: flex;
           justify-content: center;
