@@ -1,12 +1,15 @@
 import "../styles/components/Footer.scss";
-import logo from "../assets/img/keansburg-logo.png";
+import logo from "../assets/img/logo.svg";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
       <div className="Footer">
         <div className="top-Footer">
           <div className="logo-Footer">
-            <img src={logo} alt="Keanburg Park" />
+            <a href="/">
+              <img src={logo} alt="Keanburg Park" />
+            </a>
           </div>
           <div className="email-form">Contact me by email here</div>
         </div>
@@ -17,22 +20,22 @@ const Footer = () => {
             <div className="content-list">
               <ul>
                 <li>
-                  <a href="/aboutus">About Us</a>
+                  <Link to="/aboutus#full-content">About Us</Link>
                 </li>
                 <li>
-                  <a href="/gallery">Gallery</a>
+                  <Link to="/gallery#full-content">Gallery</Link>
                 </li>
                 <li>
-                  <a href="/activity">Activity</a>
+                  <Link to="/activity#full-content">Activity</Link>
                 </li>
                 <li>
-                  <a href="/contactus">Contact Us</a>
+                  <Link to="/contactus#full-content">Contact Us</Link>
                 </li>
                 <li>
-                  <a href="/review">Review</a>
+                  <Link to="/review#full-content">Review</Link>
                 </li>
                 <li>
-                  <a href="/tickets">Tickets</a>
+                  <Link to="/tickets#full-content">Tickets</Link>
                 </li>
               </ul>
             </div>
@@ -43,13 +46,13 @@ const Footer = () => {
             <div className="content-list">
               <ul>
                 <li>
-                  <a href="/disclamer">Disclamer</a>
+                  <Link to="/aboutus#disclamer-info">Disclamer</Link>
                 </li>
                 <li>
-                  <a href="/privatepolicy">Privacy Policy</a>
+                  <Link to="/aboutus#privacy-policy">Privacy Policy</Link>
                 </li>
                 <li>
-                  <a href="/bookingterm">Ticket Booking Terms</a>
+                  <Link to="/aboutus#booking-terms">Ticket Booking Terms</Link>
                 </li>
               </ul>
             </div>
@@ -78,10 +81,12 @@ const Footer = () => {
             <div className="title-list">Introduce</div>
             <div className="line-list"></div>
             <div className="content-list">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
+              Keansburg Amusement Park offers a vibrant escape with a classic
+              boardwalk feel. Experience thrilling rides, family-friendly
+              attractions, and a lively arcade, all while savoring delicious
+              seaside treats. From the soaring heights of the Ferris wheel to
+              the friendly competition of skill games, Keansburg provides a day
+              of unforgettable fun and memories for everyone..
             </div>
           </div>
         </div>

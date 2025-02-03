@@ -1,21 +1,38 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/components/Marquee.scss";
 const Marquee = () => {
-  // Tham chiếu đến phần tử .marquee-ticker và span
   const marqueeTickerRef = useRef(null);
   const spanRef = useRef(null);
 
-  // Tính toán giá trị x và cập nhật vào CSS
-  useEffect(() => {
+  // Add a state variable to trigger re-render
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // Function to calculate and update CSS variable
+  const calculateX = () => {
     const marqueeTicker = marqueeTickerRef.current;
     const span = spanRef.current;
     if (marqueeTicker && span) {
-      const marqueeWidth = marqueeTicker.offsetWidth; // Chiều rộng của .marquee-ticker
-      const x = marqueeWidth; // Thêm 100% width của .marquee-ticker
-      // Cập nhật giá trị x vào inline styles
+      const marqueeWidth = marqueeTicker.offsetWidth;
+      const x = marqueeWidth;
       span.style.setProperty("--x", `${x}px`);
     }
-  }, []); // Chỉ chạy một lần sau khi component được render
+  };
+
+  useEffect(() => {
+    calculateX(); // Initial calculation on mount
+
+    // Handle window resize
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth); // Update state to trigger re-render
+      calculateX();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Cleanup the listener on unmount
+    };
+  }, [windowWidth]);
   return (
     <>
       <div className="MarqueeArea">
