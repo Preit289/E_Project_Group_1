@@ -1,11 +1,19 @@
-import React, { useState, useLayoutEffect, useRef, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useCallback,
+} from "react";
 import "../styles/components/Header.scss";
 import "../../node_modules/boxicons/css/boxicons.min.css";
-import logo from "../assets/img/keansburg-logo.png";
+import logo from "../assets/img/logo.svg";
 import { Link } from "react-router-dom";
 const Header = () => {
   const [visitCount, setVisitCount] = useState(0);
   const isInitialMount = useRef(true); // Biến cờ để kiểm soát lần render đầu tiên
+  const [isTopNavbarHidden, setIsTopNavbarHidden] = useState(false);
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
   // Load visit count from localStorage and increment it
   useLayoutEffect(() => {
     if (isInitialMount.current) {
@@ -28,24 +36,100 @@ const Header = () => {
     localStorage.setItem("page_view", 0); // Đặt lại giá trị trong localStorage thành 0
     setVisitCount(0); // Đặt lại visitCount thành 0
   }, []);
+  // Move scrollToTop outside useEffect
+  const scrollToTop = useCallback(() => {
+    const scrollDuration = 1000; // Thời gian scroll (ms)
+    const scrollHeight = window.scrollY;
+    const startTime = performance.now();
 
+    const animateScroll = (currentTime) => {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / scrollDuration, 1);
+      const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
+      window.scrollTo(0, scrollHeight * (1 - easeInOutQuad(progress)));
+
+      if (timeElapsed < scrollDuration) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      // Remember measure height of top-Navbar again when edit Styles {100: 100px}
+      if (window.scrollY > 90) {
+        // Cuộn quá 100px thì ẩn
+        setIsTopNavbarHidden(true);
+        setIsNavbarFixed(true);
+      } else {
+        setIsTopNavbarHidden(false);
+        setIsNavbarFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup khi component unmount để tránh memory leaks
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <div className="Header">
         <div className="top-Navbar">
-          <div className="info-contact">Info Contact</div>
-          <div className="social-icon">Social</div>
-          <div className="SearchArea">Search icon</div>
+          <ul className="list-nav-item">
+            <li>
+              <i class="bx bxs-map"></i>
+              <span>
+                <a href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5">
+                  275 Beachway Ave, Keansburg, NJ 07734
+                </a>
+              </span>
+            </li>
+            <li>
+              <i class="bx bxs-phone"></i>
+              <span>
+                <a href="tel:(732) 495-1400">(732) 495-1400</a>
+              </span>
+            </li>
+            <li>
+              <i class="bx bxs-envelope"></i>
+              <span>
+                <a href="mailto:info@keansburgamusementpark.com">
+                  info@keansburgamusementpark.com
+                </a>
+              </span>
+            </li>
+          </ul>
+          <ul className="list-nav-item">
+            <li>
+              <i class="bx bxl-facebook"></i>
+            </li>
+            <li>
+              <i class="bx bxl-tiktok"></i>
+            </li>
+            <li>
+              <i class="bx bxl-instagram"></i>
+            </li>
+            <li>
+              <i class="bx bxl-youtube"></i>
+            </li>
+          </ul>
           <div className="visitor-count">
-            <div>Visitor count:</div>
+            <div className="TitleVisitor">
+              <i class="bx bxs-user-account"></i>Visits
+            </div>
             <div className="website-counter">{visitCount}</div>
             <button
               //   Remember block code after remove Reset button
               style={{
-                backgroundColor: "red", // background -> backgroundColor
+                backgroundColor: "#131f2a", // background -> backgroundColor
                 color: "white", // Màu chữ
-                padding: "3px 20px", // Khoảng cách bên trong nút
-                margin: "0px 0px 10px 5px",
+                padding: "3px 10px", // Khoảng cách bên trong nút
+                margin: "10px 0px 10px 5px",
                 border: "none", // Loại bỏ viền
                 borderRadius: "5px", // Bo góc
                 cursor: "pointer", // Hiển thị con trỏ khi di chuột qua
@@ -57,7 +141,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <nav className="Navbar">
+        <div className={`Navbar ${isNavbarFixed ? "fixed" : ""}`}>
           <Link to="/">
             <i className="bx bxs-home"></i>
           </Link>
@@ -73,7 +157,13 @@ const Header = () => {
           <Link to="/tickets" className="buy-tickets">
             <i className="bx bxs-purchase-tag"></i>Tickets
           </Link>
-        </nav>
+        </div>
+      </div>
+      <div
+        className={`ScrolltoTop ${isTopNavbarHidden ? "" : "hidden"}`}
+        onClick={scrollToTop}
+      >
+        <i class="bx bxs-chevrons-up"></i>
       </div>
     </>
   );
