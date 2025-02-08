@@ -36,8 +36,11 @@ const Homepage = () => {
   }, []);
   return (
     <>
-      <h1>Home</h1>
       <main>
+        <section>
+          <br />
+          <br />
+        </section>
         <section id="about" className="overview">
           <h2>About Keansburg Park</h2>
           <p>Keansburg Park, located in New Jersey, is a beloved destination known for its family-friendly atmosphere, thrilling rides, and stunning views of the Raritan Bay. Established in 1905, the park combines rich history with modern attractions, making it a perfect spot for visitors of all ages.</p>
