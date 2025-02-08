@@ -84,7 +84,11 @@ const Header = () => {
             <li>
               <i class="bx bxs-map"></i>
               <span>
-                <a href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5">
+                <a
+                  href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   275 Beachway Ave, Keansburg, NJ 07734
                 </a>
               </span>
@@ -106,16 +110,40 @@ const Header = () => {
           </ul>
           <ul className="list-nav-item">
             <li>
-              <i class="bx bxl-facebook"></i>
+              <a
+                href="https://www.facebook.com/KeansburgAmusementRunawayRapids"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bx bxl-facebook"></i>
+              </a>
             </li>
             <li>
-              <i class="bx bxl-tiktok"></i>
+              <a
+                href="https://www.tiktok.com/@keansburgamusementpark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bx bxl-tiktok"></i>
+              </a>
             </li>
             <li>
-              <i class="bx bxl-instagram"></i>
+              <a
+                href="https://www.instagram.com/keansburg_amusementpark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bx bxl-instagram"></i>
+              </a>
             </li>
             <li>
-              <i class="bx bxl-youtube"></i>
+              <a
+                href="https://www.youtube.com/@keansburgamusementparkruna6333"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bx bxl-youtube"></i>
+              </a>
             </li>
           </ul>
           <div className="visitor-count">

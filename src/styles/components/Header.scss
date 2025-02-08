@@ -1,7 +1,11 @@
+:root {
+  --header-height: 90px;
+  --navbar-height: calc(var(--header-height) * 2 / 3);
+}
 .Header {
   display: block;
   color: white;
-  height: 90px;
+  height: var(--header-height);
   position: relative;
   background: #128125;
   .top-Navbar {
@@ -27,6 +31,10 @@
         align-items: center;
         gap: 10px;
         list-style: none;
+        a {
+          color: white;
+          text-decoration: none;
+        }
         i {
           display: flex;
           justify-content: center;
@@ -101,9 +109,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 100px;
-    height: calc(100% * 2 / 3);
+    height: var(--navbar-height);
     margin: 0px 100px;
     border-radius: 50px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.57), 0px 0px 5px rgba(0, 0, 0, 0.57),
+      0px 0px 5px rgba(0, 0, 0, 0.57);
     // transition: all 0.3s ease-in-out;
     a {
       padding: 0px 0px;
@@ -115,10 +125,16 @@
     }
     .logo {
       img {
-        width: 200px;
+        width: 220px;
         height: auto;
         margin: auto auto;
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
         transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
       }
     }
     .buy-tickets {
@@ -131,15 +147,18 @@
     }
     &.fixed {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0px;
+      left: 0px;
       right: 0px;
-      height: 60px; /* Instead of  calc(100% * 2 / 3 * 90px) */
+      height: var(--navbar-height);
       z-index: 1;
       margin: 0px 100px;
       .logo {
         img {
           transform: translateY(15px);
+          &:hover {
+            transform: scale(1.1) translateY(15px);
+          }
         }
       }
     }
