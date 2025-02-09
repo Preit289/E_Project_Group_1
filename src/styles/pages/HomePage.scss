@@ -94,3 +94,17 @@ body {
     font-size: 16px;
     line-height: 1.5;
   }
+
+  .content-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between the video and text if needed */
+  }
+  
+  .centered-video {
+    width: 60%;
+  }
+  
+  .text-content {
+    flex: 1;
+  }

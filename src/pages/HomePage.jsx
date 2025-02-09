@@ -29,6 +29,7 @@
 import React from "react";
 import { useEffect } from "react";
 import "../styles/pages/HomePage.scss";
+import video from "../assets/video/kap-website-banner-video-reduced.mp4";
 
 const Homepage = () => {
   useEffect(() => {
@@ -41,23 +42,34 @@ const Homepage = () => {
           <br />
           <br />
         </section>
+
         <section id="about" className="overview">
-          <h2>About Keansburg Park</h2>
-          <p>
-            Keansburg Park, located in New Jersey, is a beloved destination
-            known for its family-friendly atmosphere, thrilling rides, and
-            stunning views of the Raritan Bay. Established in 1905, the park
-            combines rich history with modern attractions, making it a perfect
-            spot for visitors of all ages.
-          </p>
-          <p>
-            Whether you’re looking to relax on the free beach, enjoy
-            exhilarating joy rides, or indulge in delicious food, Keansburg Park
-            has something for everyone. The park also features an arcade with
-            classic games, a waterpark, batting cages, a fishing pier, and
-            exciting go-kart tracks. Every visit promises a day filled with fun
-            and adventure!
-          </p>
+          <div className="content-container">
+            <video className="centered-video" controls loop autoPlay>
+              <source src={video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="text-content">
+              <h2>About Keansburg Park</h2>
+              <br />
+              <p>
+                Keansburg Park, located in New Jersey, is a beloved destination
+                known for its family-friendly atmosphere, thrilling rides, and
+                stunning views of the Raritan Bay. Established in 1905, the park
+                combines rich history with modern attractions, making it a
+                perfect spot for visitors of all ages.
+              </p>
+              <br />
+              <p>
+                Whether you’re looking to relax on the free beach, enjoy
+                exhilarating joy rides, or indulge in delicious food, Keansburg
+                Park has something for everyone. The park also features an
+                arcade with classic games, a waterpark, batting cages, a fishing
+                pier, and exciting go-kart tracks. Every visit promises a day
+                filled with fun and adventure!
+              </p>
+            </div>
+          </div>
         </section>
 
         <section className="events">
