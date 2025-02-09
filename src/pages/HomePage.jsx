@@ -78,9 +78,24 @@ const Homepage = () => {
         </section>
 
         <section className="location-contact">
-          <h2>Location & Contact Details</h2>
-          <p>Address: 123 Park Avenue, Keansburg, NJ</p>
-          <p>Phone: (123) 456-7890</p>
+          <div className="content-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9015870946305!2d-74.1346442!3d40.4553151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24ecd58443ccd%3A0x2137997ca2385d5!2sKeansburg%20Amusement%20Park!5e0!3m2!1sen!2s!4v1739073981853!5m2!1sen!2s"
+              width="60%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps Location"
+            ></iframe>
+            <div className="text-content">
+              <h2>Location & Contact Details</h2>
+              <br />
+              <p>Address: 123 Park Avenue, Keansburg, NJ</p>
+              <p>Phone: (123) 456-7890</p>
+            </div>
+          </div>
         </section>
 
         <section className="reviews">
