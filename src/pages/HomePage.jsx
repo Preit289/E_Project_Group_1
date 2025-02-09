@@ -30,6 +30,9 @@ import React from "react";
 import { useEffect } from "react";
 import "../styles/pages/HomePage.scss";
 import video from "../assets/video/kap-website-banner-video-reduced.mp4";
+import waterPark from "../assets/img/water-park.png"
+import rollercoaster from "../assets/img/rollercoaster.png"
+import slide from "../assets/img/giant-slide.png"
 
 const Homepage = () => {
   useEffect(() => {
@@ -72,6 +75,32 @@ const Homepage = () => {
           </div>
         </section>
 
+        <section id="activities" className="activities">
+          <h2>Activities</h2>
+          <br />
+          <br />
+          <div className="activites-row">
+            <div className="activity-tag">
+              <img src={waterPark} alt="water park" />
+              <div>
+                <p>Family water park</p>
+              </div>
+            </div>
+            <div className="activity-tag">
+              <img src={rollercoaster} alt="water park" />
+              <div>
+                <p>Amusement</p>
+              </div>
+            </div>
+            <div className="activity-tag">
+              <img src={slide} alt="water park" />
+              <div>
+                <p>Special offers</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="events">
           <h2>Upcoming Events & Activities</h2>
           <p>Check out our exciting upcoming events and activities.</p>
@@ -108,37 +137,7 @@ const Homepage = () => {
           <h2>Get Your Tickets Now</h2>
           <button>Buy Tickets</button>
         </section>
-
-        <section id="activities" className="activities">
-          <h2>Activities</h2>
-          <ul>
-            <li>
-              Beach: Enjoy a relaxing day on the free beach with beautiful
-              sunsets and historical charm.
-            </li>
-            <li>
-              Joy Rides: Experience classic amusement rides and pulse-pounding
-              coasters.
-            </li>
-            <li>
-              Dining: Savor a variety of food options available throughout the
-              park.
-            </li>
-            <li>
-              Arcades: Have fun with classic games like ski-ball, air hockey,
-              and more.
-            </li>
-            <li>
-              Waterpark: Dive into excitement at the Runaway Rapids Waterpark.
-            </li>
-            <li>Batting Cages: Test your swing at the batting cages.</li>
-            <li>
-              Fishing Pier: Spend a day fishing on the 2000-foot pier
-              overlooking the Raritan Bay.
-            </li>
-            <li>Go Karts: Feel the thrill of racing on the go-kart tracks.</li>
-          </ul>
-        </section>
+        
       </main>
     </>
   );

@@ -108,3 +108,25 @@ body {
   .text-content {
     flex: 1;
   }
+
+  .activites-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .activity-tag {
+    text-align: center;
+  }
+  
+  .activity-tag img {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .activity-tag div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
