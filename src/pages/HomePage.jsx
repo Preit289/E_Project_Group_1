@@ -30,9 +30,15 @@ import React from "react";
 import { useEffect } from "react";
 import "../styles/pages/HomePage.scss";
 import video from "../assets/video/kap-website-banner-video-reduced.mp4";
-import waterPark from "../assets/img/water-park.png"
-import rollercoaster from "../assets/img/rollercoaster.png"
-import slide from "../assets/img/giant-slide.png"
+import waterPark from "../assets/img/water-park.png";
+import rollercoaster from "../assets/img/rollercoaster.png";
+import slide from "../assets/img/giant-slide.png";
+import gokart from "../assets/img/gokart.jpg";
+import ride from "../assets/img/ride.jpeg";
+import game from "../assets/img/game.png";
+import beach from "../assets/img/beach.jpg";
+import cage from "../assets/img/battingCage.jpg";
+import fishing from "../assets/img/fishing.jpeg";
 
 const Homepage = () => {
   useEffect(() => {
@@ -53,7 +59,9 @@ const Homepage = () => {
               Your browser does not support the video tag.
             </video>
             <div className="text-content">
-              <h2>About Keansburg Park</h2>
+              <div className="redBlock">
+                <h2>Welcome to Keansburg Park</h2>
+              </div>
               <br />
               <p>
                 Keansburg Park, located in New Jersey, is a beloved destination
@@ -76,9 +84,42 @@ const Homepage = () => {
         </section>
 
         <section id="activities" className="activities">
-          <h2>Activities</h2>
+          <div className="redBlock">
+            <h2>What do we have?</h2>
+          </div>
           <br />
           <br />
+          <div className="container">
+            <div className="left-side">
+              <h1>Amusement</h1>
+            </div>
+            <div className="right-side">
+              <div className="image-container">
+                <img src={ride} alt="Rides" />
+                <div className="caption">Rides</div>
+              </div>
+              <div className="image-container">
+                <img src={cage} alt="Batting Cage" />
+                <div className="caption">Batting Cage</div>
+              </div>
+              <div className="image-container">
+                <img src={fishing} alt="Fishing Pier" />
+                <div className="caption">Fishing Pier</div>
+              </div>
+              <div className="image-container">
+                <img src={gokart} alt="Go-Karts" />
+                <div className="caption">Go-Karts</div>
+              </div>
+              <div className="image-container">
+                <img src={beach} alt="Beach" />
+                <div className="caption">Beach</div>
+              </div>
+              <div className="image-container">
+                <img src={game} alt="Carnival Games" />
+                <div className="caption">Carnival Games</div>
+              </div>
+            </div>
+          </div>
           <div className="activites-row">
             <div className="activity-tag">
               <img src={waterPark} alt="water park" />
@@ -102,7 +143,9 @@ const Homepage = () => {
         </section>
 
         <section className="events">
-          <h2>Upcoming Events & Activities</h2>
+          <div className="redBlock">
+            <h2>Upcoming Events & Activities</h2>
+          </div>
           <p>Check out our exciting upcoming events and activities.</p>
         </section>
 
@@ -119,7 +162,9 @@ const Homepage = () => {
               title="Google Maps Location"
             ></iframe>
             <div className="text-content">
-              <h2>Location & Contact Details</h2>
+              <div className="redBlock">
+                <h2>Location & Contact Details</h2>
+              </div>
               <br />
               <p>Address: 123 Park Avenue, Keansburg, NJ</p>
               <p>Phone: (123) 456-7890</p>
@@ -128,16 +173,19 @@ const Homepage = () => {
         </section>
 
         <section className="reviews">
-          <h2>Visitor Reviews</h2>
+          <div className="redBlock">
+            <h2>Visitor Reviews</h2>
+          </div>
           <p>"A wonderful experience for the whole family!"</p>
           <p>"Loved the rides and the beach. Can't wait to go back!"</p>
         </section>
 
         <section className="tickets">
-          <h2>Get Your Tickets Now</h2>
+          <div className="redBlock">
+            <h2>Get Your Tickets Now</h2>
+          </div>
           <button>Buy Tickets</button>
         </section>
-        
       </main>
     </>
   );
