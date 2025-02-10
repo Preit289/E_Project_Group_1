@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/E_Project_Group_1/static/css/main.4b429227.css",
+    "main.js": "/E_Project_Group_1/static/js/main.bc7ec84c.js",
+    "static/media/kap-website-banner-video-reduced.mp4": "/E_Project_Group_1/static/media/kap-website-banner-video-reduced.0a52b8697cca02b27204.mp4",
+    "static/media/logo.svg": "/E_Project_Group_1/static/media/logo.fa91cf2d5becf86fe28f805fa55be05b.svg",
+    "static/media/boxicons.svg": "/E_Project_Group_1/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/game.png": "/E_Project_Group_1/static/media/game.8e960f1f93cacb0ed77d.png",
+    "static/media/boxicons.eot": "/E_Project_Group_1/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/RobotoCondensed-VariableFont_wght.ttf": "/E_Project_Group_1/static/media/RobotoCondensed-VariableFont_wght.ff29b2791402495b1616.ttf",
+    "static/media/fishing.jpeg": "/E_Project_Group_1/static/media/fishing.7621caf6048f6cc53cfd.jpeg",
+    "static/media/boxicons.woff": "/E_Project_Group_1/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "/E_Project_Group_1/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/water-park.png": "/E_Project_Group_1/static/media/water-park.af2c36546abe04404180.png",
+    "static/media/giant-slide.png": "/E_Project_Group_1/static/media/giant-slide.58d2b06748f9603297b5.png",
+    "static/media/rollercoaster.png": "/E_Project_Group_1/static/media/rollercoaster.a9d926041ea606dfe275.png",
+    "static/media/boxicons.woff2": "/E_Project_Group_1/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "static/media/beach.jpg": "/E_Project_Group_1/static/media/beach.383fb4f1e991d5796952.jpg",
+    "static/media/gokart.jpg": "/E_Project_Group_1/static/media/gokart.97b046d8a2ca546916b0.jpg",
+    "static/media/battingCage.jpg": "/E_Project_Group_1/static/media/battingCage.fe40052c155e781eb0fb.jpg",
+    "static/media/ride.jpeg": "/E_Project_Group_1/static/media/ride.8e6d72e305a615d1add9.jpeg",
+    "index.html": "/E_Project_Group_1/index.html",
+    "main.4b429227.css.map": "/E_Project_Group_1/static/css/main.4b429227.css.map",
+    "main.bc7ec84c.js.map": "/E_Project_Group_1/static/js/main.bc7ec84c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b429227.css",
+    "static/js/main.bc7ec84c.js"
+  ]
+}
