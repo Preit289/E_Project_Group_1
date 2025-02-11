@@ -186,6 +186,9 @@ ul li {
   width: 100%;
   height: 270px; /* Adjusted to ensure uniform height */
 }
+.image-container:hover {
+  transform: scale(1.05); /* Scale up the entire image container when hovered */
+}
 
 .right-side img {
   width: 100%;
