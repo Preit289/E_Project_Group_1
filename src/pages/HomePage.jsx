@@ -17,6 +17,24 @@ import slides from "../assets/img/slides.jpg";
 import lockers from "../assets/img/lockers.png";
 import dining from "../assets/img/dining.png";
 import changing from "../assets/img/changingRoom.jpg";
+import CheesyPizza from "../assets/img/CheesyPizza.jpeg";
+import CJSpot from "../assets/img/CJSpot.jpeg";
+import CoastalIceCream from "../assets/img/CoastalIceCream.jpeg";
+import CottonCandy from "../assets/img/CottonCandy.jpg";
+import DippinDots from "../assets/img/DippinDots.jpeg";
+import FlavorBurst from "../assets/img/FlavorBurst.jpg";
+import Fries from "../assets/img/Fries.jpg";
+import FrozenFlavors from "../assets/img/FrozenFlavors.jpeg";
+import GeorgiaLemon from "../assets/img/GeorgiaLemon.jpeg";
+import Heidelberg from "../assets/img/Heidelberg.jpg";
+import LemonStand from "../assets/img/LemonStand.jpeg";
+import ToucanGrille from "../assets/img/ToucanGrille.jpg";
+import PavilionGrille from "../assets/img/PavilionGrille.jpg";
+import Nando from "../assets/img/Nando.jpeg";
+import ShaveIce from "../assets/img/ShaveIce.jpg";
+import Nickerson from "../assets/img/Nickerson.jpeg";
+import PizzaV from "../assets/img/PizzaV.jpeg";
+import Patio from "../assets/img/Patio.jpg";
 
 const Homepage = () => {
   useEffect(() => {
@@ -30,6 +48,7 @@ const Homepage = () => {
           <br />
         </section>
 
+        {/* Welcome */}
         <section id="about" className="overview">
           <div className="content-container">
             <video className="centered-video" controls loop autoPlay>
@@ -61,6 +80,7 @@ const Homepage = () => {
           </div>
         </section>
 
+        {/* Activities */}
         <section id="activities" className="activities">
           <div className="redBlock">
             <h2>2. What do we have?</h2>
@@ -129,8 +149,44 @@ const Homepage = () => {
               </div>
             </div>
           </div>
+          <div className="container">
+            <div className="left-side">
+              <h2>2.3. Dinning</h2>
+            </div>
+            <div className="right-side">
+              <div className="image-container">
+                <img src={Patio} alt="Patio" />
+                <div className="caption">The Patio</div>
+              </div>
+              <div className="image-container">
+                <img src={LemonStand} alt="Holly's Lemonade Stand" />
+                <div className="caption">Holly's Lemonade Stand</div>
+              </div>
+              <div className="image-container">
+                <img src={ToucanGrille} alt="Toucan Grille" />
+                <div className="caption">Toucan Grille</div>
+              </div>
+              <div className="image-container">
+                <img src={PavilionGrille} alt="Pavillion Bar & Grille" />
+                <div className="caption">Pavillion Bar & Grille</div>
+              </div>
+              <div className="image-container">
+                <img src={FlavorBurst} alt="Flavor Burst" />
+                <div className="caption">Flavor Burst</div>
+              </div>
+              <div className="image-container">
+                <img src={CottonCandy} alt="Cotton Candy" />
+                <div className="caption">Cotton Candy</div>
+              </div>
+              <div className="image-container">
+                <img src={Nando} alt="Mamba Nando's" />
+                <div className="caption">More ...</div>
+              </div>
+            </div>
+          </div>
         </section>
 
+        {/* Events */}
         <section className="events">
           <div className="redBlock">
             <h2>Upcoming Events & Activities</h2>
@@ -138,6 +194,7 @@ const Homepage = () => {
           <p>Check out our exciting upcoming events and activities.</p>
         </section>
 
+        {/* Location and Contacts */}
         <section className="location-contact">
           <div className="redBlock">
             <h2>Location & Contact Details</h2>
@@ -162,6 +219,7 @@ const Homepage = () => {
           </div>
         </section>
 
+        {/* Reviews */}
         <section className="reviews">
           <div className="redBlock">
             <h2>Visitor Reviews</h2>
@@ -170,6 +228,7 @@ const Homepage = () => {
           <p>"Loved the rides and the beach. Can't wait to go back!"</p>
         </section>
 
+        {/* Tickets */}
         <section className="tickets">
           <div className="redBlock">
             <h2>Get Your Tickets Now</h2>
