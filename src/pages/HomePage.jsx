@@ -52,7 +52,7 @@ const HomePage = () => {
           <div className="content-container">
             <video className="centered-video" controls loop autoPlay>
               <source
-                src="https://huggingface.co/dangvinh77/uYouPlus/resolve/main/kap-website-banner-video-reduced.mp4"
+                src="https://huggingface.co/dangvinh77/eproject/resolve/main/kap-website-banner-video-reduced.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
