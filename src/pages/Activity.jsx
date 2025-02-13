@@ -1,73 +1,114 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/pages/Activity.scss";
+
+// Placeholder image URLs (replace with your actual image paths)
+const attractiveZonesImage =
+  "https://placehold.co/800x400/?text=Attractive+Zones";
+const entertainmentImage = "https://placehold.co/800x400/?text=Entertainment";
+const restaurantsImage = "https://placehold.co/800x400/?text=Restaurants";
+
 const Activity = () => {
-  // Setup title for page
   useEffect(() => {
     document.title = "Activity | KEANSBURG PARK";
   }, []);
+
   return (
     <>
       <div className="Activity">
-        <p
-          style={{
-            fontSize: "15pt",
-            padding: "50px 0px",
-            textAlign: "justify",
-            lineHeight: "1.6",
-          }}
-        >
+        <p className="activity-intro">
+          {/* ... Your existing introduction text ... */}
           <b>(ActivityPage)</b> Embark on an adventure-filled journey through
-          our Activity page, your comprehensive guide to the thrilling rides,
-          captivating shows, and engaging attractions that make Keanburg
-          Amusement Park an unforgettable destination. Step into a world of
-          limitless possibilities, where every corner of our park offers a new
-          and exciting experience waiting to be discovered. Our Activity page is
-          designed to be your personal itinerary planner, providing you with the
-          essential details about each of our park's offerings, ensuring your
-          visit is filled with joy, laughter, and lasting memories. From
-          heart-stopping roller coasters that challenge your courage to
-          family-friendly adventures that ignite your imagination, we believe in
-          the power of shared experiences, and we've carefully curated our
-          activities to cater to guests of all ages and thrill levels. As you
-          explore our digital landscape, you’ll uncover a wealth of information,
-          including detailed descriptions of each ride, show schedules, and
-          performance times, along with height restrictions and accessibility
-          details. We understand that planning a day at an amusement park can be
-          a large undertaking, which is why we’ve designed our Activity page to
-          be both informative and user-friendly, making it easy for you to
-          access all the resources you need for a seamless and enjoyable day.
-          We've carefully organized each activity into themed sections, allowing
-          you to explore our different categories and find the perfect
-          experiences that match your interests and preferences. Our commitment
-          to your enjoyment extends beyond the physical boundaries of the park,
-          with this online portal helping you plan and prepare for a day of
-          excitement and wonder, fostering a sense of anticipation and
-          discovery. Here, you’ll discover not only what we offer but also the
-          passion and dedication that drives us to continually improve and
-          create new and exciting adventures for our valued guests. The design
-          of our Activity page reflects the lively and welcoming atmosphere of
-          the park, featuring clear descriptions and captivating images that
-          draw you in and spark your imagination. Whether you’re a seasoned
-          thrill-seeker or a first-time visitor, we encourage you to explore the
-          various sections of our Activity page, from our most daring roller
-          coasters to our gentle family rides, from our live shows to our
-          special events. We are constantly adding new features and attractions,
-          so be sure to check back frequently for updates and announcements. We
-          invite you to dive into our online guide and start planning your
-          unforgettable day. We believe that a visit to Keanburg is more than
-          just a day at an amusement park; it's a chance to escape the ordinary,
-          create cherished moments with friends and family, and embark on a
-          journey filled with laughter, wonder, and unforgettable adventures.
-          From the gentle sway of our classic carousel to the adrenaline rush of
-          our most daring roller coaster, Keanburg Amusement Park offers
-          something for everyone, and this page is your starting point for
-          planning your perfect day. We hope you'll join us soon to experience
-          the thrill, the excitement, and the genuine happiness that is
-          Keanburg. We’re confident that you’ll leave our park with a smile on
-          your face and memories that will last a lifetime. Thank you for
-          exploring our activities, and we look forward to welcoming you to
-          Keanburg!
+          our Activity page, your comprehensive and interactive guide to the
+          exhilarating world of Keansburg Amusement Park! We've meticulously
+          crafted this page to be your one-stop resource for planning the
+          perfect day of fun, excitement, and unforgettable memories. Whether
+          you're a seasoned thrill-seeker, a family looking for wholesome
+          entertainment, or a food enthusiast eager to explore delicious treats,
+          Keansburg has something special for everyone. This page is more than
+          just a list of attractions; it's a portal to discovering the heart and
+          soul of our park. We've designed it to be intuitive and easy to
+          navigate, allowing you to quickly find the activities that match your
+          interests and create a personalized itinerary. Imagine yourself
+          soaring through the air on one of our iconic roller coasters, the wind
+          whipping through your hair as you experience the ultimate adrenaline
+          rush. Picture the smiles and laughter of your children as they enjoy
+          our classic carousel or explore our family-friendly rides, designed to
+          spark joy and imagination. Beyond the thrills, Keansburg offers a
+          vibrant tapestry of entertainment. From live music performances that
+          will get you dancing to captivating stage shows that will leave you
+          mesmerized, our entertainment lineup is constantly evolving to provide
+          fresh and exciting experiences. And when hunger strikes, our diverse
+          range of restaurants and food stalls are ready to satisfy every
+          craving. From classic boardwalk fare like crispy fries and sweet
+          cotton candy to delicious sit-down meals offering a variety of
+          cuisines, you'll find the perfect fuel for your adventures. We
+          understand that planning a day at an amusement park can sometimes feel
+          overwhelming, which is why we've packed this Activity page with all
+          the essential information you need. You'll find detailed descriptions
+          of each ride and attraction, including height restrictions and
+          accessibility information, ensuring that everyone in your group can
+          participate safely and comfortably. We've also included show schedules
+          and performance times, so you can plan your day around your favorite
+          acts and avoid missing out on any of the excitement. At Keansburg
+          Amusement Park, we believe in the power of shared experiences and
+          creating lasting memories. We're more than just an amusement park;
+          we're a community, a place where families and friends come together to
+          connect, laugh, and create moments that they'll cherish for years to
+          come. We're constantly striving to enhance the visitor experience,
+          adding new attractions, improving our facilities, and ensuring that
+          every visit is better than the last. We invite you to use this
+          Activity page as your guide, to explore the possibilities, and to
+          start planning your unforgettable Keansburg adventure today. We can't
+          wait to welcome you and share the magic of our park with you! Browse
+          through our sections below, discover your next thrill, and get ready
+          for a day of pure fun!
         </p>
+
+        <div className="activity-section">
+          <Link to="/attractive-zones" className="section-link">
+            <div className="section-content">
+              <img
+                src={attractiveZonesImage}
+                alt="Attractive Zones"
+                className="section-image"
+              />
+              <h2>Attractive Zones</h2>
+              <p>Explore our thrilling rides and attractions...</p>
+              <span className="more-button">More</span>
+            </div>
+          </Link>
+        </div>
+
+        <div className="activity-section">
+          <Link to="/entertainment" className="section-link">
+            <div className="section-content">
+              <img
+                src={entertainmentImage}
+                alt="Entertainment"
+                className="section-image"
+              />
+              <h2>Entertainment</h2>
+              <p>Experience captivating live shows...</p>
+              <span className="more-button">More</span>
+            </div>
+          </Link>
+        </div>
+
+        <div className="activity-section">
+          <Link to="/restaurants" className="section-link">
+            <div className="section-content">
+              <img
+                src={restaurantsImage}
+                alt="Restaurants"
+                className="section-image"
+              />
+              <h2>Restaurants</h2>
+              <p>Satisfy your hunger with a variety of dining options...</p>
+              <span className="more-button">More</span>
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -1,0 +1,22 @@
+.Activity {
+  padding: 50px 0px;
+
+  .activity-section {
+    .section-link {
+      .section-content {
+        // ... (your existing styles for section-content)
+        display: flex; // Use flexbox for layout
+        flex-direction: column; // Stack items vertically
+        align-items: center; // Center items horizontally
+      }
+    }
+
+    .section-image {
+      width: 100%;
+      max-width: 400px; // Control image size
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  }
+}
