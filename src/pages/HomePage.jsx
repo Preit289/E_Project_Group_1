@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import Reviews from "./Home_Review";
 import "../styles/pages/HomePage.scss";
 import video from "../assets/video/kap-website-banner-video-reduced.mp4";
 import waterPark from "../assets/img/water-park.png";
@@ -191,7 +192,9 @@ const Homepage = () => {
           <div className="redBlock">
             <h2>Upcoming Events & Activities</h2>
           </div>
-          <p>Check out our exciting upcoming events and activities.</p>
+          <br />
+          <p>No upcoming events yet.</p>
+          <p>Stay tune!</p>
         </section>
 
         {/* Location and Contacts */}
@@ -220,12 +223,14 @@ const Homepage = () => {
         </section>
 
         {/* Reviews */}
-        <section className="reviews">
+
+        <section className="reviewSection">
           <div className="redBlock">
             <h2>Visitor Reviews</h2>
           </div>
-          <p>"A wonderful experience for the whole family!"</p>
-          <p>"Loved the rides and the beach. Can't wait to go back!"</p>
+          <div className="reviews">
+            <Reviews/>
+          </div>
         </section>
 
         {/* Tickets */}

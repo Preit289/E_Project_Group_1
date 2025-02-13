@@ -45,6 +45,7 @@ main {
 .events,
 .location-contact,
 .reviews,
+.reviewSection,
 .tickets,
 .activities {
   background-color: white;
@@ -146,6 +147,7 @@ ul li {
   color: #fff;
 }
 
+// Activities
 .container {
   display: flex;
   background-color: #ffffff;
@@ -209,3 +211,76 @@ ul li {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+// reviews
+.reviews{
+  display: flex;
+  flex-direction: row; /* Arrange review cards in a row */
+  flex-wrap: wrap; /* Allow review cards to wrap to the next line if they exceed the container width */
+  gap: 20px;
+  padding: 20px;
+}
+
+.review-card {
+  flex: 1 1 calc(33.333% - 20px); /* Make each card take up approximately a third of the container width, accounting for the gap */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding and border are included in the width calculation */
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.review-header p {
+  margin: 0;
+  color: #555;
+}
+
+.review-card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.review-card p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+}
+
+.circle.filled {
+  background-color: #4caf50;
+}
+
+.review-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #777;
+  font-size: 14px;
+}
+
