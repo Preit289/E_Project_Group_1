@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.header {
+  background-color: #a74848;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+main {
+  padding: 20px;
+}
+
+.overview,
+.events,
+.location-contact,
+.reviews,
+.tickets,
+.activities {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #a74848;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.activities {
+  display: block; /* Ensure it's being displayed */
+}
+
+ul li {
+  margin-bottom: 10px; /* Add space between list items */
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.content-container {
+  display: flex;
+  align-items: top;
+  gap: 20px; /* Adjust the gap between the video and text if needed */
+}
+
+.centered-video {
+  width: 60%;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.activites-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.activity-tag {
+  text-align: center;
+}
+
+.activity-tag img {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.activity-tag div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redBlock {
+  background-color: #810000;
+  padding: 7px 20px 7px;
+  border-radius: 20px;
+}
+
+.redBlock h2 {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.left-side {
+  background-color: #810000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 7px 20px 7px;
+  border-radius: 20px;
+  width: 18%;
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.left-side h2 {
+  margin: 0;
+  line-height: 1.2;
+  word-spacing: -0.2em;
+  color: white;
+}
+
+.right-side {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  align-items: stretch;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 270px; /* Adjusted to ensure uniform height */
+}
+.image-container:hover {
+  transform: scale(1.05); /* Scale up the entire image container when hovered */
+}
+
+.right-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will ensure the image is cropped to fill the container */
+  border-radius: 5px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
