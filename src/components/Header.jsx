@@ -176,70 +176,81 @@ const Header = () => {
           </div>
         </div>
         <div className={`Navbar ${isNavbarFixed ? "fixed" : ""}`}>
-          <Link to="/">
-            <i className="bx bxs-home"></i>
-          </Link>
-          <Link to="/">Home</Link>
-          {/* About Us with Dropdown */}
-          <Link
-            className="dropdown-container"
-            onMouseEnter={toggleNavItemDropdown}
-            onMouseLeave={toggleNavItemDropdown}
-          >
-            <NavLink to="/aboutus">
-              {/* Use NavLink */}
-              About Us
-            </NavLink>
-            {isNavItemDropdownOpen && (
-              <div className="dropdown-menu">
-                <Link to="/aboutus/disclaimer">Disclaimer</Link>
-                <Link to="/aboutus/privacy-policy">Policy</Link>
-                <Link to="/aboutus/tickets-term">Booking Terms</Link>
-              </div>
-            )}
-          </Link>
-          {/* Gallery with Dropdown */}
-          <Link
-            className="dropdown-container"
-            onMouseEnter={toggleNavItemDropdown}
-            onMouseLeave={toggleNavItemDropdown}
-          >
-            <NavLink to="/gallery">
-              {/* Use NavLink */}
-              Gallery
-            </NavLink>
-            {isNavItemDropdownOpen && (
-              <div className="dropdown-menu">
-                <Link to="/gallery/website">Website Gallery</Link>
-                <Link to="/gallery/visitor">Visitor Gallery</Link>
-              </div>
-            )}
-          </Link>
-          <Link to="/" className="logo">
-            <img src={logo} alt="Keanburg Park" />
-          </Link>
-          <Link
-            className="dropdown-container"
-            onMouseEnter={toggleNavItemDropdown}
-            onMouseLeave={toggleNavItemDropdown}
-          >
-            <NavLink to="/activity">
-              {/* Use NavLink */}
-              Activity
-            </NavLink>
-            {isNavItemDropdownOpen && (
-              <div className="dropdown-menu">
-                <Link to="/activity/attractive-zones">Attractive Zones</Link>
-                <Link to="/activity/entertainment">Entertainment</Link>
-                <Link to="/activity/restaurants">Restaurants</Link>
-              </div>
-            )}
-          </Link>
-          <Link to="/review">Review</Link>
-          <Link to="/contactus">Contact Us</Link>
-          <Link to="/tickets" className="buy-tickets">
-            <i className="bx bxs-purchase-tag"></i>Tickets
-          </Link>
+          <div className="Navbar-content">
+            <div className="side-navbar">
+              <Link to="/">
+                <i className="bx bxs-home"></i>
+              </Link>
+
+              {/* About Us with Dropdown */}
+              <Link
+                className="dropdown-container"
+                onMouseEnter={toggleNavItemDropdown}
+                onMouseLeave={toggleNavItemDropdown}
+              >
+                <NavLink to="/aboutus">
+                  {/* Use NavLink */}
+                  About Us
+                </NavLink>
+                {isNavItemDropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link to="/aboutus/disclaimer">Disclaimer</Link>
+                    <Link to="/aboutus/privacy-policy">Policy</Link>
+                    <Link to="/aboutus/tickets-term">Booking Terms</Link>
+                  </div>
+                )}
+              </Link>
+              {/* Gallery with Dropdown */}
+              <Link
+                className="dropdown-container"
+                onMouseEnter={toggleNavItemDropdown}
+                onMouseLeave={toggleNavItemDropdown}
+              >
+                <NavLink to="/gallery">
+                  {/* Use NavLink */}
+                  Gallery
+                </NavLink>
+                {isNavItemDropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link to="/gallery/website">Website Gallery</Link>
+                    <Link to="/gallery/visitor">Visitor Gallery</Link>
+                  </div>
+                )}
+              </Link>
+
+              <Link
+                className="dropdown-container"
+                onMouseEnter={toggleNavItemDropdown}
+                onMouseLeave={toggleNavItemDropdown}
+              >
+                <NavLink to="/activity">
+                  {/* Use NavLink */}
+                  Activity
+                </NavLink>
+                {isNavItemDropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link to="/activity/attractive-zones">
+                      Attractive Zones
+                    </Link>
+                    <Link to="/activity/entertainment">Entertainment</Link>
+                    <Link to="/activity/restaurants">Restaurants</Link>
+                  </div>
+                )}
+              </Link>
+            </div>
+            <div className="logo-navbar">
+              <Link to="/" className="logo">
+                <img src={logo} alt="Keanburg Park" />
+              </Link>
+            </div>
+            <div className="side-navbar">
+              <Link to="/review">Review</Link>
+              <Link to="/contactus">Contact Us</Link>
+              <Link to="/tickets" className="buy-tickets">
+                <i className="bx bxs-purchase-tag"></i>Tickets
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
       <div

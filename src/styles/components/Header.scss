@@ -107,67 +107,89 @@
     right: 0px;
     left: 0px;
     background: #131f2a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 100px;
+    padding: 0px 0px;
     height: var(--navbar-height);
     margin: 0px 100px;
     border-radius: 50px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.57), 0px 0px 5px rgba(0, 0, 0, 0.57),
       0px 0px 5px rgba(0, 0, 0, 0.57);
-    // transition: all 0.3s ease-in-out;
-    a {
-      padding: 20px 20px;
-      text-decoration: none;
-      color: white;
-      .bxs-home {
-        font-size: 20pt;
-      }
-    }
-    .logo {
-      img {
-        width: 220px;
-        height: auto;
-        margin: auto auto;
-        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-        transition: all 0.3s ease-in-out;
-      }
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-      }
-    }
-    .dropdown-container {
-      position: relative;
-      display: inline-block; // Để dropdown hiển thị đúng
-      .dropdown-menu {
-        display: block;
-        position: absolute;
-        top: 50px;
-        background-color: #131f2a;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        a {
-          color: rgb(255, 255, 255);
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
+    .Navbar-content {
+      display: grid;
+      grid-template-columns: 40% 20% 40%;
+      .logo-navbar {
+        height: var(--navbar-height);
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 0px 40px;
+        align-items: center;
+        .logo {
+          img {
+            width: 220px;
+            height: auto;
+            margin: auto auto;
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+            transition: all 0.3s ease-in-out;
+          }
           &:hover {
-            background-color: #826bc3;
+            img {
+              transform: scale(1.1);
+            }
           }
         }
       }
-    }
-    .buy-tickets {
-      background: #a50f0f;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 10px;
-      border-radius: 10px;
+      .side-navbar {
+        height: var(--navbar-height);
+        display: flex;
+        justify-content: space-around;
+        padding: 0px 40px;
+        align-items: center;
+        a {
+          padding: 20px 10px;
+          text-decoration: none;
+          color: white;
+          .bxs-home {
+            font-size: 20pt;
+          }
+        }
+
+        .dropdown-container {
+          position: relative;
+          display: inline-block; // Để dropdown hiển thị đúng
+          .dropdown-menu {
+            display: block;
+            position: absolute;
+            top: 50px;
+            background-color: #131f2a;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            a {
+              color: rgb(255, 255, 255);
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              &:hover {
+                background-color: #826bc3;
+              }
+            }
+          }
+        }
+        .buy-tickets {
+          background: #a50f0f;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 10px;
+          border-radius: 10px;
+        }
+
+        .active {
+          color: #ff0000;
+          font-weight: bold;
+          border-bottom: 2px solid #ff0000;
+        }
+      }
     }
     &.fixed {
       position: fixed;
@@ -185,11 +207,6 @@
           }
         }
       }
-    }
-    .active {
-      color: #ff0000;
-      font-weight: bold;
-      border-bottom: 2px solid #ff0000;
     }
   }
 }
