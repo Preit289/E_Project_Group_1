@@ -1,0 +1,52 @@
+.AboutUs {
+  padding: 50px 0px;
+  .introduction-text {
+    font-size: 15pt;
+    padding: 50px 0px;
+    text-align: justify;
+    line-height: 1.6;
+  }
+
+  .section-container {
+    display: flex;
+    flex-wrap: wrap; // Allow sections to wrap on smaller screens
+    justify-content: space-around; // Distribute sections evenly
+    gap: 20px; // Add some spacing between sections
+  }
+
+  .section {
+    width: calc(
+      50% - 20px
+    ); // Each section takes up a little less than half the width, accounting for the gap
+    // width: 300px; // Or set a fixed width if you prefer
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none; // Remove underline from links
+    color: inherit; // Inherit text color from parent
+    transition: transform 0.2s ease; // Add a subtle hover effect
+
+    @media (max-width: 768px) {
+      width: 100%; // On smaller screens, sections take up full width
+    }
+
+    &:hover {
+      transform: translateY(-5px); // Slightly lift the section on hover
+    }
+
+    img {
+      width: 100%; // Make images fill their container
+      height: auto; // Maintain aspect ratio
+      border-radius: 8px; // Optional: Add rounded corners
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}

@@ -1,74 +1,123 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/pages/Review.scss";
+
 const Review = () => {
-  // Setup title for page
   useEffect(() => {
     document.title = "Review | KEANSBURG PARK";
   }, []);
+
+  const [name, setName] = useState("");
+  const [rating, setRating] = useState(5); // Default to 5 stars
+  const [reviewText, setReviewText] = useState("");
+  const [submissionMessage, setSubmissionMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Basic validation
+    if (!name.trim() || !reviewText.trim()) {
+      setSubmissionMessage("Please fill in all fields.");
+      return;
+    }
+    // In a real application, you would send this data to a backend server
+    console.log("Submitted Review:", { name, rating, reviewText });
+    setSubmissionMessage("Thank you for your review!");
+
+    // Clear the form
+    setName("");
+    setRating(5);
+    setReviewText("");
+  };
+
   return (
-    <>
-      <div className="Review">
-        <p
-          style={{
-            fontSize: "15pt",
-            padding: "50px 0px",
-            textAlign: "justify",
-            lineHeight: "1.6",
-          }}
-        >
-          <b>(ReviewPage)</b> Delve into the authentic experiences of fellow
-          adventurers through our Review page, your gateway to unfiltered
-          feedback and genuine perspectives on Keanburg Amusement Park. Step
-          into a space where the voices of our valued guests come alive, sharing
-          their stories of thrills, laughter, and unforgettable moments. Our
-          Review page is designed to be a trusted resource, providing you with
-          real-life insights into the park’s diverse offerings and helping you
-          make informed decisions as you plan your visit. From candid
-          descriptions of the park's most daring roller coasters to heartfelt
-          reflections on family-friendly attractions, you’ll find a wealth of
-          feedback from guests of all ages and backgrounds. We believe in the
-          power of shared experiences, and this page is dedicated to fostering
-          transparency and community, allowing you to learn from the adventures
-          of others. As you explore our digital landscape, you’ll uncover a
-          spectrum of reviews, spanning detailed accounts of specific rides and
-          shows to more general impressions of the overall park experience. We
-          understand that planning a day at an amusement park is an undertaking,
-          which is why we’ve designed our Review page to be both comprehensive
-          and user-friendly, making it easy for you to navigate and find the
-          information that is most relevant to your interests. We encourage you
-          to browse through the various sections, filter reviews by activity
-          type or rating, and discover the different viewpoints that make up the
-          Keanburg experience. Our commitment to your enjoyment extends beyond
-          the physical boundaries of the park, with this online space providing
-          you with the knowledge and confidence you need to create your own
-          perfect day. Here, you’ll discover not only what our guests have to
-          say but also the passion and dedication that drives us to continually
-          improve and create new and exciting experiences for our valued guests.
-          The design of our Review page reflects the lively and welcoming
-          atmosphere of the park, featuring clear layouts and intuitive
-          navigation that encourage you to explore and engage with the content.
-          Whether you’re a seasoned thrill-seeker looking for tips on the best
-          rides or a first-time visitor seeking advice on family-friendly
-          activities, we invite you to delve into the insights offered by our
-          community. We are constantly working to improve our platform and
-          provide you with the most up-to-date and accurate feedback. We invite
-          you to explore our online collection of reviews, and learn from the
-          shared experiences of others as you plan your next adventure. We
-          believe that a visit to Keanburg is more than just a day at an
-          amusement park; it’s a chance to escape the ordinary, create cherished
-          moments with friends and family, and embark on a journey filled with
-          joy, wonder, and unforgettable experiences. From the gentle sway of
-          our classic carousel to the adrenaline rush of our most daring roller
-          coaster, Keanburg Amusement Park offers something for everyone, and
-          this page is your guide to discovering it all. We hope you’ll use this
-          valuable resource as you plan your day, and we look forward to
-          welcoming you to Keanburg soon. We’re confident that you’ll leave our
-          park with a smile on your face and memories that will last a lifetime.
-          Thank you for exploring our reviews, and we look forward to seeing you
-          at Keanburg!
+    <div className="Review">
+      <div className="review-content">
+        <p className="review-intro">
+          {/* ... Your existing introduction text ... */}
+          Tell you feeling about us here !!
         </p>
+
+        {/* Placeholder for existing reviews (you'd fetch these from a database) */}
+        <div className="existing-reviews">
+          <h3>Recent Reviews</h3>
+          <div className="review">
+            <h4>John Doe</h4>
+            <p>Rating: ★★★★★</p>
+            <p>Great park! Had a wonderful time with the family.</p>
+          </div>
+          <div className="review">
+            <h4>Jane Smith</h4>
+            <p>Rating: ★★★★☆</p>
+            <p>Fun rides, but the lines were a bit long.</p>
+          </div>
+          {/* ... more placeholder reviews ... */}
+        </div>
+
+        {/* Review Submission Form */}
+        <div className="review-form">
+          <h3>Submit Your Review</h3>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="rating">Rating:</label>
+              <select
+                id="rating"
+                value={rating}
+                onChange={(e) => setRating(parseInt(e.target.value, 10))}
+              >
+                <option value={5}>★★★★★</option>
+                <option value={4}>★★★★☆</option>
+                <option value={3}>★★★☆☆</option>
+                <option value={2}>★★☆☆☆</option>
+                <option value={1}>★☆☆☆☆</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="reviewText">Review:</label>
+              <textarea
+                id="reviewText"
+                value={reviewText}
+                onChange={(e) => setReviewText(e.target.value)}
+                required
+                rows={4} // Added rows for better textarea size
+              />
+            </div>
+            {submissionMessage && (
+              <p className="submission-message">{submissionMessage}</p>
+            )}
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
       </div>
-    </>
+
+      <aside className="review-sidebar">
+        <h3>Explore More</h3>
+        <ul>
+          <li>
+            <Link to="/attractive-zones">Attractive Zones</Link>
+          </li>
+          <li>
+            <Link to="/entertainment">Entertainment</Link>
+          </li>
+          <li>
+            <Link to="/restaurants">Restaurants</Link>
+          </li>
+          <li>
+            <Link to="/submit-review">Submit Review</Link>
+          </li>
+        </ul>
+      </aside>
+    </div>
   );
 };
 

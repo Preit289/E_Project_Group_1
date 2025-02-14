@@ -1,12 +1,13 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/pages/Activity.scss";
 import ParkMap from "../assets/img/MapOnly.png";
 import ParkInfo from "./Activity_ParkInfo";
 const Activity = () => {
-  // Setup title for page
   useEffect(() => {
     document.title = "Activity | KEANSBURG PARK";
   }, []);
+
   return (
     <>
       <main>

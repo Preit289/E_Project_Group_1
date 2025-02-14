@@ -8,7 +8,7 @@ import React, {
 import "../styles/components/Header.scss";
 import "../../node_modules/boxicons/css/boxicons.min.css";
 import logo from "../assets/img/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const [visitCount, setVisitCount] = useState(0);
   const isInitialMount = useRef(true); // Biến cờ để kiểm soát lần render đầu tiên
@@ -76,6 +76,12 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [isNavItemDropdownOpen, setIsNavItemDropdownOpen] = useState(false);
+
+  const toggleNavItemDropdown = () => {
+    setIsNavItemDropdownOpen(!isNavItemDropdownOpen);
+  };
   return (
     <>
       <div className="Header">
@@ -174,12 +180,61 @@ const Header = () => {
             <i className="bx bxs-home"></i>
           </Link>
           <Link to="/">Home</Link>
-          <Link to="/aboutus">About Us</Link>
-          <Link to="/gallery">Gallery</Link>
+          {/* About Us with Dropdown */}
+          <Link
+            className="dropdown-container"
+            onMouseEnter={toggleNavItemDropdown}
+            onMouseLeave={toggleNavItemDropdown}
+          >
+            <NavLink to="/aboutus">
+              {/* Use NavLink */}
+              About Us
+            </NavLink>
+            {isNavItemDropdownOpen && (
+              <div className="dropdown-menu">
+                <Link to="/aboutus/disclaimer">Disclaimer</Link>
+                <Link to="/aboutus/privacy-policy">Policy</Link>
+                <Link to="/aboutus/tickets-term">Booking Terms</Link>
+              </div>
+            )}
+          </Link>
+          {/* Gallery with Dropdown */}
+          <Link
+            className="dropdown-container"
+            onMouseEnter={toggleNavItemDropdown}
+            onMouseLeave={toggleNavItemDropdown}
+          >
+            <NavLink to="/gallery">
+              {/* Use NavLink */}
+              Gallery
+            </NavLink>
+            {isNavItemDropdownOpen && (
+              <div className="dropdown-menu">
+                <Link to="/gallery/website">Website Gallery</Link>
+                <Link to="/gallery/visitor">Visitor Gallery</Link>
+              </div>
+            )}
+          </Link>
           <Link to="/" className="logo">
             <img src={logo} alt="Keanburg Park" />
           </Link>
-          <Link to="/activity">Activity</Link>
+          <Link
+            className="dropdown-container"
+            onMouseEnter={toggleNavItemDropdown}
+            onMouseLeave={toggleNavItemDropdown}
+          >
+            <NavLink to="/activity">
+              {/* Use NavLink */}
+              Activity
+            </NavLink>
+            {isNavItemDropdownOpen && (
+              <div className="dropdown-menu">
+                <Link to="/activity/attractive-zones">Attractive Zones</Link>
+                <Link to="/activity/entertainment">Entertainment</Link>
+                <Link to="/activity/restaurants">Restaurants</Link>
+              </div>
+            )}
+          </Link>
           <Link to="/review">Review</Link>
           <Link to="/contactus">Contact Us</Link>
           <Link to="/tickets" className="buy-tickets">

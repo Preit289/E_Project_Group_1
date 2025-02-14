@@ -1,0 +1,120 @@
+.Tickets {
+  .tickets-intro {
+    font-size: 15pt;
+    padding: 50px 0px;
+    text-align: justify;
+    line-height: 1.6;
+  }
+  .ticket-options {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .ticket-type-selection,
+    .family-size-selection,
+    .quantity-selection,
+    .payment-options,
+    .credit-card-form,
+    .billing-info {
+      margin-bottom: 15px;
+      text-align: center;
+
+      .ticket-button {
+        // Style for buttons with images
+        display: inline-flex;
+        flex-direction: column; // Stack image and text vertically
+        align-items: center; // Center content horizontally
+        padding: 10px;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+        cursor: pointer;
+        width: auto; // Adjust as needed
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+        img {
+          margin-bottom: 5px; // Space between image and text
+          width: 100%; // Make the images fill their container
+          max-width: 200px; // But don't let them get too big
+          height: auto; // Maintain aspect ratio
+        }
+
+        &.active {
+          background-color: #007bff;
+          color: white;
+          border-color: #007bff;
+        }
+        &:hover {
+          background-color: #0056b3;
+          color: white;
+        }
+      }
+
+      button {
+        // General button styling (for payment options)
+        padding: 10px 15px;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+        cursor: pointer;
+
+        &.active {
+          background-color: #007bff;
+          color: white;
+          border-color: #007bff;
+        }
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+      label {
+        margin-right: 10px; // Add some spacing between label and select
+      }
+
+      select,
+      input[type="number"],
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%; // Use full width within their container
+        box-sizing: border-box; // Include padding and border in width
+      }
+    }
+
+    .price-display {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .submission-message {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .add-to-cart-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+
+      &:hover {
+        background-color: #1e7e34;
+      }
+    }
+  }
+}
