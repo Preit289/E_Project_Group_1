@@ -159,3 +159,34 @@ img {
 .go-karts li::before {
   content: counter(gk-item) "gk"; /* Custom numbering format for Go Karts */
 }
+
+// Hover card
+
+.hover-card {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none; /* Prevent card from interfering with mouse events */
+  z-index: 10;
+  color: black; /* Ensure text color is visible */
+  max-width: 300px; /* Adjust the max-width as needed */
+}
+
+.hover-card h4 {
+  margin: 0 0 10px;
+  color: black; /* Ensure title color is visible */
+}
+
+.hover-card img {
+  width: 100%; /* Make the image as wide as the card */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+  border-radius: 5px; /* Add some rounding to the image corners if desired */
+}
+
+.hover-card p {
+  margin: 0;
+}
