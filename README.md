@@ -1,4 +1,4 @@
-# **[Topic Name (Placeholder)]**
+# eProject Semester 1: _Keanburg Park_
 
 =======================================
 
@@ -12,8 +12,8 @@
 | No  | Roll No        | Full Name      | Note   |
 | --- | -------------- | -------------- | ------ |
 | 1   | Student1614909 | Hồ An Thịnh    | Leader |
-| 2   | Student1614910 | Phạm Đăng Vinh |        |
-| 3   | Student1614911 | Hoàng Như Hậu  |        |
+| 2   | Student1614911 | Hoàng Như Hậu  |        |
+| 3   | Student1614910 | Phạm Đăng Vinh |        |
 
 =======================================  
 **Documentations**: [Placeholder]
