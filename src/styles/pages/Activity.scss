@@ -69,6 +69,14 @@ img {
   padding: 0;
   margin: 0;
   counter-reset: item; /* Initialize counter */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.category-card:hover ul {
+  max-height: 3000px; /* Adjust based on the number of items */
+  transition: max-height 0.5s ease-in;
 }
 
 .category-card ul li {
@@ -82,7 +90,7 @@ img {
 }
 
 .category-card ul li:hover {
-  transform: scale(1.05); /* Scale up the item when hovered */
+  transform: scale(1.05) translateX(10px); /* Scale up the item when hovered */
 }
 
 .category-card ul li::before {

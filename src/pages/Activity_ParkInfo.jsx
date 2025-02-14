@@ -3,6 +3,7 @@ import { useState } from "react";
 import "../styles/pages/Activity.scss";
 import FrozenFlavors from "../assets/img/FrozenFlavors.jpeg";
 
+// Data for activities
 const parkInfo = {
   coolStuff: [
     {
@@ -716,6 +717,7 @@ const ParkInfo = () => {
             </li>
           ))}
         </ul>
+        <br />
         <h3>Go Karts</h3>
         <ul className="go-karts">
           {parkInfo.goKarts.map((item, index) => (
