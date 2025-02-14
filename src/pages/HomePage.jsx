@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import Reviews from "./Home_Review";
 import "../styles/pages/HomePage.scss";
-import video from "../assets/video/kap-website-banner-video-reduced.mp4";
 import waterPark from "../assets/img/water-park.png";
 import rollercoaster from "../assets/img/rollercoaster.png";
 import slide from "../assets/img/giant-slide.png";
@@ -53,7 +52,7 @@ const Homepage = () => {
         <section id="about" className="overview">
           <div className="content-container">
             <video className="centered-video" controls loop autoPlay>
-              <source src={video} type="video/mp4" />
+              <source src="https://jacobspace.sfo3.cdn.digitaloceanspaces.com/Keansburg/kap-website-banner-video-reduced.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="text-content">
