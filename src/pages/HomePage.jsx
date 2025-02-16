@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import Reviews from "./Home_Review";
+import Reviews from "../components/Home_Review";
 import "../styles/pages/HomePage.scss";
 import waterPark from "../assets/img/water-park.png";
 import rollercoaster from "../assets/img/rollercoaster.png";
