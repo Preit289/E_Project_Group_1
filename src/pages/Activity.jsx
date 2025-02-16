@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/pages/Activity.scss";
+import ParkMap from "../assets/img/MapOnly.png";
+import ParkInfo from "../components/Activity_ParkInfo";
 
 // Placeholder image URLs (replace with your actual image paths)
 const attractiveZonesImage =
   "https://placehold.co/800x400/?text=Attractive+Zones";
 const entertainmentImage = "https://placehold.co/800x400/?text=Entertainment";
 const restaurantsImage = "https://placehold.co/800x400/?text=Restaurants";
-
 const Activity = () => {
   useEffect(() => {
     document.title = "Activity | KEANSBURG PARK";
@@ -110,6 +111,21 @@ const Activity = () => {
           </Link>
         </div>
       </div>
+      <main>
+        <br /><br />
+        <div className="redBlock">
+          <h2>Keansburg Park map</h2>
+        </div>
+        <br />
+        <div className="Activity">
+          <div className="park-info-container">
+            <ParkInfo />
+          </div>
+          <div className="map-container">
+            <img src={ParkMap} alt="Keansburg-Map" />
+          </div>
+        </div>
+      </main>
     </>
   );
 };
