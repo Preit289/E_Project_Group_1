@@ -22,7 +22,7 @@ import CottonCandy from "../assets/img/CottonCandy.jpg";
 import DippinDots from "../assets/img/DippinDots.jpeg";
 import FlavorBurst from "../assets/img/FlavorBurst.jpg";
 import Fries from "../assets/img/Fries.jpg";
-import FrozenFlavors from "../assets/img/FrozenFlavors.jpeg";
+import FrozenFlavors from "../assets/img/coolstuff/FrozenFlavors.jpeg";
 import GeorgiaLemon from "../assets/img/GeorgiaLemon.jpeg";
 import Heidelberg from "../assets/img/Heidelberg.jpg";
 import LemonStand from "../assets/img/LemonStand.jpeg";

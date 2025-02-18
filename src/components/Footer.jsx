@@ -1,7 +1,38 @@
 import "../styles/components/Footer.scss";
 import logo from "../assets/img/logo.svg";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionResult, setSubmissionResult] = useState(null); // 'success' | 'error' | null
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Email validation (same regex as before)
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    if (!emailRegex.test(email)) {
+      setSubmissionResult("error");
+      setTimeout(() => setSubmissionResult(null), 5000); // Clear error after 5s
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Simulate subscription (replace with actual API call)
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmissionResult("success");
+      setEmail(""); // Clear the input on success
+
+      setTimeout(() => setSubmissionResult(null), 8000); // Clear message after 8s
+    }, 2000); // Simulate a 2-second delay
+  };
   return (
     <>
       <div className="Footer">
@@ -11,7 +42,35 @@ const Footer = () => {
               <img src={logo} alt="Keanburg Park" />
             </a>
           </div>
-          <div className="email-form">Contact me by email here</div>
+          <div className="email-form">
+            <div className="form">
+              <div className="Title-form">
+                <h2>Contact us here</h2>
+                <p className="description">Subscribe for Updates weekly</p>
+              </div>
+              <div className="Content-form">
+                <form onSubmit={handleSubmit} className="subscrbe-form">
+                  <input
+                    type="text" // Use type="email" for better validation
+                    placeholder="Enter your email here "
+                    value={email}
+                    onChange={handleEmailChange}
+                    name="email" // Add name attribute
+                  />
+                  <button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Subcribing." : "Subscribe"}
+                    <i class="bx bx-mail-send"></i>
+                  </button>
+                </form>
+                {submissionResult === "success" && (
+                  <p className="success-message">Successfully!</p>
+                )}
+                {submissionResult === "error" && (
+                  <p className="error-message">Please enter a valid email</p>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
         <div className="mid-Footer">
           <div className="list-Footer">

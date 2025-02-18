@@ -1,0 +1,68 @@
+.Activity {
+  margin-top: 50px;
+  .Activity-firstwrap {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .redBlock {
+      background-color: #810000;
+      padding: 7px 20px; // Condensed padding
+      border-radius: 20px;
+      width: 100%;
+      text-align: left;
+
+      h2 {
+        color: #fff;
+        margin: 0; // Reset default margin
+      }
+    }
+    .activity-container {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      .park-info-container {
+        flex: 0 0 20%;
+        overflow-y: auto;
+        max-height: calc(100vh - 150px);
+        padding: 0px;
+        box-sizing: border-box;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+      }
+      .map-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+  .Activity-secondwrap {
+    padding: 50px 0px;
+
+    .activity-section {
+      .section-link {
+        .section-content {
+          // ... (your existing styles for section-content)
+          display: flex; // Use flexbox for layout
+          flex-direction: column; // Stack items vertically
+          align-items: center; // Center items horizontally
+        }
+      }
+
+      .section-image {
+        width: 100%;
+        max-width: 400px; // Control image size
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
