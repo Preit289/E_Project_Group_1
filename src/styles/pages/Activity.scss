@@ -9,10 +9,9 @@ main {
   border-radius: 20px;
   width: 100%; /* Make the red block span the whole width */
   text-align: left; /* Align the text to the left */
-}
-
-.redBlock h2 {
-  color: #fff;
+  .redBlock h2 {
+    color: #fff;
+  }
 }
 
 .Activity {
@@ -44,12 +43,12 @@ img {
   box-sizing: border-box;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  .park-info-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
 }
 
-.park-info-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
-
+//Category card
 .category-card {
   flex: 1 1 calc(50% - 10px);
   padding: 10px;
