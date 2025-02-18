@@ -19,7 +19,7 @@
 **Documentations**: [Placeholder]
 
 =======================================  
-**Published website**: [Placeholder]
+**Published website**: e-project-1-self.vercel.app/
 
 =======================================  
 **Thank you for visiting our website.**
