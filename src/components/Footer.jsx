@@ -20,22 +20,22 @@ const Footer = () => {
             <div className="content-list">
               <ul>
                 <li>
-                  <Link to="/aboutus#full-content">About Us</Link>
+                  <a href="/aboutus">About Us</a>
                 </li>
                 <li>
-                  <Link to="/gallery#full-content">Gallery</Link>
+                  <a href="/gallery">Gallery</a>
                 </li>
                 <li>
-                  <Link to="/activity#full-content">Activity</Link>
+                  <a href="/activity">Activity</a>
                 </li>
                 <li>
-                  <Link to="/contactus#full-content">Contact Us</Link>
+                  <a href="/contactus">Contact Us</a>
                 </li>
                 <li>
-                  <Link to="/review#full-content">Review</Link>
+                  <a href="/review">Review</a>
                 </li>
                 <li>
-                  <Link to="/tickets#full-content">Tickets</Link>
+                  <a href="/tickets">Tickets</a>
                 </li>
               </ul>
             </div>
@@ -46,13 +46,13 @@ const Footer = () => {
             <div className="content-list">
               <ul>
                 <li>
-                  <Link to="/aboutus#disclamer-info">Disclamer</Link>
+                  <a href="/disclamer-info">Disclamer</a>
                 </li>
                 <li>
-                  <Link to="/aboutus#privacy-policy">Privacy Policy</Link>
+                  <a href="/privacy-policy">Privacy Policy</a>
                 </li>
                 <li>
-                  <Link to="/aboutus#booking-terms">Ticket Booking Terms</Link>
+                  <a href="/booking-terms">Ticket Booking Terms</a>
                 </li>
               </ul>
             </div>

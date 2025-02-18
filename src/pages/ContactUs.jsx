@@ -1,71 +1,118 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/pages/ContactUs.scss";
+
 const ContactUs = () => {
-  // Setup title for page
   useEffect(() => {
     document.title = "Contact Us | KEANSBURG PARK";
   }, []);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [submissionMessage, setSubmissionMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Basic validation
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      setSubmissionMessage("Please fill in all fields.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setSubmissionMessage("Please enter a valid email address.");
+      return;
+    }
+
+    // In a real app, send this data to a backend (e.g., using fetch or a library like axios)
+    console.log("Submitted Contact Form:", { name, email, message });
+    setSubmissionMessage(
+      "Thank you for contacting us! We'll get back to you soon."
+    );
+
+    //Clear Form
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
-    <>
-      <div className="ContactUs">
-        <p
-          style={{
-            fontSize: "15pt",
-            padding: "50px 0px",
-            textAlign: "justify",
-            lineHeight: "1.6",
-          }}
-        >
-          <b>(ContactUsPage)</b> Connect with us and let us be your guide on
-          your journey to the excitement and wonder of Keanburg Amusement Park
-          through our dedicated Contact Us page. Step into a space designed to
-          facilitate clear and efficient communication, ensuring your questions
-          are answered and your needs are met with promptness and care. Our
-          Contact Us page is your direct line to our friendly and knowledgeable
-          team, providing you with various avenues to reach us, allowing you to
-          easily access any information or assistance you may require. From
-          general inquiries to specific requests, we believe in providing
-          exceptional service, and we've carefully curated our contact options
-          to ensure you receive the support you need. As you explore our digital
-          landscape, you’ll find all the essential details for reaching us,
-          including our phone number, email address, a convenient contact form
-          for submitting your questions, and our physical address. We understand
-          that planning a visit to an amusement park can bring about various
-          inquiries, which is why we’ve designed our Contact Us page to be both
-          informative and user-friendly, making it easy for you to find the most
-          suitable way to connect with us. We’ve organized the information
-          clearly, providing all the details you need to reach us efficiently.
-          Our commitment to your enjoyment extends beyond the physical
-          boundaries of the park, with this online portal serving as your direct
-          connection to us, allowing you to share your questions, comments, or
-          concerns with ease. Here, you’ll discover not only the different
-          methods of contacting us, but also the passion and dedication that
-          drives us to provide you with exceptional support throughout your
-          journey. The design of our Contact Us page reflects the lively and
-          welcoming atmosphere of the park, featuring clear labels, engaging
-          icons, and a simple design that guides you to the information you are
-          seeking. Whether you’re a first-time visitor looking for directions to
-          the park or a loyal guest with questions about our attractions, we
-          encourage you to utilize the various methods provided, confident that
-          your inquiry will be met with a swift and helpful response. We are
-          continuously improving our communication channels to ensure the best
-          possible service for our valued guests. We invite you to reach out to
-          us with any questions or concerns you may have, and let us help you
-          create unforgettable memories at Keanburg. We believe that a visit to
-          Keanburg is more than just a day at an amusement park; it’s a chance
-          to escape the ordinary, create cherished moments with friends and
-          family, and embark on a journey filled with joy, wonder, and
-          unforgettable experiences. From the gentle sway of our classic
-          carousel to the adrenaline rush of our most daring roller coaster,
-          Keanburg Amusement Park offers something for everyone, and this page
-          is your direct line to our team. We hope you’ll find the information
-          you need and reach out to us with confidence. We’re confident that
-          you’ll leave our park with a smile on your face and memories that will
-          last a lifetime. Thank you for considering Keanburg, and we look
-          forward to hearing from you soon!
-        </p>
+    <div className="ContactUs">
+      <p className="contact-intro">
+        {/* ... Your existing introduction text ... */}
+        Connect with us and let us be your guide on your journey to the
+        excitement...
+      </p>
+
+      <div className="contact-sections">
+        <div className="contact-section">
+          <h2>Address</h2>
+          <p>275 Beachway Ave, Keansburg, NJ 07734, USA</p>{" "}
+          {/* Replace with actual address */}
+          {/* Placeholder for Map - Replace with actual map integration */}
+          <img
+            src="https://placehold.co/800x400/?text=Map+Placeholder"
+            alt="Map of Keansburg Amusement Park"
+            className="map-placeholder"
+          />
+        </div>
+
+        <div className="contact-section">
+          <h2>Phone</h2>
+          <p>
+            <a href="tel:+17324951400">(732) 495-1400</a>{" "}
+            {/* Replace with actual phone number */}
+          </p>
+        </div>
+
+        <div className="contact-section">
+          <h2>Email</h2>
+          <p>
+            <a href="mailto:info@keansburgamusementpark.com">
+              info@keansburgamusementpark.com
+            </a>
+            {/* Replace with actual email */}
+          </p>
+          {/* Contact Form */}
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div>
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="message">Message:</label>
+              <textarea
+                id="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                rows={4}
+              />
+            </div>
+            {submissionMessage && (
+              <p className="submission-message">{submissionMessage}</p>
+            )}
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
