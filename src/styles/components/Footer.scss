@@ -136,6 +136,10 @@
           padding: 0;
           li {
             margin: 5px 0;
+            display: flex;
+            color: white;
+            align-items: center;
+            gap: 10px;
             a {
               color: white;
               text-decoration: none;

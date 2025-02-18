@@ -74,44 +74,84 @@ const Footer = () => {
         </div>
         <div className="mid-Footer">
           <div className="list-Footer">
-            <div className="title-list">Navigation</div>
+            <div className="title-list">About Us</div>
             <div className="line-list"></div>
             <div className="content-list">
               <ul>
                 <li>
-                  <a href="/aboutus">About Us</a>
+                  <a href="/aboutus">Introduce</a>
                 </li>
                 <li>
-                  <a href="/gallery">Gallery</a>
+                  <a href="/aboutus/disclaimer">Disclaimer</a>
                 </li>
                 <li>
-                  <a href="/activity">Activity</a>
+                  <a href="/aboutus/privacy-policy">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="/contactus">Contact Us</a>
-                </li>
-                <li>
-                  <a href="/review">Review</a>
-                </li>
-                <li>
-                  <a href="/tickets">Tickets</a>
+                  <a href="/aboutus/tickets-term">Tickets Term</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="list-Footer">
-            <div className="title-list">Legal Informations</div>
+            <div className="title-list">Gallery</div>
             <div className="line-list"></div>
             <div className="content-list">
               <ul>
                 <li>
-                  <a href="/disclamer-info">Disclamer</a>
+                  <a href="/gallery">General Gallery</a>
                 </li>
                 <li>
-                  <a href="/privacy-policy">Privacy Policy</a>
+                  <a href="/gallery/website">Website Gallery</a>
                 </li>
                 <li>
-                  <a href="/booking-terms">Ticket Booking Terms</a>
+                  <a href="/gallery/visitor">Visitor Gallery</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="list-Footer">
+            <div className="title-list">Activity</div>
+            <div className="line-list"></div>
+            <div className="content-list">
+              <ul>
+                <li>
+                  <a href="/activity/attractions">Attractions</a>
+                </li>
+                <li>
+                  <a href="/activity/waterpark">Waterpark</a>
+                </li>
+                <li>
+                  <a href="/activity/beachr">Beach</a>
+                </li>
+                <li>
+                  <a href="/activity/foodndrink">Food and Drink</a>
+                </li>
+                <li>
+                  <a href="/activity/fishingpier">Fishing Pier</a>
+                </li>
+                <li>
+                  <a href="/activity/events">Events</a>
+                </li>
+                <li>
+                  <a href="/activity/accessibility">Accessibility</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="list-Footer">
+            <div className="title-list">Others</div>
+            <div className="line-list"></div>
+            <div className="content-list">
+              <ul>
+                <li>
+                  <a href="/review">Review</a>
+                </li>
+                <li>
+                  <a href="//tickets">Buy Tickets</a>
+                </li>
+                <li>
+                  <a href="/">Homepage</a>
                 </li>
               </ul>
             </div>
@@ -122,30 +162,24 @@ const Footer = () => {
             <div className="content-list">
               <ul>
                 <li>
-                  <div className="icon-contact"></div>
-                  <div>Address</div>
+                  <div className="icon-contact">
+                    <i class="bx bxs-phone"></i>
+                  </div>
+                  <div>(732) 495-1400</div>
                 </li>
                 <li>
-                  <div className="icon-contact"></div>
-                  <div>Phone number</div>
+                  <div className="icon-contact">
+                    <i class="bx bxs-envelope"></i>
+                  </div>
+                  <div>info@keansburgamusementpark.com</div>
                 </li>
                 <li>
-                  <div className="icon-contact"></div>
-                  <div>Email</div>
+                  <div className="icon-contact">
+                    <i class="bx bxs-map"></i>
+                  </div>
+                  <div>275 Beachway Ave, Keansburg, NJ 07734</div>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div className="list-Footer">
-            <div className="title-list">Introduce</div>
-            <div className="line-list"></div>
-            <div className="content-list">
-              Keansburg Amusement Park offers a vibrant escape with a classic
-              boardwalk feel. Experience thrilling rides, family-friendly
-              attractions, and a lively arcade, all while savoring delicious
-              seaside treats. From the soaring heights of the Ferris wheel to
-              the friendly competition of skill games, Keansburg provides a day
-              of unforgettable fun and memories for everyone..
             </div>
           </div>
         </div>
