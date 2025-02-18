@@ -55,7 +55,7 @@ const Homepage = () => {
         <section id="about" className="overview">
           <div className="content-container">
             <video className="centered-video" controls loop autoPlay>
-              <source src={video} type="video/mp4" />
+            <source src="https://jacobspace.sfo3.cdn.digitaloceanspaces.com/Keansburg/kap-website-banner-video-reduced.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="text-content">
