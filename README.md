@@ -15,11 +15,13 @@
 | 2   | Student1614911 | Hoàng Như Hậu  |        |
 | 3   | Student1614910 | Phạm Đăng Vinh |        |
 
-=======================================  
-**Documentations**: [Placeholder]
+=======================================
 
-=======================================  
-**Published website**: [Placeholder]
+**Documentations**: https://github.com/Preit289/E_Project_Group_1/tree/main/Documentation
+
+======================================= 
+
+**Published website**: [e-project-1-self.vercel.app/](e-project-1-self.vercel.app/)
 
 =======================================  
 **Thank you for visiting our website.**
