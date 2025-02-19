@@ -45,6 +45,7 @@
           height: 30px;
           border-radius: 50%;
           transition: transform 0.3s ease-in-out;
+          color: white;
         }
         span {
           a {
@@ -182,12 +183,19 @@
           align-items: center;
           padding: 10px 10px;
           border-radius: 10px;
+          &.active {
+            background-color: darken(
+              #a50f0f,
+              10%
+            ); // Darken the background slightly
+            color: white;
+          }
         }
 
         .active {
           color: #ff0000;
           font-weight: bold;
-          border-bottom: 2px solid #ff0000;
+          border-bottom: 5px solid #ff0000;
         }
       }
     }
@@ -238,4 +246,8 @@
   &.hidden {
     opacity: 0;
   }
+}
+
+.icon-header {
+  color: white;
 }
