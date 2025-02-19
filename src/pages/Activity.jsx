@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "../styles/pages/Activity.scss";
 import ParkMap from "../assets/img/MapOnly.png";
-import ParkInfo from "../components/Activity_ParkInfo";
+import ParkInfo from "../components/Activity_parkinfo";
 const Activity = () => {
   // Setup title for page
   useEffect(() => {

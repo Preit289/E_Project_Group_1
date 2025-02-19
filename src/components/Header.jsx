@@ -8,12 +8,18 @@ import React, {
 import "../styles/components/Header.scss";
 import "../../node_modules/boxicons/css/boxicons.min.css";
 import logo from "../assets/img/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 const Header = () => {
   const [visitCount, setVisitCount] = useState(0);
   const isInitialMount = useRef(true); // Biến cờ để kiểm soát lần render đầu tiên
   const [isTopNavbarHidden, setIsTopNavbarHidden] = useState(false);
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+  const location = useLocation(); // Get current location
+  // Refs for ALL navigation items (including those with Link)
+  const homeRef = useRef(null);
+  const reviewRef = useRef(null);
+  const contactUsRef = useRef(null);
+  const ticketsRef = useRef(null);
   // Load visit count from localStorage and increment it
   useLayoutEffect(() => {
     if (isInitialMount.current) {
@@ -76,6 +82,80 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // --- Dropdown States and Refs ---
+  const aboutUsRef = useRef(null);
+  const galleryRef = useRef(null);
+  const activityRef = useRef(null);
+
+  const [isAboutUsDropdownOpen, setIsAboutUsDropdownOpen] = useState(false);
+  const [isGalleryDropdownOpen, setIsGalleryDropdownOpen] = useState(false);
+  const [isActivityDropdownOpen, setIsActivityDropdownOpen] = useState(false);
+
+  // --- Close Dropdown Function ---
+  const closeDropdowns = useCallback(() => {
+    setIsAboutUsDropdownOpen(false);
+    setIsGalleryDropdownOpen(false);
+    setIsActivityDropdownOpen(false);
+  }, []);
+
+  // --- Toggle Dropdown Functions ---
+  const toggleAboutUsDropdown = () => {
+    setIsAboutUsDropdownOpen(!isAboutUsDropdownOpen);
+    setIsGalleryDropdownOpen(false);
+    setIsActivityDropdownOpen(false);
+  };
+
+  const toggleGalleryDropdown = () => {
+    setIsGalleryDropdownOpen(!isGalleryDropdownOpen);
+    setIsAboutUsDropdownOpen(false);
+    setIsActivityDropdownOpen(false);
+  };
+
+  const toggleActivityDropdown = () => {
+    setIsActivityDropdownOpen(!isActivityDropdownOpen);
+    setIsAboutUsDropdownOpen(false);
+    setIsGalleryDropdownOpen(false);
+  };
+
+  // --- Click Outside Handler ---
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        aboutUsRef.current &&
+        !aboutUsRef.current.contains(event.target) &&
+        galleryRef.current &&
+        !galleryRef.current.contains(event.target) &&
+        activityRef.current &&
+        !activityRef.current.contains(event.target)
+      ) {
+        closeDropdowns();
+      }
+    };
+
+    if (
+      isAboutUsDropdownOpen ||
+      isGalleryDropdownOpen ||
+      isActivityDropdownOpen
+    ) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [
+    isAboutUsDropdownOpen,
+    isGalleryDropdownOpen,
+    isActivityDropdownOpen,
+    closeDropdowns,
+  ]);
+
+  // --- Helper function to determine active state ---
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <>
       <div className="Header">
@@ -170,21 +250,105 @@ const Header = () => {
           </div>
         </div>
         <div className={`Navbar ${isNavbarFixed ? "fixed" : ""}`}>
-          <Link to="/">
-            <i className="bx bxs-home"></i>
-          </Link>
-          <Link to="/">Home</Link>
-          <Link to="/aboutus">About Us</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/" className="logo">
-            <img src={logo} alt="Keanburg Park" />
-          </Link>
-          <Link to="/activity">Activity</Link>
-          <Link to="/review">Review</Link>
-          <Link to="/contactus">Contact Us</Link>
-          <Link to="/tickets" className="buy-tickets">
-            <i className="bx bxs-purchase-tag"></i>Tickets
-          </Link>
+          <div className="Navbar-content">
+            <div className="side-navbar">
+              <Link
+                to="/"
+                ref={homeRef}
+                className={isActive("/") ? "active" : ""}
+              >
+                <i className="bx bxs-home"></i>
+              </Link>
+
+              {/* About Us with Dropdown */}
+              <Link
+                className="dropdown-container"
+                onMouseEnter={toggleAboutUsDropdown}
+                onMouseLeave={toggleAboutUsDropdown}
+              >
+                <NavLink to="/aboutus">
+                  {/* Use NavLink */}
+                  About Us
+                </NavLink>
+                {isAboutUsDropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link to="/aboutus/disclaimer">Disclaimer</Link>
+                    <Link to="/aboutus/privacy-policy">Policy</Link>
+                    <Link to="/aboutus/tickets-term">Booking Terms</Link>
+                  </div>
+                )}
+              </Link>
+              {/* Gallery with Dropdown */}
+              <Link
+                className="dropdown-container"
+                onMouseEnter={toggleGalleryDropdown}
+                onMouseLeave={toggleGalleryDropdown}
+              >
+                <NavLink to="/gallery">
+                  {/* Use NavLink */}
+                  Gallery
+                </NavLink>
+                {isGalleryDropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link to="/gallery/website">Website Gallery</Link>
+                    <Link to="/gallery/visitor">Visitor Gallery</Link>
+                  </div>
+                )}
+              </Link>
+
+              <Link
+                className="dropdown-container"
+                onMouseEnter={toggleActivityDropdown}
+                onMouseLeave={toggleActivityDropdown}
+              >
+                <NavLink to="/activity">
+                  {/* Use NavLink */}
+                  Activity
+                </NavLink>
+                {isActivityDropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link to="/activity/attractions">Attractions</Link>
+                    <Link to="/activity/waterpark">Waterpark</Link>
+                    <Link to="/activity/beach">Beach</Link>
+                    <Link to="/activity/foodndrink">Food and Drinks</Link>
+                    <Link to="/activity/fishingpier">Fishing Pier</Link>
+                    <Link to="/activity/events">Events</Link>
+                    <Link to="/activity/accessibility">Accessibility</Link>
+                  </div>
+                )}
+              </Link>
+            </div>
+            <div className="logo-navbar">
+              <Link to="/" className="logo">
+                <img src={logo} alt="Keanburg Park" />
+              </Link>
+            </div>
+            <div className="side-navbar">
+              <Link
+                to="/review"
+                ref={reviewRef}
+                className={isActive("/review") ? "active" : ""}
+              >
+                Review
+              </Link>
+              <Link
+                to="/contactus"
+                ref={contactUsRef}
+                className={isActive("/contactus") ? "active" : ""}
+              >
+                Contact Us
+              </Link>
+              <Link
+                to="/tickets"
+                ref={ticketsRef}
+                className={`buy-tickets ${
+                  isActive("/tickets") ? "active" : "buy-tickets"
+                }`}
+              >
+                <i className="bx bxs-purchase-tag"></i>Tickets
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
       <div

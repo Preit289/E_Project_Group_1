@@ -1,71 +1,242 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/pages/ContactUs.scss";
+
+// Import placeholder images
+import adPlaceholder1 from "../assets/img/contact/ad-placeholder-1.jpg";
+import adPlaceholder2 from "../assets/img/contact/ad-placeholder-2.jpg";
+import adPlaceholder3 from "../assets/img/contact/ad-placeholder-3.jpg";
+
 const ContactUs = () => {
-  // Setup title for page
   useEffect(() => {
     document.title = "Contact Us | KEANSBURG PARK";
   }, []);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [submissionMessage, setSubmissionMessage] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setNameError("");
+    setEmailError("");
+    setMessageError("");
+    setSubmissionMessage("");
+
+    let hasError = false;
+
+    if (!name.trim()) {
+      setNameError("Please enter your name.");
+      hasError = true;
+    }
+    if (!email.trim()) {
+      setEmailError("Please enter your email.");
+      hasError = true;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailError("Please enter a valid email address.");
+      hasError = true;
+    }
+
+    if (!message.trim()) {
+      setMessageError("Please enter your message.");
+      hasError = true;
+    }
+
+    if (hasError) {
+      return;
+    }
+
+    console.log("Submitted Contact Form:", { name, email, message });
+    setSubmissionMessage(
+      "Thank you for contacting us! We'll get back to you soon."
+    );
+
+    setName("");
+    setEmail("");
+    setMessage("");
+
+    setTimeout(() => {
+      setSubmissionMessage("");
+    }, 5000);
+  };
+
   return (
-    <>
-      <div className="ContactUs">
-        <p
-          style={{
-            fontSize: "15pt",
-            padding: "50px 0px",
-            textAlign: "justify",
-            lineHeight: "1.6",
-          }}
-        >
-          <b>(ContactUsPage)</b> Connect with us and let us be your guide on
-          your journey to the excitement and wonder of Keanburg Amusement Park
-          through our dedicated Contact Us page. Step into a space designed to
-          facilitate clear and efficient communication, ensuring your questions
-          are answered and your needs are met with promptness and care. Our
-          Contact Us page is your direct line to our friendly and knowledgeable
-          team, providing you with various avenues to reach us, allowing you to
-          easily access any information or assistance you may require. From
-          general inquiries to specific requests, we believe in providing
-          exceptional service, and we've carefully curated our contact options
-          to ensure you receive the support you need. As you explore our digital
-          landscape, you’ll find all the essential details for reaching us,
-          including our phone number, email address, a convenient contact form
-          for submitting your questions, and our physical address. We understand
-          that planning a visit to an amusement park can bring about various
-          inquiries, which is why we’ve designed our Contact Us page to be both
-          informative and user-friendly, making it easy for you to find the most
-          suitable way to connect with us. We’ve organized the information
-          clearly, providing all the details you need to reach us efficiently.
-          Our commitment to your enjoyment extends beyond the physical
-          boundaries of the park, with this online portal serving as your direct
-          connection to us, allowing you to share your questions, comments, or
-          concerns with ease. Here, you’ll discover not only the different
-          methods of contacting us, but also the passion and dedication that
-          drives us to provide you with exceptional support throughout your
-          journey. The design of our Contact Us page reflects the lively and
-          welcoming atmosphere of the park, featuring clear labels, engaging
-          icons, and a simple design that guides you to the information you are
-          seeking. Whether you’re a first-time visitor looking for directions to
-          the park or a loyal guest with questions about our attractions, we
-          encourage you to utilize the various methods provided, confident that
-          your inquiry will be met with a swift and helpful response. We are
-          continuously improving our communication channels to ensure the best
-          possible service for our valued guests. We invite you to reach out to
-          us with any questions or concerns you may have, and let us help you
-          create unforgettable memories at Keanburg. We believe that a visit to
-          Keanburg is more than just a day at an amusement park; it’s a chance
-          to escape the ordinary, create cherished moments with friends and
-          family, and embark on a journey filled with joy, wonder, and
-          unforgettable experiences. From the gentle sway of our classic
-          carousel to the adrenaline rush of our most daring roller coaster,
-          Keanburg Amusement Park offers something for everyone, and this page
-          is your direct line to our team. We hope you’ll find the information
-          you need and reach out to us with confidence. We’re confident that
-          you’ll leave our park with a smile on your face and memories that will
-          last a lifetime. Thank you for considering Keanburg, and we look
-          forward to hearing from you soon!
-        </p>
+    <div className="ContactUs">
+      <p className="contact-intro">
+        Connect with us and let us be your guide on your journey to the
+        excitement...
+      </p>
+
+      <div className="contact-container">
+        {/* Section 1: Contact Details + Image 1 */}
+        <div className="contact-section-group">
+          <div className="contact-details">
+            <div className="contact-section">
+              <h2>Contact Information</h2>
+              <div className="contact-info">
+                <i className="bx bxs-map"></i>
+                <span>
+                  <a
+                    href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    275 Beachway Ave, Keansburg, NJ 07734
+                  </a>
+                </span>
+              </div>
+              <div className="contact-info">
+                <i className="bx bxs-phone"></i>
+                <span>
+                  <a href="tel:(732) 495-1400">(732) 495-1400</a>
+                </span>
+              </div>
+              <div className="contact-info">
+                <i className="bx bxs-envelope"></i>
+                <span>
+                  <a href="mailto:info@keansburgamusementpark.com">
+                    info@keansburgamusementpark.com
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div className="contact-section">
+              <h2>Follow Us</h2>
+              <div className="social-media-links">
+                <a
+                  href="https://www.facebook.com/KeansburgAmusementRunawayRapids"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <i className="bx bxl-facebook"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@keansburgamusementpark"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <i className="bx bxl-tiktok"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/keansburg_amusementpark"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <i className="bx bxl-instagram"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/@keansburgamusementparkruna6333"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <i className="bx bxl-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Image associated with Contact Details */}
+          <div className="ad-section">
+            <img src={adPlaceholder1} alt="Park Image 1" className="ad-image" />
+          </div>
+        </div>
+
+        {/* Section 2: Image 2 + Form  */}
+        <div className="contact-section-group">
+          {/* Image associated with Form */}
+          <div className="ad-section">
+            <img src={adPlaceholder2} alt="Park Image 2" className="ad-image" />
+          </div>
+          <div className="contact-form-section">
+            <h2>Send us a Message</h2>
+            <form onSubmit={handleSubmit} className="contact-form" noValidate>
+              <div className="form-group">
+                <label htmlFor="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  name="name"
+                />
+                {nameError && <p className="error-message">{nameError}</p>}
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
+                />
+                {emailError && <p className="error-message">{emailError}</p>}
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message:</label>
+                <textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows={4}
+                  name="message"
+                />
+                {messageError && (
+                  <p className="error-message">{messageError}</p>
+                )}
+              </div>
+
+              <button type="submit">Send Message</button>
+              {submissionMessage && (
+                <p className="success-message">{submissionMessage}</p>
+              )}
+            </form>
+          </div>
+        </div>
+
+        {/* Section 3: Map + Image 3 */}
+        <div className="contact-section-group">
+          <div className="map-section">
+            <h2>Find Us</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9015870946305!2d-74.1346442!3d40.4553151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24ecd58443ccd%3A0x2137997ca2385d5!2sKeansburg%20Amusement%20Park!5e0!3m2!1sen!2s!4v1739073981853!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Keansburg Amusement Park Map"
+            ></iframe>
+            <p>
+              <i class="bx bxs-map"></i>
+              <span>
+                <a
+                  href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  275 Beachway Ave, Keansburg, NJ 07734
+                </a>
+              </span>
+            </p>
+          </div>
+
+          {/* Image associated with Map */}
+          <div className="ad-section">
+            <img src={adPlaceholder3} alt="Park Image 3" className="ad-image" />
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
