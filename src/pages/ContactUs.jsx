@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/pages/ContactUs.scss";
+
+// Import placeholder images
+import adPlaceholder1 from "../assets/img/contact/ad-placeholder-1.jpg";
+import adPlaceholder2 from "../assets/img/contact/ad-placeholder-2.jpg";
+import adPlaceholder3 from "../assets/img/contact/ad-placeholder-3.jpg";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -10,106 +16,224 @@ const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submissionMessage, setSubmissionMessage] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setNameError("");
+    setEmailError("");
+    setMessageError("");
+    setSubmissionMessage("");
 
-    // Basic validation
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      setSubmissionMessage("Please fill in all fields.");
+    let hasError = false;
+
+    if (!name.trim()) {
+      setNameError("Please enter your name.");
+      hasError = true;
+    }
+    if (!email.trim()) {
+      setEmailError("Please enter your email.");
+      hasError = true;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailError("Please enter a valid email address.");
+      hasError = true;
+    }
+
+    if (!message.trim()) {
+      setMessageError("Please enter your message.");
+      hasError = true;
+    }
+
+    if (hasError) {
       return;
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setSubmissionMessage("Please enter a valid email address.");
-      return;
-    }
 
-    // In a real app, send this data to a backend (e.g., using fetch or a library like axios)
     console.log("Submitted Contact Form:", { name, email, message });
     setSubmissionMessage(
       "Thank you for contacting us! We'll get back to you soon."
     );
 
-    //Clear Form
     setName("");
     setEmail("");
     setMessage("");
+
+    setTimeout(() => {
+      setSubmissionMessage("");
+    }, 5000);
   };
 
   return (
     <div className="ContactUs">
       <p className="contact-intro">
-        {/* ... Your existing introduction text ... */}
         Connect with us and let us be your guide on your journey to the
         excitement...
       </p>
 
-      <div className="contact-sections">
-        <div className="contact-section">
-          <h2>Address</h2>
-          <p>275 Beachway Ave, Keansburg, NJ 07734, USA</p>{" "}
-          {/* Replace with actual address */}
-          {/* Placeholder for Map - Replace with actual map integration */}
-          <img
-            src="https://placehold.co/800x400/?text=Map+Placeholder"
-            alt="Map of Keansburg Amusement Park"
-            className="map-placeholder"
-          />
+      <div className="contact-container">
+        {/* Section 1: Contact Details + Image 1 */}
+        <div className="contact-section-group">
+          <div className="contact-details">
+            <div className="contact-section">
+              <h2>Contact Information</h2>
+              <div className="contact-info">
+                <i className="bx bxs-map"></i>
+                <span>
+                  <a
+                    href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    275 Beachway Ave, Keansburg, NJ 07734
+                  </a>
+                </span>
+              </div>
+              <div className="contact-info">
+                <i className="bx bxs-phone"></i>
+                <span>
+                  <a href="tel:(732) 495-1400">(732) 495-1400</a>
+                </span>
+              </div>
+              <div className="contact-info">
+                <i className="bx bxs-envelope"></i>
+                <span>
+                  <a href="mailto:info@keansburgamusementpark.com">
+                    info@keansburgamusementpark.com
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div className="contact-section">
+              <h2>Follow Us</h2>
+              <div className="social-media-links">
+                <a
+                  href="https://www.facebook.com/KeansburgAmusementRunawayRapids"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <i className="bx bxl-facebook"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@keansburgamusementpark"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <i className="bx bxl-tiktok"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/keansburg_amusementpark"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <i className="bx bxl-instagram"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/@keansburgamusementparkruna6333"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                >
+                  <i className="bx bxl-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Image associated with Contact Details */}
+          <div className="ad-section">
+            <img src={adPlaceholder1} alt="Park Image 1" className="ad-image" />
+          </div>
         </div>
 
-        <div className="contact-section">
-          <h2>Phone</h2>
-          <p>
-            <a href="tel:+17324951400">(732) 495-1400</a>{" "}
-            {/* Replace with actual phone number */}
-          </p>
+        {/* Section 2: Image 2 + Form  */}
+        <div className="contact-section-group">
+          {/* Image associated with Form */}
+          <div className="ad-section">
+            <img src={adPlaceholder2} alt="Park Image 2" className="ad-image" />
+          </div>
+          <div className="contact-form-section">
+            <h2>Send us a Message</h2>
+            <form onSubmit={handleSubmit} className="contact-form" noValidate>
+              <div className="form-group">
+                <label htmlFor="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  name="name"
+                />
+                {nameError && <p className="error-message">{nameError}</p>}
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
+                />
+                {emailError && <p className="error-message">{emailError}</p>}
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message:</label>
+                <textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows={4}
+                  name="message"
+                />
+                {messageError && (
+                  <p className="error-message">{messageError}</p>
+                )}
+              </div>
+
+              <button type="submit">Send Message</button>
+              {submissionMessage && (
+                <p className="success-message">{submissionMessage}</p>
+              )}
+            </form>
+          </div>
         </div>
 
-        <div className="contact-section">
-          <h2>Email</h2>
-          <p>
-            <a href="mailto:info@keansburgamusementpark.com">
-              info@keansburgamusementpark.com
-            </a>
-            {/* Replace with actual email */}
-          </p>
-          {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div>
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="message">Message:</label>
-              <textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-                rows={4}
-              />
-            </div>
-            {submissionMessage && (
-              <p className="submission-message">{submissionMessage}</p>
-            )}
-            <button type="submit">Send Message</button>
-          </form>
+        {/* Section 3: Map + Image 3 */}
+        <div className="contact-section-group">
+          <div className="map-section">
+            <h2>Find Us</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9015870946305!2d-74.1346442!3d40.4553151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24ecd58443ccd%3A0x2137997ca2385d5!2sKeansburg%20Amusement%20Park!5e0!3m2!1sen!2s!4v1739073981853!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Keansburg Amusement Park Map"
+            ></iframe>
+            <p>
+              <i class="bx bxs-map"></i>
+              <span>
+                <a
+                  href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  275 Beachway Ave, Keansburg, NJ 07734
+                </a>
+              </span>
+            </p>
+          </div>
+
+          {/* Image associated with Map */}
+          <div className="ad-section">
+            <img src={adPlaceholder3} alt="Park Image 3" className="ad-image" />
+          </div>
         </div>
       </div>
     </div>

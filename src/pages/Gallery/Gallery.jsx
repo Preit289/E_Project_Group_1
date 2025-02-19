@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../styles/pages/Gallery.scss";
+import "../../styles/pages/Gallery/Gallery.scss";
 
 // Placeholder image URLs (replace with your actual images)
 const websiteGalleryImages = [
