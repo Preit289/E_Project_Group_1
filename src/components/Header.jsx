@@ -162,7 +162,7 @@ const Header = () => {
         <div className="top-Navbar">
           <ul className="list-nav-item">
             <li>
-              <i class="bx bxs-map"></i>
+              <i class="bx bxs-map icon-header"></i>
               <span>
                 <a
                   href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5"
@@ -174,13 +174,13 @@ const Header = () => {
               </span>
             </li>
             <li>
-              <i class="bx bxs-phone"></i>
+              <i class="bx bxs-phone icon-header"></i>
               <span>
                 <a href="tel:(732) 495-1400">(732) 495-1400</a>
               </span>
             </li>
             <li>
-              <i class="bx bxs-envelope"></i>
+              <i class="bx bxs-envelope icon-header"></i>
               <span>
                 <a href="mailto:info@keansburgamusementpark.com">
                   info@keansburgamusementpark.com
@@ -195,7 +195,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="bx bxl-facebook"></i>
+                <i class="bx bxl-facebook icon-header"></i>
               </a>
             </li>
             <li>

@@ -1,4 +1,6 @@
+import React from "react";
 import { useEffect } from "react";
+import Reviews from "../components/Home_Review";
 import "../styles/pages/HomePage.scss";
 import waterPark from "../assets/img/water-park.png";
 import rollercoaster from "../assets/img/rollercoaster.png";
@@ -22,7 +24,7 @@ import CottonCandy from "../assets/img/CottonCandy.jpg";
 import DippinDots from "../assets/img/DippinDots.jpeg";
 import FlavorBurst from "../assets/img/FlavorBurst.jpg";
 import Fries from "../assets/img/Fries.jpg";
-import FrozenFlavors from "../assets/img/coolstuff/FrozenFlavors.jpeg";
+import FrozenFlavors from "../assets/img/FrozenFlavors.jpeg";
 import GeorgiaLemon from "../assets/img/GeorgiaLemon.jpeg";
 import Heidelberg from "../assets/img/Heidelberg.jpg";
 import LemonStand from "../assets/img/LemonStand.jpeg";
@@ -34,8 +36,7 @@ import Nickerson from "../assets/img/Nickerson.jpeg";
 import PizzaV from "../assets/img/PizzaV.jpeg";
 import Patio from "../assets/img/Patio.jpg";
 
-const HomePage = () => {
-  // Setup title for page
+const Homepage = () => {
   useEffect(() => {
     document.title = "Homepage | KEANSBURG PARK";
   }, []);
@@ -51,10 +52,7 @@ const HomePage = () => {
         <section id="about" className="overview">
           <div className="content-container">
             <video className="centered-video" controls loop autoPlay>
-              <source
-                src="https://huggingface.co/dangvinh77/eproject/resolve/main/kap-website-banner-video-reduced.mp4"
-                type="video/mp4"
-              />
+              <source src="https://jacobspace.sfo3.cdn.digitaloceanspaces.com/Keansburg/kap-website-banner-video-reduced.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="text-content">
@@ -193,7 +191,9 @@ const HomePage = () => {
           <div className="redBlock">
             <h2>Upcoming Events & Activities</h2>
           </div>
-          <p>Check out our exciting upcoming events and activities.</p>
+          <br />
+          <p>No upcoming events yet.</p>
+          <p>Stay tune!</p>
         </section>
 
         {/* Location and Contacts */}
@@ -222,12 +222,14 @@ const HomePage = () => {
         </section>
 
         {/* Reviews */}
-        <section className="reviews">
+
+        <section className="reviewSection">
           <div className="redBlock">
             <h2>Visitor Reviews</h2>
           </div>
-          <p>"A wonderful experience for the whole family!"</p>
-          <p>"Loved the rides and the beach. Can't wait to go back!"</p>
+          <div className="reviews">
+            <Reviews/>
+          </div>
         </section>
 
         {/* Tickets */}
@@ -242,4 +244,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Homepage;
