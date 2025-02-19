@@ -44,12 +44,12 @@ img {
   box-sizing: border-box;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  .park-info-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
 }
 
-.park-info-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
-
+//Category card
 .category-card {
   flex: 1 1 calc(50% - 10px);
   padding: 10px;
