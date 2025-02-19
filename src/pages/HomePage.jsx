@@ -36,7 +36,7 @@ import Nickerson from "../assets/img/Nickerson.jpeg";
 import PizzaV from "../assets/img/PizzaV.jpeg";
 import Patio from "../assets/img/Patio.jpg";
 
-const Homepage = () => {
+const HomePage = () => {
   useEffect(() => {
     document.title = "Homepage | KEANSBURG PARK";
   }, []);
