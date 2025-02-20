@@ -17,8 +17,9 @@ const AboutUs = () => {
       <br />
       <br />
       <div className="AboutUs">
-        <h2 className="history">Keansburg park <br /> The history</h2>
-        <hr className="history-line"/>
+        <div className="redBlock">
+          <h2>History</h2>
+        </div>
         <div className="content-container">
           <div className="left-side">
             <img src={FishVillage} alt="Fishing village" />

@@ -4,19 +4,13 @@
   padding: 20px;
   margin-bottom: 20px;
 
-  .history {
-    color: #810000;
-    text-align: center;
-    font-family: "Garamond", serif;
-    font-size: 2em;
-  }
-
-  .history-line {
-    width: 60%; // Set the line width to 60% of the screen width
-    margin: 20px auto; // Center-align the line with margin auto
-    border: 0; // Remove default border
-    height: 1px; // Set the height of the line
-    background-color: #810000; // Set the color of the line
+  .redBlock {
+    background-color: #810000;
+    padding: 7px 20px 7px;
+    border-radius: 20px;
+    h2 {
+      color: #fff;
+    }
   }
 
   .content-container {
@@ -30,6 +24,8 @@
     .left-side {
       width: 60%; // Set the width to 60% of the screen width
       background-color: white; // Set the background to white to avoid inheriting any color
+      margin: 0;
+      padding: 0;
 
       img {
         width: 100%; // Ensure the image takes up the full width of its container
