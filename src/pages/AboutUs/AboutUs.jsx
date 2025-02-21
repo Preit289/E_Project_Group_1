@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
 import "../../styles/pages/AboutUs/AboutUs.scss";
 import FishVillage from "../../assets/img/AboutUs/FishVillage.jpg";
 import Resort from "../../assets/img/AboutUs/Resort.png";

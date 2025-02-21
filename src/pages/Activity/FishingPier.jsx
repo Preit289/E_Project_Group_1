@@ -17,12 +17,13 @@ const FishingPier = () => {
           </div>
           <div className="text-content">
             <h2>Discover Keansburg Fishing Pier</h2>
+            <br />
             <p>
               Located in Keansburg, New Jersey, our pier extends almost 2,000
               feet into Raritan Bay, offering a prime spot for fishing
               enthusiasts. Here’s what we offer:
             </p>
-            <ul style={{ listStyleType: "none", padding: 0 }}>
+            <ul>
               <li>
                 <strong>Accessible Facilities:</strong> Wheelchair-friendly with
                 well-maintained amenities.
@@ -40,6 +41,7 @@ const FishingPier = () => {
               Beyond fishing, enjoy the nearby amusement park and waterpark.
               Check our Facebook page for updates.
             </p>
+            <br />
             <h3>
               Join us for a great fishing experience at Keansburg Fishing Pier!
               🎣

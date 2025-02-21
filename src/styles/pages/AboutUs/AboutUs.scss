@@ -20,6 +20,9 @@
     margin-top: 10px;
     width: 100%;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
 
     .left-side {
       width: 60%; // Set the width to 60% of the screen width
@@ -32,6 +35,8 @@
         filter: none;
         border-radius: 20px; // Add rounded edges to the image
         background-color: white; // Ensure the image background is white
+        margin: 0;
+        padding: 0;
       }
     }
 
