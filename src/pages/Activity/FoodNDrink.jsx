@@ -8,7 +8,7 @@ const FoodNDrink = () => {
       <br />
       <div className="Accessibilities">
         <div className="redBlock">
-          <h2>Accessibilities</h2>
+          <h2>Food and Drinks</h2>
         </div>
         <div className="content-container">
           <div className="left-side">
