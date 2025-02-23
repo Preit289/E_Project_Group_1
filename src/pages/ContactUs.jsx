@@ -66,17 +66,14 @@ const ContactUs = () => {
 
   return (
     <div className="ContactUs">
-      <p className="contact-intro">
-        Connect with us and let us be your guide on your journey to the
-        excitement...
-      </p>
-
       <div className="contact-container">
         {/* Section 1: Contact Details + Image 1 */}
         <div className="contact-section-group">
           <div className="contact-details">
             <div className="contact-section">
-              <h2>Contact Information</h2>
+              <div className="redBlock">
+                <h2>Contact Information</h2>
+              </div>
               <div className="contact-info">
                 <i className="bx bxs-map"></i>
                 <span>
@@ -106,7 +103,9 @@ const ContactUs = () => {
             </div>
 
             <div className="contact-section">
-              <h2>Follow Us</h2>
+              <div className="redBlock">
+                <h2>Follow Us</h2>
+              </div>
               <div className="social-media-links">
                 <a
                   href="https://www.facebook.com/KeansburgAmusementRunawayRapids"
@@ -156,7 +155,9 @@ const ContactUs = () => {
             <img src={adPlaceholder2} alt="Park Image 2" className="ad-image" />
           </div>
           <div className="contact-form-section">
-            <h2>Send us a Message</h2>
+            <div className="redBlock">
+              <h2>Send Us a Message !</h2>
+            </div>
             <form onSubmit={handleSubmit} className="contact-form" noValidate>
               <div className="form-group">
                 <label htmlFor="name">Name:</label>
@@ -205,7 +206,9 @@ const ContactUs = () => {
         {/* Section 3: Map + Image 3 */}
         <div className="contact-section-group">
           <div className="map-section">
-            <h2>Find Us</h2>
+            <div className="redBlock">
+              <h2>Find Us</h2>
+            </div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9015870946305!2d-74.1346442!3d40.4553151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24ecd58443ccd%3A0x2137997ca2385d5!2sKeansburg%20Amusement%20Park!5e0!3m2!1sen!2s!4v1739073981853!5m2!1sen!2s"
               width="100%"
@@ -233,6 +236,10 @@ const ContactUs = () => {
           {/* Image associated with Map */}
           <div className="ad-section">
             <img src={adPlaceholder3} alt="Park Image 3" className="ad-image" />
+            {/* Slogan Container */}
+            <div className="slogan-container">
+              <p className="slogan-text">Your Adventure Awaits!</p>
+            </div>
           </div>
         </div>
       </div>

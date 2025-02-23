@@ -1,22 +1,35 @@
+// Gallery.js
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import CustomCarousel from "../../components/Carousel"; // Correct path
 import "../../styles/pages/Gallery/Gallery.scss";
 
-// Placeholder image URLs (replace with your actual images)
+// Import the images
+import websiteImage1 from "../../assets/img/CottonCandy.jpg";
+import websiteImage2 from "../../assets/img/Fries.jpg";
+import websiteImage3 from "../../assets/img/CoastalIceCream.jpeg";
+import websiteImage4 from "../../assets/img/hottub.jpg";
+import websiteImage5 from "../../assets/img/ShaveIce.jpg";
+import websiteImage6 from "../../assets/img/FlavorBurst.jpg";
+
+import visitorImage1 from "../../assets/img/CJSpot.jpeg";
+import visitorImage2 from "../../assets/img/giant-slide.png";
+import visitorImage3 from "../../assets/img/Heidelberg.jpg";
+import visitorImage4 from "../../assets/img/lagoon.png";
+
 const websiteGalleryImages = [
-  "https://placehold.co/800x400/?text=Website+Image+1",
-  "https://placehold.co/800x400/?text=Website+Image+2",
-  "https://placehold.co/800x400/?text=Website+Image+3",
-  "https://placehold.co/800x400/?text=Website+Image+4",
-  "https://placehold.co/800x400/?text=Website+Image+5", // More images
-  "https://placehold.co/800x400/?text=Website+Image+6",
+  websiteImage1,
+  websiteImage2,
+  websiteImage3,
+  websiteImage4,
+  websiteImage5,
+  websiteImage6,
 ];
 
 const visitorGalleryImages = [
-  "https://placehold.co/800x400/?text=Visitor+Image+1",
-  "https://placehold.co/800x400/?text=Visitor+Image+2",
-  "https://placehold.co/800x400/?text=Visitor+Image+3", // More images
-  "https://placehold.co/800x400/?text=Visitor+Image+4",
+  visitorImage1,
+  visitorImage2,
+  visitorImage3,
+  visitorImage4,
 ];
 
 const Gallery = () => {
@@ -24,104 +37,34 @@ const Gallery = () => {
     document.title = "Gallery | KEANSBURG PARK";
   }, []);
 
-  const websiteImagesToShow = 4; // Number of images to show initially
-  const visitorImagesToShow = 2;
-
   return (
-    <>
-      <div className="Gallery">
-        <p className="gallery-intro">
-          {/* ... Your existing introduction text ... */}
-          Immerse yourself in the vibrant tapestry of Keanburg Amusement Park
-          through our captivating Gallery, where memories and magic are
-          perpetually preserved in stunning visuals. Step into a world of
-          dynamic images, each capturing a unique facet of the park's
-          excitement, wonder, and unforgettable moments. Our Gallery serves as a
-          visual journey through the heart of Keanburg, allowing you to relive
-          the thrills, the laughter, and the joy that define our park's
-          experience. From adrenaline-pumping roller coasters soaring against
-          the sky to the tender smiles of families sharing magical moments, our
-          Gallery showcases the kaleidoscope of experiences that await. We
-          believe that a picture is worth a thousand words, and we've carefully
-          curated this collection to provide a taste of the action and ambiance
-          that makes Keanburg so special. Our commitment to your enjoyment
-          extends beyond the physical boundaries of the park, with this online
-          portal bringing you closer to the magic of Keanburg from the comfort
-          of your own screen. Here, you’ll discover not only the diverse array
-          of attractions we offer, but also the passion and dedication that
-          drive us to create new and exciting memories for our valued guests.
-          The design of our Gallery reflects the lively and welcoming atmosphere
-          of the park, featuring an engaging layout and dynamic visuals that
-          draw you in and spark your imagination. Whether you’re a seasoned
-          thrill-seeker eager to relive your favorite ride, or a first-time
-          visitor looking to discover what awaits, we encourage you to explore
-          our various themed albums, showcasing rides, shows, special events,
-          and the countless smiles that are the heartbeat of Keanburg. We’re
-          constantly updating our collection, capturing new moments and adding
-          new experiences, so be sure to check back frequently for more glimpses
-          into the joy and wonder of our park. We invite you to explore this
-          online haven of memories and get a taste of the magic that awaits you.
-          We believe that a visit to Keanburg is more than just a day at an
-          amusement park; it’s about creating shared experiences and forging
-          bonds that last a lifetime. From the gentle sway of a classic ride to
-          the exhilarating rush of our most daring adventure, the Keanburg
-          Amusement Park experience is captured here in its finest form. Our
-          Gallery serves as your window into that experience, and we hope you’ll
-          browse and reflect upon the laughter, the thrills, and the genuine
-          happiness that is Keanburg. We’re confident that you’ll leave our
-          gallery with a smile on your face and an eagerness to create memories
-          of your own. Thank you for visiting, and we hope to see you soon at
-          Keanburg!
-        </p>
-
+    <div className="Gallery">
+      <div className="gallery-container">
+        {/* Website Gallery Section */}
         <div className="gallery-section">
-          <h2>Website Gallery</h2>
-          <div className="image-grid">
-            {websiteGalleryImages
-              .slice(0, websiteImagesToShow)
-              .map((image, index) => (
-                <Link
-                  to={`/website-image/${index}`}
-                  key={`website-${index}`}
-                  className="gallery-image-link"
-                >
-                  <img src={image} alt={`Website Image ${index + 1}`} />
-                </Link>
-              ))}
+          <div className="redBlock">
+            <h2>Park's Album</h2>
           </div>
-          {websiteGalleryImages.length > websiteImagesToShow && (
-            <Link to="/website-gallery-all" className="more-button">
-              More
-            </Link>
-          )}
+          <CustomCarousel
+            images={websiteGalleryImages}
+            linkTo="/gallery/website"
+            interval={4000} // Optional: Customize interval
+          />
         </div>
 
+        {/* Visitor Uploads Section */}
         <div className="gallery-section">
-          <h2>Visitor Uploads</h2>
-          <div className="image-grid">
-            {visitorGalleryImages
-              .slice(0, visitorImagesToShow)
-              .map((image, index) => (
-                <Link
-                  to={`/visitor-image/${index}`}
-                  key={`visitor-${index}`}
-                  className="gallery-image-link"
-                >
-                  <img src={image} alt={`Visitor Image ${index + 1}`} />
-                </Link>
-              ))}
+          <div className="redBlock">
+            <h2>Visitors's Album</h2>
           </div>
-          {visitorGalleryImages.length > visitorImagesToShow && (
-            <Link to="/visitor-gallery-all" className="more-button">
-              More
-            </Link>
-          )}
-          <Link to="/upload" className="upload-button">
-            Upload Your Photo
-          </Link>
+          <CustomCarousel
+            images={visitorGalleryImages}
+            linkTo="/gallery/visitor"
+            interval={5000} // Optional: Different interval
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

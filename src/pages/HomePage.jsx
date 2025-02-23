@@ -1,10 +1,6 @@
-import React from "react";
 import { useEffect } from "react";
-import Reviews from "../components/Home_Review";
 import "../styles/pages/HomePage.scss";
-import waterPark from "../assets/img/water-park.png";
-import rollercoaster from "../assets/img/rollercoaster.png";
-import slide from "../assets/img/giant-slide.png";
+import { Link } from "react-router-dom";
 import gokart from "../assets/img/gokart.jpg";
 import ride from "../assets/img/ride.jpeg";
 import game from "../assets/img/game.png";
@@ -17,42 +13,36 @@ import slides from "../assets/img/slides.jpg";
 import lockers from "../assets/img/lockers.png";
 import dining from "../assets/img/dining.png";
 import changing from "../assets/img/changingRoom.jpg";
-import CheesyPizza from "../assets/img/CheesyPizza.jpeg";
-import CJSpot from "../assets/img/CJSpot.jpeg";
-import CoastalIceCream from "../assets/img/CoastalIceCream.jpeg";
 import CottonCandy from "../assets/img/CottonCandy.jpg";
-import DippinDots from "../assets/img/DippinDots.jpeg";
 import FlavorBurst from "../assets/img/FlavorBurst.jpg";
-import Fries from "../assets/img/Fries.jpg";
-import FrozenFlavors from "../assets/img/FrozenFlavors.jpeg";
-import GeorgiaLemon from "../assets/img/GeorgiaLemon.jpeg";
-import Heidelberg from "../assets/img/Heidelberg.jpg";
 import LemonStand from "../assets/img/LemonStand.jpeg";
 import ToucanGrille from "../assets/img/ToucanGrille.jpg";
 import PavilionGrille from "../assets/img/PavilionGrille.jpg";
 import Nando from "../assets/img/Nando.jpeg";
-import ShaveIce from "../assets/img/ShaveIce.jpg";
-import Nickerson from "../assets/img/Nickerson.jpeg";
-import PizzaV from "../assets/img/PizzaV.jpeg";
 import Patio from "../assets/img/Patio.jpg";
+import BuyTicket from "../assets/img/BuyTicketNow.jpg";
 
 const HomePage = () => {
+  // Setup title for page
   useEffect(() => {
     document.title = "Homepage | KEANSBURG PARK";
   }, []);
   return (
     <>
-      <main>
+      <div className="HomePage">
         <section>
           <br />
           <br />
         </section>
 
         {/* Welcome */}
-        <section id="about" className="overview">
+        <div id="about" className="overview">
           <div className="content-container">
             <video className="centered-video" controls loop autoPlay>
-              <source src="https://jacobspace.sfo3.cdn.digitaloceanspaces.com/Keansburg/kap-website-banner-video-reduced.mp4" type="video/mp4" />
+              <source
+                src="https://huggingface.co/dangvinh77/eproject/resolve/main/kap-website-banner-video-reduced.mp4"
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
             <div className="text-content">
@@ -78,10 +68,10 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Activities */}
-        <section id="activities" className="activities">
+        <div id="activities" className="activities">
           <div className="redBlock">
             <h2>2. What do we have?</h2>
           </div>
@@ -184,20 +174,10 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Events */}
-        <section className="events">
-          <div className="redBlock">
-            <h2>Upcoming Events & Activities</h2>
-          </div>
-          <br />
-          <p>No upcoming events yet.</p>
-          <p>Stay tune!</p>
-        </section>
+        </div>
 
         {/* Location and Contacts */}
-        <section className="location-contact">
+        <div className="location-contact">
           <div className="redBlock">
             <h2>Location & Contact Details</h2>
           </div>
@@ -215,31 +195,86 @@ const HomePage = () => {
             ></iframe>
             <div className="text-content">
               <br />
-              <p>Address: 123 Park Avenue, Keansburg, NJ</p>
-              <p>Phone: (123) 456-7890</p>
+              <h2>Plan Your Visit:</h2>
+              <br />
+              <ul>
+                <li>
+                  <strong>Operating Hours:</strong> Check our website for
+                  up-to-date information on operating hours and special events.
+                </li>
+                <li>
+                  <strong>Location:</strong> Conveniently located on the Jersey
+                  Shore, our park is easy to reach and offers ample parking.
+                </li>
+                <li>
+                  <strong>Address:</strong> 123 Park Avenue, Keansburg, NJ
+                </li>
+                <li>
+                  <strong>Phone: </strong> (123) 456-7890
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
-
-        {/* Reviews */}
-
-        <section className="reviewSection">
-          <div className="redBlock">
-            <h2>Visitor Reviews</h2>
-          </div>
-          <div className="reviews">
-            <Reviews/>
-          </div>
-        </section>
+        </div>
 
         {/* Tickets */}
         <section className="tickets">
           <div className="redBlock">
-            <h2>Get Your Tickets Now</h2>
+            <h2>Tickets</h2>
           </div>
-          <button>Buy Tickets</button>
+          <div className="content-container">
+            <div className="left-side-hp">
+              <img src={BuyTicket} alt="Buy ticket now!" />
+            </div>
+            <div className="text-content">
+              <h2>Get Your Tickets to Keansburg Amusement Park!</h2>
+              <p>
+                Ready for a day of fun and excitement? Purchase your tickets to
+                Keansburg Amusement Park and enjoy access to all our thrilling
+                rides, games, and attractions. Whether you're visiting with
+                family or friends, we have ticket options to suit everyone.
+              </p>
+              <h3>Ticket Options:</h3>
+              <br />
+              <ul>
+                <li>
+                  <strong>Daily Ticket:</strong> Enjoy full-day access to all
+                  the rides and attractions at Keansburg Amusement Park.
+                </li>
+                <li>
+                  <strong>Weekly Ticket:</strong> Get unlimited access to the
+                  park for an entire week with our convenient weekly ticket.
+                </li>
+                <li>
+                  <strong>Family Ticket:</strong> Perfect for families, this
+                  ticket offers great value for a fun-filled day at the park.
+                </li>
+                <li>
+                  <strong>Weekday Specials:</strong> Take advantage of our
+                  special weekday pricing and enjoy unlimited rides from Monday
+                  to Thursday (1pm-8pm). Excludes Go Karts. No refunds or
+                  rainchecks.
+                </li>
+                <li>
+                  <strong>Waterpark + Amusement Park Combo:</strong> Experience
+                  the best of both worlds with our combo ticket, which includes
+                  3-hour access to Runaway Rapids Waterpark and all-day
+                  amusement park rides. Valid Monday to Friday. Excludes Go
+                  Karts. Other restrictions may apply.
+                </li>
+              </ul>
+              <h3>Purchase Your Tickets:</h3>
+              <p>
+                For more details and to purchase your tickets, visit our{" "}
+                <Link to="/tickets">
+                  <i className="bx bxs-purchase-tag"></i>official website
+                </Link>
+                . See you soon!
+              </p>
+            </div>
+          </div>
         </section>
-      </main>
+      </div>
     </>
   );
 };

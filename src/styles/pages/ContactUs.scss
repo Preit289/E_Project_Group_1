@@ -2,7 +2,7 @@
 .ContactUs {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 60px 20px; // Add some horizontal padding
 
   .contact-intro {
     font-size: 1.2rem;
@@ -22,16 +22,12 @@
         minmax(300px, 1fr)
       ); // Responsive 2 columns
       gap: 2rem;
-      align-items: flex-start; // Align items to the top
+      align-items: start; // Align items to the start (top)
 
       .contact-details {
         .contact-section {
           margin-bottom: 2rem;
 
-          h2 {
-            text-align: center;
-            margin-bottom: 1rem;
-          }
           .contact-info {
             display: flex;
             align-items: center;
@@ -51,11 +47,11 @@
           }
           .social-media-links {
             display: flex;
-            // justify-content: space-around;
+            justify-content: space-around;
             align-items: center;
-            margin-top: 1rem;
+            margin-top: 4rem;
             .social-icon {
-              font-size: 2rem;
+              font-size: 5rem;
               margin-right: 1rem;
               color: #007bff;
               transition: color 0.3s ease, transform 0.3s ease;
@@ -68,14 +64,6 @@
         }
       }
       .map-section {
-        h2 {
-          text-align: center;
-          margin-bottom: 1rem;
-        }
-        iframe {
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
         p {
           text-align: center;
           margin-top: 1rem;
@@ -96,11 +84,6 @@
         }
       }
       .contact-form-section {
-        h2 {
-          text-align: center;
-          margin-bottom: 1rem;
-        }
-
         .contact-form {
           .form-group {
             margin-bottom: 1rem;
@@ -167,14 +150,80 @@
       }
 
       .ad-section {
+        display: flex; // Use flexbox to control height
+        align-items: center; // Vertically center the image
+        flex-direction: column; // Stack image and slogan vertically
         .ad-image {
           width: 100%;
-          height: auto;
+          height: auto; // Let height adjust automatically
+          max-height: 100%; // Ensure image doesn't exceed container height
           display: block;
           border-radius: 8px;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          object-fit: cover; // ADD THIS. Key for maintaining aspect ratio.
+          margin-bottom: 1rem; // Space between image and slogan
+        }
+        .slogan-container {
+          padding: 10px;
+          border-radius: 8px;
+          width: 100%;
+          text-align: center; // Center the slogan text
+
+          .slogan-text {
+            font-size: 3rem; // Increased font size
+            font-weight: bold;
+            line-height: 1.4; // Improved line height
+            background: linear-gradient(
+              to right,
+              #2e2150,
+              #fda085,
+              #f072b6,
+              #0f061b,
+              #84fab0
+            ); // Gradient
+            -webkit-background-clip: text; // Clip the background to the text
+            background-clip: text; // Standard property
+            color: transparent; // Make the text transparent
+            padding: 5px 10px;
+          }
+        }
+      }
+      //Specific style for .map-section
+      .map-section {
+        display: flex; // Make .map-section a flex container
+        flex-direction: column; // Stack items vertically
+
+        iframe {
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          width: 100%; // Make the iframe fill the container width
+          aspect-ratio: 4 / 3; // Maintain a 4:3 aspect ratio.  Adjust as needed.
         }
       }
     }
+    // Red block styles (consistent across all sections)
+    .redBlock {
+      background-color: #810000;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 1rem;
+
+      h2 {
+        color: #fff;
+        margin: 0;
+        font-size: 1.5rem; // Slightly smaller font size
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-container .contact-section-group {
+      grid-template-columns: 1fr; // Stack sections vertically on small screens
+      .ad-section {
+        order: -1;
+      }
+    }
+    padding: 40px 20px;
   }
 }

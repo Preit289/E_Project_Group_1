@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/pages/Review.scss";
 import { FaStar, FaRegStar, FaCheckSquare, FaRegSquare } from "react-icons/fa";
 
@@ -24,67 +24,57 @@ const Review = () => {
   const [nameError, setNameError] = useState("");
   const [reviewTextError, setReviewTextError] = useState("");
   const [selectedActivities, setSelectedActivities] = useState({});
-  const [imageFile, setImageFile] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
-  const [reviews, setReviews] = useState([
-    {
-      id: 1,
-      name: "John Doe",
-      rating: 5,
-      reviewText: "Great park! Had a wonderful time with the family.",
-      activities: ["attractions", "waterpark"],
-      image: null,
-      date: "2024-07-27",
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      rating: 4,
-      reviewText: "Fun rides, but the lines were a bit long.",
-      activities: ["attractions"],
-      image: null,
-      date: "2024-07-26",
-    },
-    {
-      id: 3,
-      name: "Alice Johnson",
-      rating: 5,
-      reviewText: "The food was amazing! Loved the variety.",
-      activities: ["foodndrink"],
-      image: null,
-      date: "2024-07-25",
-    },
-    {
-      id: 4,
-      name: "Bob Williams",
-      rating: 3,
-      reviewText: "The beach was nice, but it could have been cleaner.",
-      activities: ["beach"],
-      image: null,
-      date: "2024-07-24",
-    },
-  ]);
+  const [reviews, setReviews] = useState(() => {
+    // Load reviews from sessionStorage on initial render
+    const savedReviews = sessionStorage.getItem("userReviews");
+    return savedReviews
+      ? JSON.parse(savedReviews)
+      : [
+          {
+            id: 1,
+            name: "John Doe",
+            rating: 5,
+            reviewText: "Great park! Had a wonderful time with the family.",
+            activities: ["attractions", "waterpark"],
+            date: "2024-07-27",
+          },
+          {
+            id: 2,
+            name: "Jane Smith",
+            rating: 4,
+            reviewText: "Fun rides, but the lines were a bit long.",
+            activities: ["attractions"],
+            date: "2024-07-26",
+          },
+          {
+            id: 3,
+            name: "Alice Johnson",
+            rating: 5,
+            reviewText: "The food was amazing! Loved the variety.",
+            activities: ["foodndrink"],
+            date: "2024-07-25",
+          },
+          {
+            id: 4,
+            name: "Bob Williams",
+            rating: 3,
+            reviewText: "The beach was nice, but it could have been cleaner.",
+            activities: ["beach"],
+            date: "2024-07-24",
+          },
+        ];
+  });
+
+  // Save reviews to sessionStorage whenever the reviews state changes
+  useEffect(() => {
+    sessionStorage.setItem("userReviews", JSON.stringify(reviews));
+  }, [reviews]);
 
   const handleActivityChange = (activity) => {
     setSelectedActivities((prevActivities) => ({
       ...prevActivities,
       [activity]: !prevActivities[activity],
     }));
-  };
-
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setImageFile(file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result);
-      };
-      reader.readAsDataURL(file);
-    } else {
-      setImageFile(null);
-      setImagePreview(null);
-    }
   };
 
   const handleSubmit = (e) => {
@@ -120,21 +110,19 @@ const Review = () => {
       activities: Object.keys(selectedActivities).filter(
         (key) => selectedActivities[key]
       ),
-      image: imageFile,
       date: new Date().toISOString().split("T")[0],
     };
 
     setReviews((prevReviews) => [newReview, ...prevReviews]);
-
     setSubmissionMessage("Thank you for your review!");
 
+    // Reset form fields
     setName("");
     setRating(0);
     setReviewText("");
     setSelectedActivities({});
-    setImageFile(null);
-    setImagePreview(null);
 
+    // Clear message after 5 seconds
     setTimeout(() => {
       setSubmissionMessage("");
     }, 5000);
@@ -161,6 +149,7 @@ const Review = () => {
     }
     return stars;
   };
+
   // Activity image data and descriptions
   const activityImages = [
     {
@@ -210,8 +199,6 @@ const Review = () => {
   return (
     <div className="Review">
       <div className="review-content">
-        <p className="review-intro">Tell your feelings about us here!</p>
-
         {/* Display Existing Reviews */}
         <div className="existing-reviews">
           <h3>Recent Reviews</h3>
@@ -222,13 +209,6 @@ const Review = () => {
                 {renderStars(review.rating)}
               </div>
               <p>{review.reviewText}</p>
-              {review.image && (
-                <img
-                  src={URL.createObjectURL(review.image)}
-                  alt={`Review by ${review.name}`}
-                  className="review-image"
-                />
-              )}
               <p className="review-date">Reviewed on: {review.date}</p>
               {review.activities.length > 0 && (
                 <p>
@@ -357,25 +337,6 @@ const Review = () => {
               </div>
             </div>
 
-            {/* Image Upload */}
-            <div className="form-group">
-              <label htmlFor="image">Upload Image (Optional):</label>
-              <input
-                type="file"
-                id="image"
-                accept="image/*"
-                onChange={handleImageChange}
-                name="image"
-              />
-              {imagePreview && (
-                <img
-                  src={imagePreview}
-                  alt="Preview"
-                  className="image-preview"
-                />
-              )}
-            </div>
-
             <div className="form-group">
               <label htmlFor="rating">Rating:</label>
               <div className="star-rating">{renderStars()}</div>
@@ -383,15 +344,18 @@ const Review = () => {
                 <p className="error-message">{submissionMessage}</p>
               )}
             </div>
-
             <div className="form-group">
               <label htmlFor="reviewText">Review:</label>
               <textarea
                 id="reviewText"
                 value={reviewText}
-                onChange={(e) => setReviewText(e.target.value)}
-                rows={4}
+                onChange={(e) => {
+                  setReviewText(e.target.value);
+                  setReviewTextError(""); // Clear error on input
+                }}
+                rows={4} // Initial number of rows
                 name="reviewText"
+                className="fixed-height-textarea" // Add a class for styling
               />
               {reviewTextError && (
                 <p className="error-message">{reviewTextError}</p>

@@ -1,89 +1,7 @@
-git body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
-  color: #333;
-}
-
-.header {
-  background-color: #a74848;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #333;
-}
-
-.nav li {
-  margin: 0 15px;
-}
-
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 20px;
-  display: block;
-}
-
-.nav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-main {
-  padding: 20px;
-}
-
-.overview,
-.events,
-.location-contact,
-.reviews,
-.reviewSection,
-.tickets,
-.activities {
-  background-color: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
 h2 {
   color: #333;
 }
 
-ul {
-  padding-left: 20px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #a74848;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
 
 p {
   color: #333;
@@ -93,13 +11,6 @@ p {
 
 .activities {
   display: block; /* Ensure it's being displayed */
-}
-
-ul li {
-  margin-bottom: 10px; /* Add space between list items */
-  color: #333;
-  font-size: 16px;
-  line-height: 1.5;
 }
 
 .content-container {
@@ -148,7 +59,6 @@ ul li {
   color: #fff;
 }
 
-// Activities
 .container {
   display: flex;
   background-color: #ffffff;
@@ -213,75 +123,68 @@ ul li {
   border-bottom-right-radius: 5px;
 }
 
-// reviews
-.reviews{
+.content-container {
   display: flex;
-  flex-direction: row; /* Arrange review cards in a row */
-  flex-wrap: wrap; /* Allow review cards to wrap to the next line if they exceed the container width */
-  gap: 20px;
-  padding: 20px;
-}
-
-.review-card {
-  flex: 1 1 calc(33.333% - 20px); /* Make each card take up approximately a third of the container width, accounting for the gap */
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Ensure padding and border are included in the width calculation */
-}
-
-.review-header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-}
-
-.review-header h3 {
-  margin: 0;
-  font-size: 18px;
-  color: #333;
-}
-
-.review-header p {
-  margin: 0;
-  color: #555;
-}
-
-.review-card h4 {
   margin-top: 10px;
-  font-size: 16px;
-  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1em;
+
+  .left-side-hp {
+    width: 60%;
+    flex: 1;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 100%;
+      filter: none;
+      border-radius: 20px;
+      background-color: white;
+      margin-bottom: 20px; // Add spacing between images
+    }
+  }
+
+  .text-content {
+    width: 40%;
+    flex: 1; // Use flex to allocate space evenly
+    max-width: 50%; // Ensure the text content doesn't exceed 50%
+    padding-left: 20px; // Add some padding for better readability
+    p,
+    h3 {
+      margin-top: 1em;
+    }
+  }
 }
 
-.review-card p {
-  margin: 10px 0;
-  color: #555;
+.HomePage {
+  .overview,
+  .events,
+  .location-contact,
+  .reviews,
+  .tickets,
+  .activities {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .redBlock {
+    background-color: #810000;
+    padding: 7px 20px 7px;
+    border-radius: 20px;
+    h2 {
+      color: #fff;
+    }
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      margin-bottom: 10px; /* Add space between list items */
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
 }
-
-.rating {
-  display: flex;
-  gap: 5px;
-}
-
-.circle {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #e0e0e0;
-}
-
-.circle.filled {
-  background-color: #4caf50;
-}
-
-.review-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: #777;
-  font-size: 14px;
-}
-

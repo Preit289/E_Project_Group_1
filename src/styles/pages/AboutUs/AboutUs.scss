@@ -1,52 +1,77 @@
 .AboutUs {
-  padding: 50px 0px;
-  .introduction-text {
-    font-size: 15pt;
-    padding: 50px 0px;
-    text-align: justify;
-    line-height: 1.6;
-  }
+  padding: 60px 0px 30px 0px;
 
-  .section-container {
-    display: flex;
-    flex-wrap: wrap; // Allow sections to wrap on smaller screens
-    justify-content: space-around; // Distribute sections evenly
-    gap: 20px; // Add some spacing between sections
-  }
-
-  .section {
-    width: calc(
-      50% - 20px
-    ); // Each section takes up a little less than half the width, accounting for the gap
-    // width: 300px; // Or set a fixed width if you prefer
-    margin-bottom: 20px;
-    text-align: center;
-    text-decoration: none; // Remove underline from links
-    color: inherit; // Inherit text color from parent
-    transition: transform 0.2s ease; // Add a subtle hover effect
-
-    @media (max-width: 768px) {
-      width: 100%; // On smaller screens, sections take up full width
-    }
-
-    &:hover {
-      transform: translateY(-5px); // Slightly lift the section on hover
-    }
-
-    img {
-      width: 100%; // Make images fill their container
-      height: auto; // Maintain aspect ratio
-      border-radius: 8px; // Optional: Add rounded corners
-      margin-bottom: 10px;
-    }
-
+  .redBlock {
+    background-color: #810000;
+    padding: 7px 20px 7px;
+    border-radius: 20px;
     h2 {
-      margin-bottom: 5px;
+      color: #fff;
+    }
+  }
+
+  .content-container {
+    display: flex;
+    align-items: center; // Align items to the top
+    width: 100%;
+    padding: 0px 0px;
+    margin: 30px 0px;
+    border-radius: 20px;
+    background-color: rgb(161, 161, 221);
+    .left-side {
+      width: 60%; // Set the width to 60% of the screen width
+      background-color: white; // Set the background to white to avoid inheriting any color
+      margin: 0;
+      padding: 0;
+
+      img {
+        width: 100%; // Ensure the image takes up the full width of its container
+        filter: none;
+        border-radius: 20px 0 0 20px; // Add rounded edges to the image
+        background-color: white; // Ensure the image background is white
+        margin: 0;
+        padding: 0;
+        box-shadow: 10px 0 15px rgba(0, 0, 0, 0.3);
+      }
     }
 
-    p {
-      font-size: 14px;
-      color: #555;
+    .text-content {
+      // Styles for text content
+
+      flex: 1;
+      width: 40%; // Ensure the text content takes up the remaining 40%
+    }
+  }
+  .more-info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    .info-card {
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 33.33%;
+      display: block;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+      }
+      h3 {
+        margin-top: 10px;
+        font-size: 1.2em;
+        color: #333;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
   display: block;
   color: white;
   .top-Footer {
-    background: #2d2d2d;
+    background: #131f2a;
     padding: 10px 100px;
     display: flex;
     justify-content: space-between;
@@ -52,6 +52,7 @@
             display: grid;
             grid-template-columns: 65% auto;
             gap: 20px;
+            position: relative;
 
             input[type="text"] {
               border-radius: 30px;
@@ -97,12 +98,14 @@
           }
 
           .success-message {
+            position: absolute;
             color: rgb(2, 247, 2);
             margin-top: 0.5rem;
             text-align: center; // Center the success message
           }
 
           .error-message {
+            position: absolute;
             color: rgb(250, 77, 77);
             margin-top: 0.5rem;
             text-align: center; // Center the error message
@@ -113,7 +116,7 @@
   }
   .mid-Footer {
     box-sizing: border-box;
-    background: #2d2d2d;
+    background: #131f2a;
     padding: 10px 100px;
     display: flex;
     justify-content: space-between;
@@ -153,7 +156,7 @@
     }
   }
   .bot-Footer {
-    background: #2d2d2d9f;
+    background: #826bc3;
     padding: 10px 100px;
     display: flex;
     justify-content: space-between;

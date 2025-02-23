@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; // If you use routing
 import "../../styles/pages/Tickets/Tickets.scss";
+import SuccessMessage from "../../pages/Tickets/SuccessMessage"; // Import
 
 // Import placeholder images (REPLACE WITH YOUR ACTUAL IMAGES)
 import dailyTicketImage from "../../assets/img/tickets/daily-ticket.png";
@@ -26,19 +27,20 @@ const Tickets = () => {
   const [billingAddress, setBillingAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
-  const [submissionMessage, setSubmissionMessage] = useState("");
+  const [submissionMessage, setSubmissionMessage] = useState(""); // Keep this for pre-submission messages
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [phoneError, setPhoneError] = useState("");
   const [cardError, setCardError] = useState("");
+  const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(false); // Add this
 
-  // Prices (moved adult/child prices to be consistent)
+  // Prices
   const prices = {
-    daily: { adult: 25, child: 15, base: 25 }, // Added a 'base' price for display
+    daily: { adult: 25, child: 15, base: 25 },
     weekly: { adult: 100, child: 60, base: 100 },
     family: {
-      small: { adult: 20, child: 12, base: 40 }, // Example: 2 adults base price
-      large: { adult: 18, child: 10, base: 54 }, // Example, 3 adults base price
+      small: { adult: 20, child: 12, base: 40 },
+      large: { adult: 18, child: 10, base: 54 },
     },
   };
 
@@ -64,7 +66,7 @@ const Tickets = () => {
       alt: "Family Ticket",
       label: "Family Ticket",
       price: prices.family[familySize].base,
-    }, // Use familySize here
+    },
   ];
 
   // Discount data (replace with actual data)
@@ -72,7 +74,7 @@ const Tickets = () => {
     {
       title: "Weekday Special",
       description: "Unlimited rides for $19.95 on Mon-Thurs (1pm-8pm).",
-      image: discountImage1, // Replace with actual image path
+      image: discountImage1,
       validity: "Mondays-Thursdays, 1pm-8pm",
       terms: "*Excludes Go Karts. No refunds or rainchecks.",
     },
@@ -83,7 +85,6 @@ const Tickets = () => {
       validity: "Mondays-Fridays",
       terms: "*Excludes Go Karts. Other restrictions may apply.",
     },
-    // Add more discount offers as needed
   ];
 
   useEffect(() => {
@@ -101,8 +102,8 @@ const Tickets = () => {
           numAdults * prices.family.small.adult +
           numChildren * prices.family.small.child;
       } else {
-        const numAdults = Math.min(quantity, 3); // Example: Cap at 3 adults for large family
-        const numChildren = Math.max(0, quantity - 3); // Example: Remaining are children
+        const numAdults = Math.min(quantity, 3);
+        const numChildren = Math.max(0, quantity - 3);
         basePrice =
           numAdults * prices.family.large.adult +
           numChildren * prices.family.large.child;
@@ -115,7 +116,6 @@ const Tickets = () => {
   const handleTicketTypeChange = (type) => {
     setTicketType(type);
     setQuantity(1);
-    // Reset family size to 'small' when switching to family ticket
     if (type === "family") {
       setFamilySize("small");
     }
@@ -145,7 +145,6 @@ const Tickets = () => {
   };
 
   const handleAddToCart = () => {
-    // Reset error messages
     setNameError("");
     setEmailError("");
     setPhoneError("");
@@ -154,13 +153,12 @@ const Tickets = () => {
 
     let hasError = false;
 
-    // Basic form validation
     if (!cardholderName.trim()) {
       setNameError("Please enter the cardholder name.");
       hasError = true;
     }
     if (!billingAddress.trim()) {
-      setSubmissionMessage("Please enter your billing address."); // Generic message
+      setSubmissionMessage("Please enter your billing address.");
       hasError = true;
     }
     if (!phoneNumber.trim()) {
@@ -189,9 +187,13 @@ const Tickets = () => {
       return;
     }
 
+    // Simulate a successful payment.  In a real application, you would
+    // send this data to a payment gateway (e.g., Stripe, PayPal).
+    setIsPaymentSuccessful(true);
+
     console.log("Added to Cart:", {
       ticketType,
-      familySize,
+      familySize, // Keep familySize for the success message
       quantity,
       totalPrice,
       paymentMethod,
@@ -199,19 +201,37 @@ const Tickets = () => {
       billingAddress,
       phoneNumber,
       email,
-      cardNumber, // Only send if credit card is selected
+      cardNumber,
       expiryDate,
       cvv,
     });
 
-    setSubmissionMessage(
-      "Tickets added to cart!  (This is a placeholder.  Real payment processing would happen here.)"
-    );
+    // Reset form fields (optional - you might want to keep some fields)
     setQuantity(1);
-    setTimeout(() => {
-      setSubmissionMessage("");
-    }, 5000);
+    setCardholderName("");
+    setBillingAddress("");
+    setPhoneNumber("");
+    setEmail("");
+    setCardNumber("");
+    setExpiryDate("");
+    setCvv("");
+    // setSubmissionMessage(""); // Don't set this anymore
   };
+
+  // Conditional Rendering: Show SuccessMessage if payment is successful
+  if (isPaymentSuccessful) {
+    return (
+      <SuccessMessage
+        ticketType={ticketType}
+        quantity={quantity} // Pass quantity
+        familySize={familySize} // Pass familySize
+        totalPrice={totalPrice}
+        paymentMethod={
+          paymentMethod === "creditCard" ? "Credit Card" : "Paypal"
+        }
+      />
+    );
+  }
 
   return (
     <div className="Tickets">
@@ -266,7 +286,6 @@ const Tickets = () => {
             <p>Total Price: ${totalPrice}</p>
           </div>
 
-          {/* Discounts and Specials Section */}
           <div className="discounts-section">
             <h2>Discounts & Specials</h2>
             <div className="discount-cards">
@@ -294,13 +313,14 @@ const Tickets = () => {
         <div className="payment-info">
           <h2>Payment Information</h2>
           <div className="payment-options">
-            <h3>Payment Method</h3>
+            <h3>Payment Method:</h3>
             <button
               className={`payment-button ${
                 paymentMethod === "creditCard" ? "active" : ""
               }`}
               onClick={() => handlePaymentMethodChange("creditCard")}
             >
+              <i class="bx bxs-credit-card-alt"></i>
               Credit Card
             </button>
             <button
@@ -309,6 +329,7 @@ const Tickets = () => {
               }`}
               onClick={() => handlePaymentMethodChange("paypal")}
             >
+              <i class="bx bxl-paypal"></i>
               PayPal
             </button>
           </div>
@@ -387,13 +408,13 @@ const Tickets = () => {
             </div>
           </div>
 
-          {submissionMessage && (
-            <p className="success-message">{submissionMessage}</p>
-          )}
-
+          {/* NO success message here */}
           <button className="add-to-cart-button" onClick={handleAddToCart}>
             Add to Cart
           </button>
+          {submissionMessage && (
+            <p className="error-message">{submissionMessage}</p>
+          )}
         </div>
       </div>
     </div>

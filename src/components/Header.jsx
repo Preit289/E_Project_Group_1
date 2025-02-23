@@ -162,7 +162,7 @@ const Header = () => {
         <div className="top-Navbar">
           <ul className="list-nav-item">
             <li>
-              <i class="bx bxs-map icon-header"></i>
+              <i class="bx bxs-map"></i>
               <span>
                 <a
                   href="https://maps.app.goo.gl/gfwmqXtQHXSbtnGq5"
@@ -174,13 +174,13 @@ const Header = () => {
               </span>
             </li>
             <li>
-              <i class="bx bxs-phone icon-header"></i>
+              <i class="bx bxs-phone"></i>
               <span>
                 <a href="tel:(732) 495-1400">(732) 495-1400</a>
               </span>
             </li>
             <li>
-              <i class="bx bxs-envelope icon-header"></i>
+              <i class="bx bxs-envelope"></i>
               <span>
                 <a href="mailto:info@keansburgamusementpark.com">
                   info@keansburgamusementpark.com
@@ -195,7 +195,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="bx bxl-facebook icon-header"></i>
+                <i class="bx bxl-facebook"></i>
               </a>
             </li>
             <li>
@@ -231,7 +231,7 @@ const Header = () => {
               <i class="bx bxs-user-account"></i>Visits
             </div>
             <div className="website-counter">{visitCount}</div>
-            <button
+            {/* <button
               //   Remember block code after remove Reset button
               style={{
                 backgroundColor: "#131f2a", // background -> backgroundColor
@@ -246,7 +246,7 @@ const Header = () => {
               onClick={handleReset}
             >
               Reset
-            </button>
+            </button> */}
           </div>
         </div>
         <div className={`Navbar ${isNavbarFixed ? "fixed" : ""}`}>
