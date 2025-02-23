@@ -1,33 +1,80 @@
 import { useEffect } from "react";
 import "../../styles/pages/AboutUs/Disclaimer.scss";
+
 const Disclaimer = () => {
-  // Setup title for page
+  // Set the page title
   useEffect(() => {
     document.title = "Disclaimer | KEANSBURG PARK";
   }, []);
+
   return (
     <div className="Disclaimer-info">
-      <h1>Disclaimer</h1>
+      <div className="redBlock">
+        <h2>Disclaimer</h2>
+      </div>
       <p
         style={{
           fontSize: "15pt",
-          padding: "50px 0px",
+          padding: "50px 0",
           textAlign: "justify",
           lineHeight: "1.6",
         }}
       >
-        While we strive to provide the most accurate and up-to-date information,
-        please be advised that park hours, ride availability, show schedules,
-        and pricing are subject to change without prior notice. We highly
-        recommend that you verify all details pertinent to your visit directly
-        on our site or by contacting our customer service team prior to your
-        arrival. Furthermore, Keanburg Amusement Park is not responsible for
-        personal belongings or any unforeseen accidents that may occur during
-        your visit. It is imperative that all guests adhere to safety
-        regulations and guidelines posted throughout the park to ensure a safe
-        and enjoyable experience for everyone. We aim to create a magical
-        experience, and we appreciate your understanding that some operational
-        changes may be required from time to time.
+        <b>1. Purpose of This Website:</b>
+        <br />
+        This website is created for{" "}
+        <strong>illustrative and educational purposes only</strong>. All
+        information, images, and content on this website are intended for
+        educational and practice purposes and do not represent an official
+        website of Keansburg Amusement Park or any other organization. This
+        website does not provide real services, is not related to any commercial
+        activities, and is not responsible for any transactions or agreements.
+        <br />
+        <br />
+        <b>2. Information on This Website:</b>
+        <br />
+        All information on this website, including but not limited to park
+        hours, ticket prices, ride schedules, and events, is{" "}
+        <strong>hypothetical and for illustrative purposes only</strong>. We do
+        not guarantee the accuracy, completeness, or timeliness of this
+        information. Information may change without prior notice.
+        <br />
+        <br />
+        <b>3. User Responsibility:</b>
+        <br />
+        Users accessing this website must understand that this is an educational
+        project and should not use the information on this website for
+        real-world purposes. We are not responsible for any decisions or actions
+        taken based on the information provided on this website.
+        <br />
+        <br />
+        <b>4. Intellectual Property:</b>
+        <br />
+        All images, text, and designs on this website are used for educational
+        and illustrative purposes. If any content infringes on intellectual
+        property rights, please contact us immediately so we can remove or
+        adjust it.
+        <br />
+        <br />
+        <b>5. Limitation of Liability:</b>
+        <br />
+        We are not liable for any damages, losses, or risks arising from the use
+        or access of this website. This website does not guarantee that external
+        links (if any) will function continuously or provide accurate
+        information.
+        <br />
+        <br />
+        <b>6. Changes and Updates:</b>
+        <br />
+        We reserve the right to change, update, or remove any content on this
+        website without prior notice. Users should check regularly for updates
+        (if any).
+        <br />
+        <br />
+        <b>7. Contact Us:</b>
+        <br />
+        If you have any questions or concerns about this website, please contact
+        us at: <strong>info@keansburgamusementpark.com</strong>.
       </p>
     </div>
   );

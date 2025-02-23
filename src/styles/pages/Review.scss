@@ -2,23 +2,14 @@
 .Review {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  padding: 30px 0px;
+  width: 100%;
 
   .review-content {
     flex: 3;
+    margin-top: 30px;
     margin-right: 2rem;
-
-    .review-intro {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
+    max-width: 70%;
 
     .existing-reviews {
       margin-bottom: 2rem;
@@ -51,7 +42,12 @@
         }
 
         p {
+          word-wrap: break-word; /* Important for long words */
+          overflow-wrap: break-word; /* Also important */
           margin-bottom: 0.25rem;
+          overflow: auto; /* Add scrollbar if needed */
+          white-space: pre-wrap; /* Preserve line breaks and spaces */
+          max-width: 100%; /* ADD THIS */
         }
         //Review date
         .review-date {
@@ -94,7 +90,11 @@
 
       .form-group {
         margin-bottom: 1rem;
-
+        .fixed-height-textarea {
+          resize: none; // Prevent manual resizing by the user
+          overflow-y: auto; // Add vertical scrollbar when content overflows
+          max-height: calc(1.5rem * 4 + 10px * 2 + 1px * 2);
+        }
         label {
           display: block;
           margin-bottom: 0.5rem;
@@ -201,7 +201,9 @@
     flex: 1;
     background-color: #f8f9fa; // Light background
     padding: 1rem;
+    margin-top: 30px;
     border-radius: 8px;
+    max-width: 30%;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -268,6 +270,17 @@
             padding: 0.5rem; // Add some padding
           }
         }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .review-content {
+      flex-direction: column;
+
+      .existing-reviews,
+      .review-form {
+        margin-right: 0;
       }
     }
   }

@@ -231,7 +231,7 @@ const Header = () => {
               <i class="bx bxs-user-account"></i>Visits
             </div>
             <div className="website-counter">{visitCount}</div>
-            <button
+            {/* <button
               //   Remember block code after remove Reset button
               style={{
                 backgroundColor: "#131f2a", // background -> backgroundColor
@@ -246,7 +246,7 @@ const Header = () => {
               onClick={handleReset}
             >
               Reset
-            </button>
+            </button> */}
           </div>
         </div>
         <div className={`Navbar ${isNavbarFixed ? "fixed" : ""}`}>

@@ -1,74 +1,29 @@
 .Gallery {
-  padding: 50px 0px;
-  .gallery-intro {
-    font-size: 15pt;
-    padding: 50px 0px;
-    text-align: justify;
-    line-height: 1.6;
+  width: 100%;
+  padding: 60px 0;
+  box-sizing: border-box;
+
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   .gallery-section {
-    margin-bottom: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 
-    h2 {
+    .redBlock {
+      // Style for the title container
+      padding: 10px;
       text-align: center;
-      margin-bottom: 20px;
-    }
-  }
-
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(250px, 1fr)
-    ); // Responsive grid
-    gap: 20px;
-    justify-items: center; // Center images horizontally
-  }
-  .gallery-image-link {
-    text-decoration: none;
-  }
-
-  .gallery-image-link img {
-    width: 100%;
-    max-width: 300px; // Limit image size
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: scale(1.05); //Slightly enlarge image on hover
-    }
-  }
-
-  .upload-button {
-    display: block; // Make the link a block element
-    width: fit-content; // Adjust width to content
-    margin: 20px auto; // Center the button
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center; // Center text inside the button
-
-    &:hover {
-      background-color: #0056b3; // Darker shade on hover
-    }
-  }
-  .more-button {
-    display: block;
-    width: fit-content;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #28a745; // Green color
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-
-    &:hover {
-      background-color: #1e7e34; // Darker green on hover
+      margin-bottom: 1rem; // Space between title and carousel
     }
   }
 }

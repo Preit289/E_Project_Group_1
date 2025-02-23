@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
 import "../../styles/pages/AboutUs/AboutUs.scss";
-
-// Placeholder image URLs (replace with your actual image paths)
-
-const ridesImage = "https://placehold.co/800x400/?text=Rides+and+Attractions";
-const historyImage = "https://placehold.co/800x400/?text=Park+History";
-const foodImage = "https://placehold.co/800x400/?text=Food+and+Dining";
-const defaultImage = "https://placehold.co/800x400/?text=Image+Here";
+import FishVillage from "../../assets/img/AboutUs/FishVillage.jpg";
+import Resort from "../../assets/img/AboutUs/Resort.png";
+import SpookHouse from "../../assets/img/AboutUs/SpookHouse.jpg";
+import NextGen from "../../assets/img/AboutUs/NextGeneration.png";
+import DisclaimerImg from "../../assets/img/AboutUs/Disclaimer.png";
+import PolicyImg from "../../assets/img/AboutUs/Policy.png";
+import BookingTicketImg from "../../assets/img/AboutUs/BookingTicket.png";
 const AboutUs = () => {
   // Setup title for page
   useEffect(() => {
@@ -16,62 +15,104 @@ const AboutUs = () => {
   return (
     <>
       <div className="AboutUs">
-        <h1>Introduction</h1>
-        <p
-          style={{
-            fontSize: "15pt",
-            padding: "50px 0px",
-            textAlign: "justify",
-            lineHeight: "1.6",
-          }}
-        >
-          Welcome to Keanburg Amusement Park, your premier destination for
-          thrilling adventures and unforgettable memories! Our homepage is your
-          gateway to a world of vibrant colors, exhilarating rides, and
-          captivating attractions, meticulously designed to spark joy and create
-          lasting moments for guests of all ages. Step inside and explore the
-          magic that awaits within our park’s gates, from heart-stopping roller
-          coasters to family-friendly escapades. We believe in the power of
-          shared experiences and have crafted every detail to ensure that each
-          visit to Keanburg is brimming with excitement and wonder. Discover our
-          digital landscape to uncover a wealth of information, including rides,
-          shows, dining, and park amenities, all designed to make your planning
-          seamless and enjoyable. We invite you to dive into our online world
-          and experience the very essence of what makes Keanburg so special: the
-          thrill, the excitement, and the genuine happiness.
-        </p>
-        <div className="section-container">
-          <Link to="/rides" className="section">
-            <h2>Rides & Attractions</h2>
-            <img src={ridesImage} alt="Rides and Attractions" />
+        <div className="redBlock">
+          <h2>History</h2>
+        </div>
+        <div className="content-container">
+          <div className="left-side">
+            <img src={FishVillage} alt="Fishing village" />
+          </div>
+          <div className="text-content">
+            <h2>Before 1901</h2>
+            <br />
+            <h3>From Fishing Village to Premier Resort Destination</h3>
+            <br />
             <p>
-              Explore our thrilling roller coasters, classic family rides, and
-              exciting attractions for all ages!
+              Originally a fishing village, Keansburg evolved into a resort
+              destination for visitors from Northern New Jersey and New York.
+              The Keansburg Amusement Park, which marked its 120th anniversary
+              in 2024, has been a significant attraction even before the
+              borough's official incorporation. The park, alongside the
+              Steamboat Company founded in 1910, played a crucial role in
+              developing Keansburg as a recreation-focused resort.
             </p>
-          </Link>
-
-          <Link to="/history" className="section">
-            <h2>Our History</h2>
-            <img src={historyImage} alt="Park History" />
+          </div>
+        </div>
+        <div className="content-container">
+          <div className="left-side">
+            <img src={Resort} alt="Summer resort" />
+          </div>
+          <div className="text-content">
+            <h2>1901</h2>
+            <br />
+            <h3>Founding of Keansburg Park and Early Attractions</h3>
+            <br />
             <p>
-              Discover the rich history of Keansburg Amusement Park, a beloved
-              destination for generations.
+              The park was founded by William Gehlhaus and his associates, who
+              purchased waterfront property to create a summer resort. In the
+              early days, visitors could take a 50-cent roundtrip voyage from
+              Battery Park in New York City to Keansburg's boardwalk and
+              attractions.
             </p>
-          </Link>
-
-          <Link to="/food" className="section">
-            <h2>Food & Dining</h2>
-            <img src={foodImage} alt="Food and Dining" />
+          </div>
+        </div>
+        <div className="content-container">
+          <div className="left-side">
+            <img src={SpookHouse} alt="Spook House" />
+          </div>
+          <div className="text-content">
+            <h2>1931</h2>
+            <br />
+            <h3>Iconic Attractions and Transformations at Keansburg Park</h3>
+            <br />
             <p>
-              From classic boardwalk treats to delicious sit-down meals, find
-              the perfect dining options for your visit.
+              One of the park's most famous attractions was The Spook House, one
+              of the world's oldest operating dark rides until it was damaged by
+              Hurricane Sandy. The park has seen several transformations over
+              the years, including the addition of Runaway Rapids Waterpark,
+              which was built in just nine months.
             </p>
-          </Link>
-          <Link to="/default" className="section">
-            <h2>More About the Park</h2>
-            <img src={defaultImage} alt="Default Image" />
-            <p>Click to find out more about Keansburg Amusement Park.</p>
-          </Link>
+          </div>
+        </div>
+        <div className="content-container">
+          <div className="left-side">
+            <img src={NextGen} alt="Spook House" />
+          </div>
+          <div className="text-content">
+            <h2>1995</h2>
+            <br />
+            <h3>The Next Generation of Keansburg Amusement Park</h3>
+            <br />
+            <p>
+              Despite facing challenges like Hurricane Sandy, the park has
+              remained a beloved destination for families and visitors. The
+              Gehlhaus family, who repurchased the park in 1995, played a
+              significant role in restoring and maintaining its charm.
+            </p>
+            <br />
+            <p>
+              Today, Keansburg Amusement Park continues to draw thousands of
+              visitors from April to October, offering a mix of classic and
+              modern attractions, including rides, games, and water activities.
+            </p>
+          </div>
+        </div>
+        <div className="redBlock">
+          <h2>History</h2>
+        </div>
+        <div className="more-info-container">
+          <a href="/aboutus/disclaimer" className="info-card">
+            <img src={DisclaimerImg} alt="Disclaimer" />
+            <h3>Disclaimer</h3>
+          </a>
+          <a href="/aboutus/privacy-policy" className="info-card">
+            <img src={PolicyImg} alt="Policy" />
+            <h3>Policy</h3>
+          </a>
+          <a href="/aboutus/tickets-term" className="info-card">
+            <img src={BookingTicketImg} alt="Booking Ticket" />
+            <h3>Booking Ticket</h3>
+          </a>
         </div>
       </div>
     </>
