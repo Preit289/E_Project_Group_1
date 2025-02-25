@@ -122,7 +122,7 @@ const Footer = () => {
                   <a href="/activity/waterpark">Waterpark</a>
                 </li>
                 <li>
-                  <a href="/activity/beachr">Beach</a>
+                  <a href="/activity/beach">Beach</a>
                 </li>
                 <li>
                   <a href="/activity/foodndrink">Food and Drink</a>
@@ -148,7 +148,7 @@ const Footer = () => {
                   <a href="/review">Review</a>
                 </li>
                 <li>
-                  <a href="//tickets">Buy Tickets</a>
+                  <a href="/tickets">Buy Tickets</a>
                 </li>
                 <li>
                   <a href="/">Homepage</a>
