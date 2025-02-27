@@ -13,11 +13,11 @@
   .content-container {
     display: flex;
     align-items: center; // Align items to the top
-    width: 100%;
+    width:100%;
     padding: 0px 0px;
     margin: 30px 0px;
     border-radius: 20px;
-    background-color: rgb(161, 161, 221);
+    box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2);
     .left-side {
       width: 60%; // Set the width to 60% of the screen width
       background-color: white; // Set the background to white to avoid inheriting any color
@@ -31,15 +31,19 @@
         background-color: white; // Ensure the image background is white
         margin: 0;
         padding: 0;
-        box-shadow: 10px 0 15px rgba(0, 0, 0, 0.3);
       }
     }
 
     .text-content {
       // Styles for text content
-
       flex: 1;
       width: 40%; // Ensure the text content takes up the remaining 40%
+      padding-right: 3em;
+      padding-left: 3em;
+      color: #737373;
+      p, h2{
+        color: #737373;
+      }
     }
   }
   .more-info-container {

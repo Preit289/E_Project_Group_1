@@ -20,7 +20,7 @@
 **Documentation**: https://github.com/Preit289/E_Project_Group_1/tree/main/Documentations
 
 =======================================  
-**Published website**: [e-project-1-self.vercel.app/](e-project-1-self.vercel.app/)
+**Published website**: (https://e-project-group-1.vercel.app/)
 
 =======================================  
 **Thank you for visiting our website.**

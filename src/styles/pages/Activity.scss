@@ -1,0 +1,200 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.redBlock {
+  background-color: #810000;
+  padding: 7px 20px 7px;
+  border-radius: 20px;
+  width: 100%; /* Make the red block span the whole width */
+  text-align: left; /* Align the text to the left */
+}
+
+.redBlock h2 {
+  color: #fff;
+}
+
+.Activity {
+  display: flex;
+  justify-content: top;
+  gap: 10px;
+  width: 100%;
+}
+
+.map-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+// Park Info
+.park-info-container {
+  flex: 0 0 20%;
+  overflow-y: auto;
+  max-height: calc(100vh - 150px);
+  padding: 0px;
+  box-sizing: border-box;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.park-info-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.category-card {
+  flex: 1 1 calc(50% - 10px);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.category-card h3 {
+  margin-top: 0;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.category-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: item; /* Initialize counter */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.category-card:hover ul {
+  max-height: 3000px; /* Adjust based on the number of items */
+  transition: max-height 0.5s ease-in;
+}
+
+.category-card ul li {
+  padding: 2px 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  counter-increment: item; /* Increment counter */
+  position: relative; /* For hover effect */
+  transition: transform 0.3s ease; /* Add transition effect for smooth scaling */
+}
+
+.category-card ul li:hover {
+  transform: scale(1.05) translateX(10px); /* Scale up the item when hovered */
+}
+
+.category-card ul li::before {
+  content: counter(item);
+  background-color: currentColor; /* Use the current text color */
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.cool-stuff h3 {
+  background-color: #e8d301;
+  color: black;
+}
+
+.cool-stuff ul li::before {
+  background-color: #e8d301;
+  color: black;
+}
+
+.thrill-rides h3 {
+  background-color: #840f72;
+}
+
+.thrill-rides ul li::before {
+  background-color: #840f72;
+}
+
+.games h3 {
+  background-color: #2a3e92;
+}
+
+.games ul li::before {
+  background-color: #2a3e92;
+}
+
+.kiddie-rides h3 {
+  background-color: #ed1639;
+}
+
+.kiddie-rides ul li::before {
+  background-color: #ed1639;
+}
+
+.food h3 {
+  background-color: #41b23b;
+}
+
+.food ul li::before {
+  background-color: #41b23b;
+}
+
+.arcades-and-go-karts h3 {
+  background-color: #83a7dd;
+}
+
+.arcades-and-go-karts ul li::before {
+  background-color: #83a7dd;
+}
+
+.go-karts {
+  counter-reset: gk-item; /* Initialize counter for Go Karts */
+}
+
+.go-karts li {
+  counter-increment: gk-item; /* Increment counter for Go Karts */
+}
+
+.go-karts li::before {
+  content: counter(gk-item) "gk"; /* Custom numbering format for Go Karts */
+}
+
+// Hover card
+
+.hover-card {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none; /* Prevent card from interfering with mouse events */
+  z-index: 10;
+  color: black; /* Ensure text color is visible */
+  max-width: 300px; /* Adjust the max-width as needed */
+}
+
+.hover-card h4 {
+  margin: 0 0 10px;
+  color: black; /* Ensure title color is visible */
+}
+
+.hover-card img {
+  width: 100%; /* Make the image as wide as the card */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+  border-radius: 5px; /* Add some rounding to the image corners if desired */
+}
+
+.hover-card p {
+  margin: 0;
+}
