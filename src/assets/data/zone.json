@@ -3,7 +3,7 @@
     {
       "name": "Official Parking Lot",
       "title": "Official Parking Lot",
-      "image": "../assets/img/coolstuff/FrozenFlavors.jpeg",
+      "image": "../assets/img/coolstuff/Parking.png",
       "description": "Convenient parking right at the park's entrance."
     },
     {
@@ -15,37 +15,37 @@
     {
       "name": "Racing Simulator",
       "title": "Racing Simulator",
-      "image": "path_to_racing_simulator_image",
+      "image": "../assets/img/coolstuff/RacingSimulator.jpg",
       "description": "Experience the thrill of high-speed racing in our immersive racing simulator."
     },
     {
       "name": "Food Trailer Emporium",
       "title": "Food Trailer Emporium",
-      "image": "path_to_food_trailer_image",
+      "image": "../assets/img/coolstuff/Emporium.jpg",
       "description": "Enjoy a variety of delicious food options from our diverse food trailers."
     },
     {
       "name": "Temporary Tattoo",
       "title": "Temporary Tattoo",
-      "image": "path_to_temporary_tattoo_image",
+      "image": "../assets/img/coolstuff/TempTattoo.jpg",
       "description": "Get a fun and colorful temporary tattoo to show off at the park."
     },
     {
       "name": "Cool Player",
       "title": "Cool Player",
-      "image": "path_to_cool_player_image",
+      "image": "../assets/img/coolstuff/CoolPlayer.jpg",
       "description": "Relax and listen to some tunes with our Cool Player music station."
     },
     {
       "name": "Fishing Pond",
       "title": "Fishing Pond",
-      "image": "path_to_fishing_pond_image",
+      "image": "../assets/img/coolstuff/FishingPond.jpeg",
       "description": "Cast a line and try your luck at catching some fish in our serene fishing pond."
     },
     {
       "name": "Gem Mining Sluice",
       "title": "Gem Mining Sluice",
-      "image": "path_to_gem_mining_image",
+      "image": "../assets/img/coolstuff/GemMining.jpg",
       "description": "Pan for gemstones and uncover hidden treasures at our gem mining sluice."
     }
   ],
