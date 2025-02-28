@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../../styles/pages/Gallery/Visitorgallery.scss";
-import visitorImage1 from "../../assets/img/CJSpot.jpeg";
-import visitorImage2 from "../../assets/img/giant-slide.png";
-import visitorImage3 from "../../assets/img/Heidelberg.jpg";
-import visitorImage4 from "../../assets/img/lagoon.png";
+import visitorImage1 from "../../assets/img/Gallery/CJSpot.jpeg";
+import visitorImage2 from "../../assets/img/Gallery/giant-slide.png";
+import visitorImage3 from "../../assets/img/Gallery/Heidelberg.jpg";
+import visitorImage4 from "../../assets/img/Gallery/lagoon.png";
 const Visitorgallery = () => {
   const [images, setImages] = useState(() => {
     const savedImages = sessionStorage.getItem("visitorImages");

@@ -1,14 +1,14 @@
 import React from "react";
 import "../../styles/pages/Gallery/Websitegallery.scss";
-import websiteImage1 from "../../assets/img/CottonCandy.jpg";
-import websiteImage2 from "../../assets/img/Fries.jpg";
-import websiteImage3 from "../../assets/img/CoastalIceCream.jpeg";
-import websiteImage4 from "../../assets/img/hottub.jpg";
-import websiteImage5 from "../../assets/img/ShaveIce.jpg";
-import websiteImage6 from "../../assets/img/FlavorBurst.jpg";
-import websiteImage7 from "../../assets/img/GeorgiaLemon.jpeg";
-import websiteImage8 from "../../assets/img/ToucanGrille.jpg";
-import websiteImage9 from "../../assets/img/PizzaV.jpeg";
+import websiteImage1 from "../../assets/img/Gallery/CottonCandy.jpg";
+import websiteImage2 from "../../assets/img/Gallery/Fries.jpg";
+import websiteImage3 from "../../assets/img/Gallery/CoastalIceCream.jpeg";
+import websiteImage4 from "../../assets/img/Gallery/hottub.jpg";
+import websiteImage5 from "../../assets/img/Gallery/ShaveIce.jpg";
+import websiteImage6 from "../../assets/img/Gallery/FlavorBurst.jpg";
+import websiteImage7 from "../../assets/img/Gallery/GeorgiaLemon.jpeg";
+import websiteImage8 from "../../assets/img/Gallery/ToucanGrille.jpg";
+import websiteImage9 from "../../assets/img/Gallery/PizzaV.jpeg";
 const Websitegallery = () => {
   const images = [
     websiteImage1,

@@ -110,11 +110,6 @@
                 box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
               }
             }
-
-            textarea {
-              resize: vertical;
-              min-height: 120px;
-            }
           }
 
           .error-message {
@@ -225,5 +220,17 @@
       }
     }
     padding: 40px 20px;
+  }
+
+  .contact-message-textarea {
+    resize: none;
+    height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
   }
 }

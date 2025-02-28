@@ -4,17 +4,17 @@ import CustomCarousel from "../../components/Carousel"; // Correct path
 import "../../styles/pages/Gallery/Gallery.scss";
 
 // Import the images
-import websiteImage1 from "../../assets/img/CottonCandy.jpg";
-import websiteImage2 from "../../assets/img/Fries.jpg";
-import websiteImage3 from "../../assets/img/CoastalIceCream.jpeg";
-import websiteImage4 from "../../assets/img/hottub.jpg";
-import websiteImage5 from "../../assets/img/ShaveIce.jpg";
-import websiteImage6 from "../../assets/img/FlavorBurst.jpg";
+import websiteImage1 from "../../assets/img/Gallery/CottonCandy.jpg";
+import websiteImage2 from "../../assets/img/Gallery/Fries.jpg";
+import websiteImage3 from "../../assets/img/Gallery/CoastalIceCream.jpeg";
+import websiteImage4 from "../../assets/img/Gallery/hottub.jpg";
+import websiteImage5 from "../../assets/img/Gallery/ShaveIce.jpg";
+import websiteImage6 from "../../assets/img/Gallery/FlavorBurst.jpg";
 
-import visitorImage1 from "../../assets/img/CJSpot.jpeg";
-import visitorImage2 from "../../assets/img/giant-slide.png";
-import visitorImage3 from "../../assets/img/Heidelberg.jpg";
-import visitorImage4 from "../../assets/img/lagoon.png";
+import visitorImage1 from "../../assets/img/Gallery/CJSpot.jpeg";
+import visitorImage2 from "../../assets/img/Gallery/giant-slide.png";
+import visitorImage3 from "../../assets/img/Gallery/Heidelberg.jpg";
+import visitorImage4 from "../../assets/img/Gallery/lagoon.png";
 
 const websiteGalleryImages = [
   websiteImage1,

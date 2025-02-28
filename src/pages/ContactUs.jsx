@@ -189,6 +189,7 @@ const ContactUs = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   rows={4}
                   name="message"
+                  className="contact-message-textarea" // ADDED CLASS
                 />
                 {messageError && (
                   <p className="error-message">{messageError}</p>
