@@ -1,0 +1,164 @@
+.Footer {
+  display: block;
+  color: white;
+  .top-Footer {
+    background: #131f2a;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    .logo-Footer {
+      // background-color: #f0f0f0;
+      img {
+        width: 150px;
+        height: auto;
+        margin: auto auto;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .email-form {
+      width: 85%;
+      margin: 0 auto;
+      padding: 20px;
+
+      .form {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+        float: left;
+        width: 100%;
+        justify-content: space-between;
+        .Title-form {
+          text-align: center; // Center the title and description
+          margin-bottom: 1rem;
+
+          h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+          }
+
+          .description {
+            font-size: 1.5rem;
+            color: white; // Slightly muted text color
+          }
+        }
+
+        .Content-form {
+          .subscrbe-form {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 65% auto;
+            gap: 20px;
+            position: relative;
+
+            input[type="text"] {
+              border-radius: 30px;
+              padding: 10px 30px;
+              border: none;
+              height: 60px;
+
+              &:focus {
+                border-color: rgb(255, 217, 0);
+                outline: none;
+                box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+              }
+            }
+
+            button[type="submit"] {
+              background-color: rgb(255, 217, 0);
+              color: rgb(0, 0, 0);
+              padding: 0.75rem 1rem;
+              border: none;
+              border-radius: 30px;
+              font-weight: bold;
+              cursor: pointer;
+              font-size: 1rem;
+              transition: background-color 0.2s ease;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                margin-left: 0.5rem;
+                font-size: 20pt;
+              }
+
+              &:hover {
+                background-color: #668705;
+              }
+
+              &:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+              }
+            }
+          }
+
+          .success-message {
+            position: absolute;
+            color: rgb(2, 247, 2);
+            margin-top: 0.5rem;
+            text-align: center; // Center the success message
+          }
+
+          .error-message {
+            position: absolute;
+            color: rgb(250, 77, 77);
+            margin-top: 0.5rem;
+            text-align: center; // Center the error message
+          }
+        }
+      }
+    }
+  }
+  .mid-Footer {
+    box-sizing: border-box;
+    background: #131f2a;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .list-Footer {
+      width: 20%;
+      .title-list {
+        font-style: italic;
+        font-size: 13pt;
+      }
+      .line-list {
+        height: 1px;
+        width: 100px;
+        background: white;
+        margin: 10px 0;
+      }
+      .content-list {
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            margin: 5px 0;
+            display: flex;
+            color: white;
+            align-items: center;
+            gap: 10px;
+            a {
+              color: white;
+              text-decoration: none;
+              &:hover {
+                color: #f1f1f1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bot-Footer {
+    background: #826bc3;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

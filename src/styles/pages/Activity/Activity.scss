@@ -1,0 +1,117 @@
+.Activity {
+  padding: 40px 0px 30px 0px;
+
+  .Activity-firstwrap {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .redBlock {
+      background-color: #810000;
+      padding: 7px 20px;
+      border-radius: 20px;
+      width: 100%;
+      text-align: left;
+
+      h2 {
+        color: #fff;
+        margin: 0;
+      }
+    }
+
+    .activity-container {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+
+      .park-info-container {
+        flex: 0 0 20%;
+        overflow-y: auto;
+        max-height: calc(100vh - 150px);
+        box-sizing: border-box;
+        scrollbar-width: none;
+        /* For Firefox */
+        -ms-overflow-style: none;
+        /* For Internet Explorer and Edge */
+      }
+
+      .map-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  .Activity-secondwrap {
+    padding: 50px 0px;
+
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); // 3 columns by default
+      gap: 20px; // Space between items
+      padding-top: 30px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr); // 2 columns on smaller screens
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr; // 1 column on very small screens
+      }
+    }
+
+    .activity-section {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+
+      .section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+          .section-image {
+            transform: translateY(-5px);
+          }
+        }
+      }
+
+      .section-image {
+        width: 100%; // Important: Keep this for responsiveness within the grid cell
+        height: 200px; // Fixed height
+        object-fit: cover; // Ensure images cover the area without stretching
+        border-radius: 8px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

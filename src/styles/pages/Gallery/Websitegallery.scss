@@ -1,0 +1,46 @@
+.Websitegallery {
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px 0px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .gallery-item {
+    overflow: hidden; // Keep for hover effect
+    border-radius: 4px; // Apply border-radius here
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Apply box-shadow here
+    transition: box-shadow 0.3s ease; // Animate box-shadow on the container
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      //border: 1px solid #ddd; // Remove from img if you are applying border-radius to container
+      //border-radius: 4px;  // Remove from the image
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      transition: transform 0.3s ease; // Animate transform
+
+      &:hover {
+        transform: scale(1.2) rotate(10deg); // Scale and rotate on hover
+        //box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Remove from img:hover
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Increased shadow on container hover
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.Notfound {
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Căn giữa theo chiều ngang
+  justify-content: center; // Căn giữa theo chiều dọc (nếu .Notfound có chiều cao cố định)
+  height: 100vh; // Ví dụ: chiếm toàn bộ chiều cao viewport
+  width: 100%;
+  text-align: center; //Căn giữa text
+  .titleNotfound {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ff0000;
+  }
+  .messageNotfound {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+  }
+  img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+  }
+  button#ReturnHP {
+    background: red; // background -> backgroundColor
+    color: white; // Màu chữ
+    padding: 5px 20px; // Khoảng cách bên trong nút
+    margin: 5px 20px;
+    border: none; // Loại bỏ viền
+    border-radius: 5px; // Bo góc
+    cursor: pointer; // Hiển thị con trỏ khi di chuột qua
+    &:hover {
+      background-color: #9d1616;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,604 @@
+{
+  "coolStuff": [
+    {
+      "name": "Official Parking Lot",
+      "title": "Official Parking Lot",
+      "image": "../assets/img/coolstuff/Parking.png",
+      "description": "Convenient parking right at the park's entrance."
+    },
+    {
+      "name": "Batting Cages",
+      "title": "Batting Cages",
+      "image": "../assets/img/battingCage.jpg",
+      "description": "Test your swing and hit some home runs at our state-of-the-art batting cages."
+    },
+    {
+      "name": "Racing Simulator",
+      "title": "Racing Simulator",
+      "image": "../assets/img/coolstuff/RacingSimulator.jpg",
+      "description": "Experience the thrill of high-speed racing in our immersive racing simulator."
+    },
+    {
+      "name": "Food Trailer Emporium",
+      "title": "Food Trailer Emporium",
+      "image": "../assets/img/coolstuff/Emporium.jpg",
+      "description": "Enjoy a variety of delicious food options from our diverse food trailers."
+    },
+    {
+      "name": "Temporary Tattoo",
+      "title": "Temporary Tattoo",
+      "image": "../assets/img/coolstuff/TempTattoo.jpg",
+      "description": "Get a fun and colorful temporary tattoo to show off at the park."
+    },
+    {
+      "name": "Cool Player",
+      "title": "Cool Player",
+      "image": "../assets/img/coolstuff/CoolPlayer.jpg",
+      "description": "Relax and listen to some tunes with our Cool Player music station."
+    },
+    {
+      "name": "Fishing Pond",
+      "title": "Fishing Pond",
+      "image": "../assets/img/coolstuff/FishingPond.jpeg",
+      "description": "Cast a line and try your luck at catching some fish in our serene fishing pond."
+    },
+    {
+      "name": "Gem Mining Sluice",
+      "title": "Gem Mining Sluice",
+      "image": "../assets/img/coolstuff/GemMining.jpg",
+      "description": "Pan for gemstones and uncover hidden treasures at our gem mining sluice."
+    }
+  ],
+  "thrillRides": [
+    {
+      "name": "Looping Star",
+      "title": "Looping Star",
+      "image": "../assets/img/thrillrides/looping_star.jpg",
+      "description": "Experience the thrill of a lifetime on the Looping Star roller coaster!"
+    },
+    {
+      "name": "Wave Swinger",
+      "title": "Wave Swinger",
+      "image": "../assets/img/thrillrides/wave_swinger.jpg",
+      "description": "Soar through the air on the exciting Wave Swinger ride."
+    },
+    {
+      "name": "Rockin' Tug",
+      "title": "Rockin' Tug",
+      "image": "../assets/img/thrillrides/rockin_tug.jpg",
+      "description": "Take a wild ride on the rocking and spinning Rockin' Tug."
+    },
+    {
+      "name": "Pharaoh's Fury",
+      "title": "Pharaoh's Fury",
+      "image": "../assets/img/thrillrides/pharaohs_fury.jpg",
+      "description": "Swing high and fast on the majestic Pharaoh's Fury."
+    },
+    {
+      "name": "Loop-O-Plane",
+      "title": "Loop-O-Plane",
+      "image": "../assets/img/thrillrides/loop_o_plane.jpg",
+      "description": "Defy gravity on the thrilling Loop-O-Plane ride."
+    },
+    {
+      "name": "Double Shot",
+      "title": "Double Shot",
+      "image": "../assets/img/thrillrides/double_shot.jpg",
+      "description": "Feel the adrenaline rush as you're launched into the sky on the Double Shot."
+    },
+    {
+      "name": "Tornado",
+      "title": "Tornado",
+      "image": "../assets/img/thrillrides/tornado.jpg",
+      "description": "Get caught in the whirlwind of excitement on the Tornado ride."
+    },
+    {
+      "name": "Spook Mansion",
+      "title": "Spook Mansion",
+      "image": "../assets/img/thrillrides/spook_mansion.jpg",
+      "description": "Brave the haunted halls of the eerie Spook Mansion."
+    },
+    {
+      "name": "Haunted House",
+      "title": "Haunted House",
+      "image": "../assets/img/thrillrides/haunted_house.jpg",
+      "description": "Face your fears in the spine-chilling Haunted House."
+    },
+    {
+      "name": "Bumper Cars",
+      "title": "Bumper Cars",
+      "image": "../assets/img/thrillrides/bumper_cars.jpg",
+      "description": "Have a smashing good time with friends and family in the Bumper Cars."
+    },
+    {
+      "name": "Moby Dick",
+      "title": "Moby Dick",
+      "image": "../assets/img/thrillrides/moby_dick.jpg",
+      "description": "Ride the waves of excitement on the Moby Dick ride."
+    },
+    {
+      "name": "Gravitron",
+      "title": "Gravitron",
+      "image": "../assets/img/thrillrides/gravitron.jpg",
+      "description": "Experience the force of gravity on the spinning Gravitron."
+    },
+    {
+      "name": "Tilt-a-Whirl",
+      "title": "Tilt-a-Whirl",
+      "image": "../assets/img/thrillrides/tilt_a_whirl.jpg",
+      "description": "Spin and whirl around on the classic Tilt-a-Whirl ride."
+    },
+    {
+      "name": "Chaos",
+      "title": "Chaos",
+      "image": "../assets/img/thrillrides/chaos.jpg",
+      "description": "Get ready for a wild and chaotic ride on Chaos."
+    },
+    {
+      "name": "Cliff Hanger",
+      "title": "Cliff Hanger",
+      "image": "../assets/img/thrillrides/cliff_hanger.jpg",
+      "description": "Soar through the sky like a hang glider on the Cliff Hanger ride."
+    }
+  ],
+  "games": [
+    {
+      "name": "Duck Pond",
+      "title": "Duck Pond",
+      "image": "../assets/img/games/duck_pond.jpg",
+      "description": "Try your luck at the Duck Pond and win cute prizes."
+    },
+    {
+      "name": "Shoot Range",
+      "title": "Shoot Range",
+      "image": "../assets/img/games/shoot_range.jpg",
+      "description": "Test your aim and hit the targets at the Shoot Range."
+    },
+    {
+      "name": "Sailor Pong Basketball",
+      "title": "Sailor Pong Basketball",
+      "image": "../assets/img/games/sailor_pong_basketball.jpg",
+      "description": "Show off your basketball skills in the Sailor Pong Basketball game."
+    },
+    {
+      "name": "Shilling's Shooting Gallery",
+      "title": "Shilling's Shooting Gallery",
+      "image": "../assets/img/games/shillings_shooting_gallery.jpg",
+      "description": "Hit as many targets as you can at Shilling's Shooting Gallery."
+    },
+    {
+      "name": "Shilling's Other Gallery",
+      "title": "Shilling's Other Gallery",
+      "image": "../assets/img/games/shillings_other_gallery.jpg",
+      "description": "Challenge yourself at Shilling's Other Gallery with various fun targets."
+    },
+    {
+      "name": "Long Range Basketball",
+      "title": "Long Range Basketball",
+      "image": "../assets/img/games/long_range_basketball.jpg",
+      "description": "See if you can make those long-distance shots at the Long Range Basketball game."
+    },
+    {
+      "name": "Race Cars",
+      "title": "Race Cars",
+      "image": "../assets/img/games/race_cars.jpg",
+      "description": "Race against friends and family in the exciting Race Cars game."
+    },
+    {
+      "name": "Hook Early Candy Stand",
+      "title": "Hook Early Candy Stand",
+      "image": "../assets/img/games/hook_early_candy_stand.jpg",
+      "description": "Catch delicious candies at the Hook Early Candy Stand."
+    },
+    {
+      "name": "Fishin' Hole",
+      "title": "Fishin' Hole",
+      "image": "../assets/img/games/fishin_hole.jpg",
+      "description": "Reel in some fun at the Fishin' Hole game."
+    },
+    {
+      "name": "Frog Go Race",
+      "title": "Frog Go Race",
+      "image": "../assets/img/games/frog_go_race.jpg",
+      "description": "Race frogs and see which one comes out on top in the Frog Go Race game."
+    },
+    {
+      "name": "Spin to Win",
+      "title": "Spin to Win",
+      "image": "../assets/img/games/spin_to_win.jpg",
+      "description": "Give the wheel a spin and try your luck at winning great prizes."
+    },
+    {
+      "name": "Balloon Bust",
+      "title": "Balloon Bust",
+      "image": "../assets/img/games/balloon_bust.jpg",
+      "description": "Pop balloons and win prizes at the Balloon Bust game."
+    },
+    {
+      "name": "Short Range Basketball",
+      "title": "Short Range Basketball",
+      "image": "../assets/img/games/short_range_basketball.jpg",
+      "description": "Test your shooting skills at the Short Range Basketball game."
+    },
+    {
+      "name": "Water Gun",
+      "title": "Water Gun",
+      "image": "../assets/img/games/water_gun.jpg",
+      "description": "Spray the targets and win prizes in the Water Gun game."
+    },
+    {
+      "name": "Balloon Dart",
+      "title": "Balloon Dart",
+      "image": "../assets/img/games/balloon_dart.jpg",
+      "description": "Aim your darts and pop balloons to win big at the Balloon Dart game."
+    },
+    {
+      "name": "Candy Wheel",
+      "title": "Candy Wheel",
+      "image": "../assets/img/games/candy_wheel.jpg",
+      "description": "Spin the Candy Wheel and win sweet treats."
+    },
+    {
+      "name": "Big Bass",
+      "title": "Big Bass",
+      "image": "../assets/img/games/big_bass.jpg",
+      "description": "Catch the biggest fish at the Big Bass game and win prizes."
+    },
+    {
+      "name": "Block Buster Ball",
+      "title": "Block Buster Ball",
+      "image": "../assets/img/games/block_buster_ball.jpg",
+      "description": "Knock down the blocks and win at the Block Buster Ball game."
+    },
+    {
+      "name": "Goblet Toss",
+      "title": "Goblet Toss",
+      "image": "../assets/img/games/goblet_toss.jpg",
+      "description": "Toss balls into the goblets and win prizes at the Goblet Toss game."
+    },
+    {
+      "name": "Virgil Seltzer",
+      "title": "Virgil Seltzer",
+      "image": "../assets/img/games/virgil_seltzer.jpg",
+      "description": "Try your hand at the Virgil Seltzer game and win cool prizes."
+    },
+    {
+      "name": "Goblet Toss",
+      "title": "Goblet Toss",
+      "image": "../assets/img/games/goblet_toss.jpg",
+      "description": "Toss balls into the goblets and win prizes at the Goblet Toss game."
+    }
+  ],
+  "kiddieRides": [
+    {
+      "name": "Miniature Train",
+      "title": "Miniature Train",
+      "image": "../assets/img/kiddierides/miniature_train.jpg",
+      "description": "A fun and safe ride for the little ones on the Miniature Train."
+    },
+    {
+      "name": "Frog Hoppers",
+      "title": "Frog Hoppers",
+      "image": "../assets/img/kiddierides/frog_hoppers.jpg",
+      "description": "Hop along with our friendly frogs on the Frog Hoppers ride."
+    },
+    {
+      "name": "Balloon Ferris Wheel",
+      "title": "Balloon Ferris Wheel",
+      "image": "../assets/img/kiddierides/balloon_ferris_wheel.jpg",
+      "description": "Enjoy a gentle ride with a great view on the Balloon Ferris Wheel."
+    },
+    {
+      "name": "Antique Airplanes",
+      "title": "Antique Airplanes",
+      "image": "../assets/img/kiddierides/antique_airplanes.jpg",
+      "description": "Fly high in the sky on our charming Antique Airplanes ride."
+    },
+    {
+      "name": "Merry-Go-Round",
+      "title": "Merry-Go-Round",
+      "image": "../assets/img/kiddierides/merry_go_round.jpg",
+      "description": "Experience the classic fun of the Merry-Go-Round with your favorite animals."
+    },
+    {
+      "name": "Antique Cars",
+      "title": "Antique Cars",
+      "image": "../assets/img/kiddierides/antique_cars.jpg",
+      "description": "Drive around in style with our delightful Antique Cars ride."
+    },
+    {
+      "name": "Motorcycles",
+      "title": "Motorcycles",
+      "image": "../assets/img/kiddierides/motorcycles.jpg",
+      "description": "Vroom vroom! Ride our mini motorcycles on this exciting kiddie ride."
+    },
+    {
+      "name": "Boats",
+      "title": "Boats",
+      "image": "../assets/img/kiddierides/boats.jpg",
+      "description": "Sail away on a gentle adventure with our kiddie Boats ride."
+    },
+    {
+      "name": "Sky Fighter",
+      "title": "Sky Fighter",
+      "image": "../assets/img/kiddierides/sky_fighter.jpg",
+      "description": "Take to the skies and be a hero on the Sky Fighter ride."
+    },
+    {
+      "name": "Frog Prince",
+      "title": "Frog Prince",
+      "image": "../assets/img/kiddierides/frog_prince.jpg",
+      "description": "Join the Frog Prince on a magical ride full of hopping fun."
+    },
+    {
+      "name": "Magic Ring",
+      "title": "Magic Ring",
+      "image": "../assets/img/kiddierides/magic_ring.jpg",
+      "description": "Spin around in enchantment on the Magic Ring ride."
+    },
+    {
+      "name": "Red Baron Airplanes",
+      "title": "Red Baron Airplanes",
+      "image": "../assets/img/kiddierides/red_baron_airplanes.jpg",
+      "description": "Fly with the Red Baron on this nostalgic airplane ride."
+    },
+    {
+      "name": "Little Ferris Wheel",
+      "title": "Little Ferris Wheel",
+      "image": "../assets/img/kiddierides/little_ferris_wheel.jpg",
+      "description": "Take a delightful ride on the Little Ferris Wheel, perfect for kids."
+    },
+    {
+      "name": "Superhero Roller Coaster",
+      "title": "Superhero Roller Coaster",
+      "image": "../assets/img/kiddierides/superhero_roller_coaster.jpg",
+      "description": "Join the superheroes on a thrilling roller coaster adventure."
+    },
+    {
+      "name": "Tea Cups",
+      "title": "Tea Cups",
+      "image": "../assets/img/kiddierides/tea_cups.jpg",
+      "description": "Spin around with friends in our whimsical Tea Cups ride."
+    },
+    {
+      "name": "Jumbo Around",
+      "title": "Jumbo Around",
+      "image": "../assets/img/kiddierides/jumbo_around.jpg",
+      "description": "Take a ride on the Jumbo Around with fun-filled moments for kids."
+    },
+    {
+      "name": "Whip",
+      "title": "Whip",
+      "image": "../assets/img/kiddierides/whip.jpg",
+      "description": "Feel the thrill of the Whip as you go round and round."
+    },
+    {
+      "name": "Top Spin",
+      "title": "Top Spin",
+      "image": "../assets/img/kiddierides/top_spin.jpg",
+      "description": "Enjoy a spinning adventure on the Top Spin kiddie ride."
+    },
+    {
+      "name": "Kiddie Speed Train",
+      "title": "Kiddie Speed Train",
+      "image": "../assets/img/kiddierides/kiddie_speed_train.jpg",
+      "description": "All aboard the Kiddie Speed Train for a fast-paced fun ride."
+    },
+    {
+      "name": "Raiders",
+      "title": "Raiders",
+      "image": "../assets/img/kiddierides/raiders.jpg",
+      "description": "Join the adventure on the Raiders ride, full of excitement for kids."
+    },
+    {
+      "name": "Sky Glider",
+      "title": "Sky Glider",
+      "image": "../assets/img/kiddierides/sky_glider.jpg",
+      "description": "Glide through the air on the Sky Glider, a gentle ride for children."
+    },
+    {
+      "name": "Happy Swing",
+      "title": "Happy Swing",
+      "image": "../assets/img/kiddierides/happy_swing.jpg",
+      "description": "Swing back and forth with joy on the Happy Swing ride."
+    },
+    {
+      "name": "Clown Swing",
+      "title": "Clown Swing",
+      "image": "../assets/img/kiddierides/clown_swing.jpg",
+      "description": "Swing and laugh with the Clown Swing ride, perfect for kids."
+    },
+    {
+      "name": "Mini Himalaya",
+      "title": "Mini Himalaya",
+      "image": "../assets/img/kiddierides/mini_himalaya.jpg",
+      "description": "Go on a mini mountain adventure with the Mini Himalaya ride."
+    },
+    {
+      "name": "Super Slide",
+      "title": "Super Slide",
+      "image": "../assets/img/kiddierides/super_slide.jpg",
+      "description": "Slide down and have fun with the Super Slide, great for all kids."
+    }
+  ],
+  "food": [
+    {
+      "name": "Kate's Place",
+      "title": "Kate's Place",
+      "image": "../assets/img/food/kates_place.jpg",
+      "description": "Enjoy a variety of delicious meals and snacks at Kate's Place."
+    },
+    {
+      "name": "Lemonade",
+      "title": "Lemonade",
+      "image": "../assets/img/food/lemonade.jpg",
+      "description": "Refresh yourself with a glass of freshly squeezed lemonade."
+    },
+    {
+      "name": "Shish Kabobs",
+      "title": "Shish Kabobs",
+      "image": "../assets/img/food/shish_kabobs.jpg",
+      "description": "Savor the taste of grilled shish kabobs, a perfect treat."
+    },
+    {
+      "name": "Bayside Ice Cream",
+      "title": "Bayside Ice Cream",
+      "image": "../assets/img/food/bayside_ice_cream.jpg",
+      "description": "Cool off with a scoop of delicious ice cream from Bayside."
+    },
+    {
+      "name": "Pretzels",
+      "title": "Pretzels",
+      "image": "../assets/img/food/pretzels.jpg",
+      "description": "Snack on warm, soft pretzels sprinkled with salt."
+    },
+    {
+      "name": "Headliner",
+      "title": "Headliner",
+      "image": "../assets/img/food/headliner.jpg",
+      "description": "Discover a variety of tasty meals and snacks at Headliner."
+    },
+    {
+      "name": "Hawaiian Shaved Ice",
+      "title": "Hawaiian Shaved Ice",
+      "image": "../assets/img/food/hawaiian_shaved_ice.jpg",
+      "description": "Enjoy refreshing Hawaiian shaved ice in a variety of flavors."
+    },
+    {
+      "name": "Big Chick's Mini Donuts",
+      "title": "Big Chick's Mini Donuts",
+      "image": "../assets/img/food/big_chicks_mini_donuts.jpg",
+      "description": "Delight in fresh, warm mini donuts from Big Chick's."
+    },
+    {
+      "name": "Dip N Dots",
+      "title": "Dip N Dots",
+      "image": "../assets/img/food/dip_n_dots.jpg",
+      "description": "Try the unique and fun Dip N Dots ice cream treat."
+    },
+    {
+      "name": "Club Island",
+      "title": "Club Island",
+      "image": "../assets/img/food/club_island.jpg",
+      "description": "Indulge in a variety of dishes at Club Island."
+    },
+    {
+      "name": "Cotton Candy",
+      "title": "Cotton Candy",
+      "image": "../assets/img/food/cotton_candy.jpg",
+      "description": "Enjoy the sweet and fluffy taste of cotton candy."
+    },
+    {
+      "name": "Glenn's Great Fries",
+      "title": "Glenn's Great Fries",
+      "image": "../assets/img/food/glenns_great_fries.jpg",
+      "description": "Savor the crispy and delicious fries from Glenn's Great Fries."
+    },
+    {
+      "name": "Gelato",
+      "title": "Gelato",
+      "image": "../assets/img/food/gelato.jpg",
+      "description": "Treat yourself to creamy and flavorful gelato."
+    },
+    {
+      "name": "Grandpa's Lemonade",
+      "title": "Grandpa's Lemonade",
+      "image": "../assets/img/food/grandpas_lemonade.jpg",
+      "description": "Quench your thirst with a refreshing lemonade from Grandpa's."
+    },
+    {
+      "name": "Top Dog's Walking Tacos",
+      "title": "Top Dog's Walking Tacos",
+      "image": "../assets/img/food/top_dogs_walking_tacos.jpg",
+      "description": "Grab a convenient and delicious walking taco from Top Dog's."
+    },
+    {
+      "name": "Blue's Sushi Shack",
+      "title": "Blue's Sushi Shack",
+      "image": "../assets/img/food/blues_sushi_shack.jpg",
+      "description": "Enjoy fresh and tasty sushi at Blue's Sushi Shack."
+    },
+    {
+      "name": "Bayside Ice Cream",
+      "title": "Bayside Ice Cream",
+      "image": "../assets/img/food/bayside_ice_cream.jpg",
+      "description": "Cool off with a scoop of delicious ice cream from Bayside."
+    },
+    {
+      "name": "Sizzle Pigs BBQ",
+      "title": "Sizzle Pigs BBQ",
+      "image": "../assets/img/food/sizzle_pigs_bbq.jpg",
+      "description": "Satisfy your cravings with mouth-watering BBQ from Sizzle Pigs."
+    },
+    {
+      "name": "Chillin' Pizza",
+      "title": "Chillin' Pizza",
+      "image": "../assets/img/food/chillin_pizza.jpg",
+      "description": "Grab a slice of hot and cheesy pizza from Chillin' Pizza."
+    },
+    {
+      "name": "Nappy's",
+      "title": "Nappy's",
+      "image": "../assets/img/food/nappys.jpg",
+      "description": "Discover delicious dishes and snacks at Nappy's."
+    },
+    {
+      "name": "Slice of Heaven",
+      "title": "Slice of Heaven",
+      "image": "../assets/img/food/slice_of_heaven.jpg",
+      "description": "Indulge in a perfect slice of pizza at Slice of Heaven."
+    },
+    {
+      "name": "Sketchy Hot Dog Cart",
+      "title": "Sketchy Hot Dog Cart",
+      "image": "../assets/img/food/sketchy_hot_dog_cart.jpg",
+      "description": "Grab a quick and tasty hot dog from the Sketchy Hot Dog Cart."
+    },
+    {
+      "name": "Barb's Big Burrito",
+      "title": "Barb's Big Burrito",
+      "image": "../assets/img/food/barbs_big_burrito.jpg",
+      "description": "Satisfy your hunger with a delicious burrito from Barb's."
+    }
+  ],
+  "arcades": [
+    {
+      "name": "Fun City USA",
+      "title": "Fun City USA",
+      "image": "../assets/img/arcades/fun_city_usa.jpg",
+      "description": "Enjoy endless arcade games and fun at Fun City USA."
+    },
+    {
+      "name": "Game Room",
+      "title": "Game Room",
+      "image": "../assets/img/arcades/game_room.jpg",
+      "description": "Play a variety of exciting games in the Game Room."
+    },
+    {
+      "name": "Mini Arcade - Sportland",
+      "title": "Mini Arcade - Sportland",
+      "image": "../assets/img/arcades/mini_arcade_sportland.jpg",
+      "description": "Challenge yourself with fun games at Mini Arcade - Sportland."
+    },
+    {
+      "name": "Mini Arcade - Game Room",
+      "title": "Mini Arcade - Game Room",
+      "image": "../assets/img/arcades/mini_arcade_game_room.jpg",
+      "description": "Discover a selection of thrilling games in the Mini Arcade - Game Room."
+    }
+  ],
+  "goKarts": [
+    {
+      "name": "Adult Track",
+      "title": "Adult Track",
+      "image": "../assets/img/gokarts/adult_track.jpg",
+      "description": "Speed around the track on the Adult Go-Karts for a thrilling ride."
+    },
+    {
+      "name": "Kiddie Track",
+      "title": "Kiddie Track",
+      "image": "../assets/img/gokarts/kiddie_track.jpg",
+      "description": "Let the little ones enjoy a safe and fun ride on the Kiddie Go-Karts."
+    }
+  ]
+}

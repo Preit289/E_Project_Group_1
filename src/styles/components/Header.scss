@@ -1,0 +1,249 @@
+:root {
+  --header-height: 90px;
+  --navbar-height: calc(var(--header-height) * 2 / 3);
+}
+.Header {
+  display: block;
+  color: white;
+  height: var(--header-height);
+  position: relative;
+  background: #6b0000;
+  .top-Navbar {
+    padding: 5px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: opacity 1s ease-in-out, height 1s ease-in-out;
+    &.hidden {
+      opacity: 0;
+      height: 0;
+      display: none;
+    }
+    .list-nav-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        list-style: none;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+        i {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: solid 1.8px #ffffff;
+          background-color: #131f2a;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          transition: transform 0.3s ease-in-out;
+          color: rgb(255, 255, 255);
+        }
+        span {
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+        &:hover {
+          i {
+            background-color: rgb(255, 217, 0);
+            color: #0d1c2a;
+            border: none;
+            box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.57),
+              0px 0px 10px rgba(255, 215, 0, 0.57),
+              0px 0px 10px rgba(255, 215, 0, 0.945);
+            transform: scale(1.2);
+            cursor: pointer;
+          }
+          span {
+            a {
+              color: #ffd700;
+            }
+          }
+        }
+      }
+    }
+    .visitor-count {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .TitleVisitor {
+        background-color: #ffd700;
+        padding: 5px 5px;
+        color: black;
+        border-top-left-radius: 10px; /* Bo góc trái trên */
+        border-bottom-left-radius: 10px; /* Bo góc trái dưới */
+        box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.3); /* Thêm đổ bóng */
+        z-index: 1; /* Đặt lớp z-index */
+        display: flex;
+        align-items: center;
+        i {
+          padding: 0px 5px;
+        }
+      }
+      .website-counter {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background-color: #0b3832;
+        width: 30px;
+        padding: 5px 5px;
+        margin: 0px 0px 0px 0px;
+        border-top-right-radius: 10px; /* Bo góc trái trên */
+        border-bottom-right-radius: 10px; /* Bo góc trái dưới */
+      }
+    }
+  }
+  .Navbar {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    left: 0px;
+    background: #131f2a;
+    padding: 0px 0px;
+    height: var(--navbar-height);
+    margin: 0px 100px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.57), 0px 0px 5px rgba(0, 0, 0, 0.57),
+      0px 0px 5px rgba(0, 0, 0, 0.57);
+    .Navbar-content {
+      display: grid;
+      grid-template-columns: 40% 20% 40%;
+      .logo-navbar {
+        height: var(--navbar-height);
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 0px 40px;
+        align-items: center;
+        .logo {
+          img {
+            width: 220px;
+            height: auto;
+            margin: auto auto;
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .side-navbar {
+        height: var(--navbar-height);
+        display: flex;
+        justify-content: space-around;
+        padding: 0px 40px;
+        align-items: center;
+        a {
+          padding: 20px 10px;
+          text-decoration: none;
+          color: white;
+          .bxs-home {
+            font-size: 20pt;
+          }
+        }
+
+        .dropdown-container {
+          position: relative;
+          display: inline-block; // Để dropdown hiển thị đúng
+          .dropdown-menu {
+            display: block;
+            position: absolute;
+            top: 50px;
+            background-color: #131f2a;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            a {
+              color: rgb(255, 255, 255);
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              &:hover {
+                background-color: #826bc3;
+              }
+            }
+          }
+        }
+        .buy-tickets {
+          background: #a50f0f;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 10px;
+          border-radius: 10px;
+          &.active {
+            background-color: darken(
+              #a50f0f,
+              10%
+            ); // Darken the background slightly
+            color: white;
+          }
+        }
+
+        .active {
+          color: #ff0000;
+          font-weight: bold;
+          border-bottom: 5px solid #ff0000;
+        }
+      }
+    }
+    &.fixed {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      height: var(--navbar-height);
+      z-index: 99999;
+      margin: 0px 100px;
+      .logo {
+        img {
+          transform: translateY(15px);
+          &:hover {
+            transform: scale(1.1) translateY(15px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.ScrolltoTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background: #900808;
+  transition: opacity 0.2s ease-in-out;
+  .bxs-chevrons-up {
+    font-size: 30px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(2px);
+  }
+  &:hover {
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(132, 3, 3, 0.57),
+      0px 0px 20px rgba(132, 3, 3, 0.57), 0px 0px 20px rgba(132, 3, 3, 0.57);
+    .bxs-chevrons-up {
+      color: #900808;
+      transform: translateY(-5px);
+    }
+  }
+  &.hidden {
+    opacity: 0;
+  }
+}

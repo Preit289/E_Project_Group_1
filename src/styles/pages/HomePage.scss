@@ -1,0 +1,191 @@
+h2 {
+  color: #333;
+}
+
+
+p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.activities {
+  display: block; /* Ensure it's being displayed */
+}
+
+.content-container {
+  display: flex;
+  align-items: top;
+  gap: 20px; /* Adjust the gap between the video and text if needed */
+}
+
+.centered-video {
+  width: 60%;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.activites-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.activity-tag {
+  text-align: center;
+}
+
+.activity-tag img {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.activity-tag div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redBlock {
+  background-color: #810000;
+  padding: 7px 20px 7px;
+  border-radius: 20px;
+}
+
+.redBlock h2 {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.left-side {
+  background-color: #810000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 7px 20px 7px;
+  border-radius: 20px;
+  width: 18%;
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.left-side h2 {
+  margin: 0;
+  line-height: 1.2;
+  word-spacing: -0.2em;
+  color: white;
+}
+
+.right-side {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  align-items: stretch;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 270px; /* Adjusted to ensure uniform height */
+  transition: transform 0.3s ease-in-out;
+}
+.image-container:hover {
+  transform: scale(1.05); /* Scale up the entire image container when hovered */
+}
+
+.right-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will ensure the image is cropped to fill the container */
+  border-radius: 5px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1em;
+
+  .left-side-hp {
+    width: 60%;
+    flex: 1;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 100%;
+      filter: none;
+      border-radius: 20px;
+      background-color: white;
+      margin-bottom: 20px; // Add spacing between images
+    }
+  }
+
+  .text-content {
+    width: 40%;
+    flex: 1; // Use flex to allocate space evenly
+    max-width: 50%; // Ensure the text content doesn't exceed 50%
+    padding-left: 20px; // Add some padding for better readability
+    p,
+    h3 {
+      margin-top: 1em;
+    }
+  }
+}
+
+.HomePage {
+  .overview,
+  .events,
+  .location-contact,
+  .reviews,
+  .tickets,
+  .activities {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .redBlock {
+    background-color: #810000;
+    padding: 7px 20px 7px;
+    border-radius: 20px;
+    h2 {
+      color: #fff;
+    }
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      margin-bottom: 10px; /* Add space between list items */
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
