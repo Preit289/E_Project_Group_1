@@ -98,7 +98,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="redBlock">
-          <h2>History</h2>
+          <h2>Others</h2>
         </div>
         <div className="more-info-container">
           <a href="/aboutus/disclaimer" className="info-card">
